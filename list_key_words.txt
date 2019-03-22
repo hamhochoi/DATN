@@ -1,0 +1,38 @@
+key_words:
+    SmartContext
+        smart_context_id
+        smart_context_name
+        is_sub_smart_context_of
+        has_sub_smart_context
+        has_platform
+    Platform
+        platform_id
+        platform_name
+        has_source
+    Source
+        source_global_id
+        source_local_id
+        source_name
+        has_thing
+        has_metric
+        has_type
+    Thing
+        thing_id
+        thing_name
+    Metric
+        metric_global_id
+        metric_local_id
+        metric_name
+        metric_status
+        can_set_state
+        has_unit
+    DataPoint
+        belong_metric
+        has_time_collect
+        has_value
+        has_data_type 
+
+        
+    Temperature?
+    Humidity?
+    LightIntensity?
