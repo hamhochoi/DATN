@@ -21,7 +21,8 @@ class Platform():
     :param      has_source          (list)
     """
 
-    def __init__(self, platform_id, platform_name, has_source):
+    def __init__(self, platform_id, platform_name,
+                 has_source, belong_smartcontext):
         pass
 
 
@@ -37,7 +38,8 @@ class Source():
     """
 
     def __init__(self, source_global_id, source_local_id, 
-                source_name, has_thing, has_metric, has_type):
+                source_name, has_thing, has_metric,
+                has_type, belong_platform):
         pass
 
     
@@ -48,7 +50,8 @@ class Thing():
     :param      thing_name      (string)
     """
 
-    def __init__(self, thing_id, thing_name):
+    def __init__(self, thing_id, thing_name,
+                 thing_belong_source):
         pass
 
 
@@ -63,8 +66,10 @@ class Metric():
     :param      has_unit         : unit of metric                                   (degree/percent/time - string)
     """
 
-    def __init__(self, metric_global_id, metric_local_id, metric_name,
-                 metric_status, can_set_state, has_unit):
+    def __init__(self, metric_global_id, metric_local_id, 
+                 metric_name, metric_status, 
+                 can_set_state, has_unit
+                 metric_belong_source):
         pass
 
 

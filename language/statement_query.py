@@ -1,6 +1,6 @@
 from language.statement import Statement
 from language.condition import Condition
-
+from language.api import *
 
 class Query(Statement):
 
@@ -48,7 +48,7 @@ class Query(Statement):
             return True
 
     
-    def check_from(self, from_value):
+    def check_from(self, from_value): 
         """Check if from_value is in list_keyword or in ident_list or not
 
         Return True if from_value is in list_keyword or ident_list
@@ -58,21 +58,6 @@ class Query(Statement):
             return False
         else:
             return True
-
-
-    def check_select_from(self, select_value, from_value):
-        """Check if select_value isn't at higher level than from value
-
-        Return : True if select_value isn't at higher level than from value
-                 False if otherwise
-        """
-        select_level = self.get_level(select_value)
-        from_level   = self.get_level(from_value)
-
-        if (select_level <= from_level):      # If selecdt_level == from_level, \ 
-            return True                       #--> Select ontology's attribute from ontology Object
-        else:
-            return False
         
 
     def get_select_from_result(self, select_value, from_value):
@@ -82,11 +67,41 @@ class Query(Statement):
 
         Return: (Object) The result of select...from query
         """
-        pass
+        select_level = self.get_level(select_value)
+        from_level   = self.get_level(from_value)
+
+        # SWITCH-CASE TO CALL API.
+        if (select_level == 0): # smartcontext
+            if (from_level == 0):
+                result = api_get_sub_smartcontext_from_parent_smartcontext()
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
     def check_where_condition(self, select_from_query_result, select_value, where_value):
         """Check if select_value at higher level than where_value
+
+        If select_value is not an ontology object (mean that just is an attribute)
+        So select_from_query_result is not an ontology object
+        --> ???????? 
 
         Args:
             select_from_query_result: (Object)   Result object of select...from query
@@ -96,6 +111,8 @@ class Query(Statement):
         Return 
             True if select_value at higher
         """
+
+
 
 
     def query(self, select_value, from_value, where_value):

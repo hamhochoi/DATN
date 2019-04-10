@@ -3,12 +3,13 @@ class Languague():
         self.list_key_words = [
             'SmartContext', \
                 'smart_context_id', 'smart_context_name', \
-                'is_sub_smart_context_of', 'has_sub_smart_context', \
-                'has_platform', \
+                'sub_smartcontext_id', 'parent_smartcontext_id', \
+                'platform_id', \
             'Platform', \
                 'platform_id', \
                 'platform_name', \
                 'has_source', \
+                'belong_smartcontext', \
             'Source', \
                 'source_global_id', \
                 'source_local_id', \
@@ -16,9 +17,11 @@ class Languague():
                 'has_thing', \
                 'has_metric', \
                 'has_type', \
+                'belong_platform', \
             'Thing', \
                 'thing_id', \
                 'thing_name', \
+                'thing_belong_source', \
             'Metric', \
                 'metric_global_id', \
                 'metric_local_id', \
@@ -26,6 +29,7 @@ class Languague():
                 'metric_status', \
                 'can_set_state', \
                 'has_unit', \
+                'metric_belong_source', \
             'DataPoint', \
                 'belong_metric', \
                 'has_time_collect', \
@@ -39,26 +43,29 @@ class Languague():
         """
         self.smart_context_level = [
             "SmartContext", "smart_context_id", \
-            "smart_context_name", "is_sub_smart_context_of", \
-            "has_sub_smart_context", "has_platform" \
+            "smart_context_name", "sub_smartcontext_id", \
+            "parent_smartcontext_id", "platform_id" \
         ]
         self.platform_level = [
             "Platform", "platform_id", \
-            "platform_name", "has_source" \
+            "platform_name", "has_source", \
+            "belong_smartcontext" \
         ]
         self.source_level = [
             "Source", "source_global_id", \
             "source_local_id", "source_name", \
-            "has_thing", "has_metric", "has_type" \
+            "has_thing", "has_metric", \
+            "has_type", "belong_platform" \
         ]
         self.thing_level = [
-            "Thing", "thing_id", "thing_name" \
+            "Thing", "thing_id", "thing_name", \
+            "thing_belong_source" \
         ]
         self.metric_level = [
             "Metric", "metric_global_id", \
             "metric_local_id", "metric_name", \
             "metric_status", "can_set_state", \
-            "has_unit" \
+            "has_unit", "metric_belong_source" \
         ]
         self.data_point_level = [
             "DataPoint", "belong_metric", \
