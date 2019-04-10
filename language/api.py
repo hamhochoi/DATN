@@ -15,6 +15,178 @@ cursor = db.cursor()
 
 ###########################################################
 # BASE API
+
+def api_get_metric_id_from_metric_attribute(metric_attribute):
+    query = 'select MetricId from Metric \
+             where MetricId="{}" or SourceId="{}" or \
+                   MetricName="{}" or MetricType="{}" or \
+                   Unit="{}" or MetricDomain="{}" or \
+                   MetricStatus="{}" or MetricLocalId="{}" ;'\
+                   .format(metric_attribute, metric_attribute, \
+                           metric_attribute, metric_attribute, \
+                           metric_attribute, metric_attribute, \
+                           metric_attribute, metric_attribute)
+    # print (query)
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_thing_id_from_thing_attribute(thing_attribute):
+    query = 'select ThingGlobalId from Thing \
+             where ThingGlobalId="{}" or ThingName="{}" ;'\
+                   .format(thing_attribute, thing_attribute)
+    # print (query)
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_source_id_from_source_attribute(source_attribute):
+    query = 'select SourceId from IoTSource \
+             where SourceId="{}" or EndPoint="{}" or \
+                   SourceStatus="{}" or Description="{}" or\
+                   SourceType="{}" or Label="{}" or \
+                   PlatformId="{}" or LocalId="{}" ;'\
+                   .format(source_attribute, source_attribute, \
+                           source_attribute, source_attribute, \
+                           source_attribute, source_attribute, \
+                           source_attribute, source_attribute)
+    # print (query)
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_platform_id_from_platform_attribute(platform_attribute):
+    query = 'select PlatformId from Platform \
+             where PlatformId="{}" or PlatformName="{}" or \
+                   PlatformType="{}" or PlatformHost="{}" or\
+                   PlatformPort="{}" or PlatformStatus="{}" or \
+                   LastResponse="{}" ;'\
+                   .format(platform_attribute, platform_attribute, \
+                           platform_attribute, platform_attribute, \
+                           platform_attribute, platform_attribute, \
+                           platform_attribute)
+    # print (query)
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute):
+    query = 'select SmartContextId from SmartContext \
+             where SmartContextId="{}" or SmartContextName="{}" or \
+                   ParentSmartContextId="{}" or SubSmartContextId="{}" or\
+                   PlatformId="{}" ;'\
+                   .format(smartcontext_attribute, smartcontext_attribute, \
+                           smartcontext_attribute, smartcontext_attribute, \
+                           smartcontext_attribute)
+    # print (query)
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+########################################################
+# Get all object in database
+
+def api_get_all_metric():
+    query = 'select MetricId from Metric'
+
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_all_thing():
+    query = 'select ThingGlobalId from Thing'
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+def api_get_all_source():
+    query = 'select SourceId from IoTSource'
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+def api_get_all_platform():
+    query = 'select PlatformId from Platform'
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+def api_get_all_smartcontext():
+    query = 'select SmartContextId from SmartContext'
+    
+    try:
+        cursor.execute(query)
+        results = cursor.fetchall()
+        # print (results)
+
+        return results
+    except:
+        traceback.print_exc()
+
+
+
+######################################################################################
+# END OF BASE APIs
+
 def api_get_datapoint_from_metric(metric_id):
     results = client.query('SELECT * FROM "datn"."autogen".{} '.format(metric_id))
     points = results.get_points()
@@ -487,7 +659,18 @@ def api_get_smartcontext_from_metric(metric_id):
 
 
 
+
 if __name__ == "__main__":
+    # x = api_get_all_metric()
+    # x = api_get_all_thing()
+    # x = api_get_all_source()
+    # x = api_get_all_platform()
+    # x = api_get_all_smartcontext()
+    # x = api_get_metric_id_from_metric_attribute('metric_id_1')
+    # x = api_get_thing_id_from_thing_attribute('Temperature')
+    # x = api_get_source_id_from_source_attribute('active')
+    # x = api_get_platform_id_from_platform_attribute('8080')
+    # x = api_get_smartcontext_id_from_smartcontext_attribute('HPCC')
     # x = api_get_datapoint_from_metric('metric_id_1')
     # x = api_get_metric_from_source('source_id_1')
     # x = api_get_source_from_metric('metric_id_1')
@@ -510,7 +693,7 @@ if __name__ == "__main__":
     # x = api_get_thing_from_smartcontext('smartcontext_id_1')
     # x = api_get_source_from_smartcontext('smartcontext_id_1')
     # x = api_get_platform_from_metric('metric_id_1')
-    x = api_get_platform_from_thing('source_id_6')
+    # x = api_get_platform_from_thing('source_id_6')
     # x = api_get_smartcontext_from_source('source_id_6')
     # x = api_get_smartcontext_from_thing("source_id_6")
     # x = api_get_smartcontext_from_metric('metric_id_10')
