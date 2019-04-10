@@ -1,11 +1,16 @@
-from language.statement import Statement
-from language.condition import Condition
-from language.api import *
+# from language.statement import Statement
+# from language.condition import Condition
+# from language.api import *
+import json
+from statement import Statement
+from condition import Condition
+from api import *
+
 
 class Query(Statement):
 
     def __init__(self):
-        Statement.__init__()
+        Statement.__init__(self)
 
 
     def get_level(self, value):
@@ -35,6 +40,40 @@ class Query(Statement):
             return -1
 
 
+    def check_syntax_query(self, query):
+        try:
+            select_value    = query['select']
+            where_condition = query['where']
+
+            # Check 'select' field
+            if (select_value == '' or select_value == None):
+                return False
+            
+            # Check 'where' field
+            result = self.check_syntax_where(where_condition)
+            return result
+
+        except:
+            return False
+
+
+    def check_syntax_where(self, where_condition):
+        """ Check if "where" query is valid 
+
+        return False if where_condition doesn't have (compare, logic, in_bracket) fields.
+               True otherwises
+        """
+
+        try:
+            compare_value    = where_condition['compare']
+            logic_value      = where_condition['logic']
+            in_bracket_value = where_condition['in_bracket']
+
+            return True
+        except:
+            return False
+
+
     def check_select(self, select_value):
         """Check if select_value is a keyword
 
@@ -48,19 +87,19 @@ class Query(Statement):
             return True
 
     
-    def check_from(self, from_value): 
-        """Check if from_value is in list_keyword or in ident_list or not
+    # def check_from(self, from_value): 
+    #     """Check if from_value is in list_keyword or in ident_list or not
 
-        Return True if from_value is in list_keyword or ident_list
-               False otherwise
-        """
-        if (from_value not in self.list_ontology_object)# and (from_value not in self.list_ident):
-            return False
-        else:
-            return True
+    #     Return True if from_value is in list_keyword or ident_list
+    #            False otherwise
+    #     """
+    #     if (from_value not in self.list_ontology_object)# and (from_value not in self.list_ident):
+    #         return False
+    #     else:
+    #         return True
         
 
-    def get_select_from_result(self, select_value, from_value):
+    def get_select_result(self, select_value, from_value):
         """Implement select Object from Object
         
         Call API to query DB to get result.
@@ -68,50 +107,47 @@ class Query(Statement):
         Return: (Object) The result of select...from query
         """
         select_level = self.get_level(select_value)
-        from_level   = self.get_level(from_value)
 
-        # SWITCH-CASE TO CALL API.
+        # Handle SELECT.
         if (select_level == 0): # smartcontext
-            if (from_level == 0):
-                result = api_get_sub_smartcontext_from_parent_smartcontext()
+            results = api_get_all_smartcontext()
+        elif (select_level == 1):
+            results = api_get_all_platform()
+        elif (select_level == 2):
+            results = api_get_all_source()
+        elif (select_level == 3):
+            results = api_get_all_thing()
+        elif (select_level == 4):
+            results = api_get_all_metric()
+        elif (select_level == 5):
+            results = api_get_all_datapoint()
 
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def get_where_result(self, select_value, where_condition):
+        pass
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def check_where_condition(self, select_from_query_result, select_value, where_value):
-        """Check if select_value at higher level than where_value
-
-        If select_value is not an ontology object (mean that just is an attribute)
-        So select_from_query_result is not an ontology object
-        --> ???????? 
-
-        Args:
-            select_from_query_result: (Object)   Result object of select...from query
-            select_value            : (str)      select query's parameter
-            where_value             : (str)      where query's parameter
-
-        Return 
-            True if select_value at higher
+        """TODO
         """
-
+        
 
 
 
@@ -142,3 +178,9 @@ class Query(Statement):
 
                 
 
+
+if __name__ == "__main__":
+    with open('../utils/query_format.json', 'r') as json_file:
+        query = json.load(json_file)
+        # print (query)
+    Query().check_syntax_query(query)

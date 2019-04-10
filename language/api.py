@@ -117,8 +117,22 @@ def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute):
     except:
         traceback.print_exc()
 
+
+
 ########################################################
 # Get all object in database
+
+def api_get_all_datapoint():
+    list_datapoints = []
+
+    metric_ids = api_get_all_metric()
+    for metric_id in metric_ids:
+        metric_id = metric_id[0]
+        datapoints = api_get_datapoint_from_metric(metric_id)
+        list_datapoints.extend(datapoints)
+
+    return list_datapoints
+
 
 def api_get_all_metric():
     query = 'select MetricId from Metric'
@@ -188,7 +202,9 @@ def api_get_all_smartcontext():
 # END OF BASE APIs
 
 def api_get_datapoint_from_metric(metric_id):
-    results = client.query('SELECT * FROM "datn"."autogen".{} '.format(metric_id))
+    query = 'SELECT * FROM "datn"."autogen".{} '.format(metric_id)
+    # print (query)
+    results = client.query(query)
     points = results.get_points()
 
     list_point = []
@@ -661,6 +677,7 @@ def api_get_smartcontext_from_metric(metric_id):
 
 
 if __name__ == "__main__":
+    x = api_get_all_datapoint()
     # x = api_get_all_metric()
     # x = api_get_all_thing()
     # x = api_get_all_source()

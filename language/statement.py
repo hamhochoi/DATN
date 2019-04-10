@@ -1,4 +1,4 @@
-from language.language import Languague
+from language import Languague
 
 
 
@@ -7,7 +7,11 @@ class Statement(Languague):
     # STATEMENT PARSER
 
     def __init__(self):
-        Languague.__init__()
+        Languague.__init__(self)
+
+
+    def query_parser():
+        pass
 
 
     def rule_parser(self):

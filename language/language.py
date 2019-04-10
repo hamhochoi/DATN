@@ -75,7 +75,7 @@ class Languague():
         self.list_ontology_object = [
             "SmartContext", "Platform", \
             "Source", "Thing", \
-            "Metric", "DataPoint" \ 
+            "Metric", "DataPoint" \
         ]
 
 
