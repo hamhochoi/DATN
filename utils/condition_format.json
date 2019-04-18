@@ -1,0 +1,122 @@
+# Logic
+{
+    "compare" : {},
+    "logic" : {
+        "operation" : "AND",
+        "condition_1" : {
+            "compare" : {
+                "keyword" : "metric_global_id",
+                "comparator" : "=",
+                "expression" : "metric_id_1"
+            },
+            "logic" : {},
+            "in_bracket" : {}
+        }, 
+        "condition_2" : {
+            "compare" : {
+                "keyword" : "platform_id",
+                "comparator" : "=",
+                "expression" : "platform_id_1"
+            },
+            "logic" : {},
+            "in_bracket" : {}
+        }
+    }, 
+    "in_bracket" : {}
+}
+
+
+# Compare
+{
+    "compare" : {
+        "keyword" : "metric_global_id",
+        "comparator" : "=",
+        "expression" : "metric_id_1"
+    },
+    "logic" : {}, 
+    "in_bracket" : {}
+}
+
+
+
+# in_bracket
+{
+    "compare" : {},
+    "logic" : {}, 
+    "in_bracket" : {
+        "condition" : {
+            "compare" : {},
+            "logic" : {
+                "operation" : "AND",
+                "condition_1" : {
+                    "compare" : {
+                        "keyword" : "metric_global_id",
+                        "comparator" : "=",
+                        "expression" : "metric_id_1"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }, 
+                "condition_2" : {
+                    "compare" : {
+                        "keyword" : "platform_id",
+                        "comparator" : "=",
+                        "expression" : "platform_id_1"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }
+            },
+            "in_bracket" : {}
+        }
+    }
+}
+
+
+{
+    "compare" : {},
+    "logic" : {
+        "operation" : "AND",
+        "condition_1" : {
+            "compare" : {},
+            "logic" : {},
+            "in_bracket" : {
+                "condition" : {
+                    "compare" : {},
+                    "in_bracket" : {},
+                    "logic" : {
+                        "operation" : "OR",
+                        "condition_1" : {
+                            "logic" : {},
+                            "in_bracket" : {},
+                            "compare" : {
+                                "keyword" : "source_global_id",
+                                "comparator" : "=",
+                                "expression" : "source_id_1"
+                            }
+                        },
+                        "condition_2" : {
+                            "logic" : {},
+                            "in_bracket" : {},
+                            "compare" : {
+                                "keyword" : "source_global_id",
+                                "comparator" : "=",
+                                "expression" : "source_id_2"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "condition_2" : {
+            "compare" : {
+                "keyword" : "source_global_id",
+                "comparator" : "=",
+                "expression" : "source_id_3"
+            },
+            "logic" : {},
+            "in_bracket" : {}
+        }
+    }
+
+}

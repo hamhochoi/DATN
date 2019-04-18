@@ -2,7 +2,7 @@ class Languague():
     def __init__(self):
         self.list_key_words = [
             'SmartContext', \
-                'smart_context_id', 'smart_context_name', \
+                'smartcontext_id', 'smartcontext_name', \
                 'sub_smartcontext_id', 'parent_smartcontext_id', \
                 'platform_id', \
             'Platform', \
@@ -41,9 +41,9 @@ class Languague():
 
         self.list_ident = []
         """
-        self.smart_context_level = [
-            "SmartContext", "smart_context_id", \
-            "smart_context_name", "sub_smartcontext_id", \
+        self.smartcontext_level = [
+            "SmartContext", "smartcontext_id", \
+            "smartcontext_name", "sub_smartcontext_id", \
             "parent_smartcontext_id", "platform_id" \
         ]
         self.platform_level = [
@@ -77,6 +77,9 @@ class Languague():
             "Source", "Thing", \
             "Metric", "DataPoint" \
         ]
+
+        self.list_comparator = [">", "<" , ">=" , "<=", "=" , "!="]
+        self.list_logic = ["AND", "OR"]
 
 
     def get_key_word_from_db(self):

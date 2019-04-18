@@ -16,7 +16,7 @@ class Query(Statement):
     def get_level(self, value):
         """Get level 
 
-        Return: 0 : if smart_context_level
+        Return: 0 : if smartcontext_level
                 1 : if platform_level
                 2 : if source_level
                 3 : if thing_level
@@ -24,7 +24,7 @@ class Query(Statement):
                 5 : if data_point_level
                 -1: Error
         """
-        if (value in self.smart_context_level):
+        if (value in self.smartcontext_level):
             return 0
         elif (value in self.platform_level):
             return 1
@@ -124,9 +124,27 @@ class Query(Statement):
 
 
     def get_where_result(self, select_value, where_condition):
-        pass
+        """
+        There is only one field (of {'compare', 'logic' and 'in_bracket'})
+        has value, others will = '{}'
+        """
 
+        # Check if where_condition is valid
+        is_where_condition_valid = Condition().check_where_condition_syntax_valid(where_condition)
+        if (is_where_condition_valid == False):
+            return None
 
+        # Parse where_condition
+        compare    = where_condition['compare']
+        logic      = where_condition['logic']
+        in_bracket = where_condition['in_bracker']
+
+        if (compare != {}):
+            keyword = compare['keyword']
+            comparator = compare['comparator']
+            expression = compare['expression']
+
+            
 
 
 

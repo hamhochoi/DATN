@@ -1,0 +1,56 @@
+{
+    "select" : "select_value",
+    "from" : "from_value",
+    "where" : {
+        "condition" : {
+            "compare" : {
+                "keyword" : "source_id",
+                "comparation" : "=",
+                "expression" : "source_id_1"
+            },
+            "logic" : {
+                "operation" : "AND",
+                "condition_1" : {
+                    "compare" : {
+                        "keyword" : "metric_id",
+                        "comparation" : "=",
+                        "expression" : "metric_id_1"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }, 
+                "condition_2" : {
+                    "compare" : {
+                        "keyword" : "platform_id",
+                        "comparation" : "=",
+                        "expression" : "platform_id_1"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }
+            }, 
+            "in_bracket" : {}
+        }
+    },
+    "Rule" : [
+        {   
+            "if" : "temperature>10",     
+            "then" : [    
+                {
+                    "key" : "led_id_1",
+                    "value" : "turn on"
+                },
+                {
+                    "key" : "led_id_2",
+                    "value" : "turn off"
+                }
+            ], 
+            "else" : [ 
+                {
+                    "key" : "led_id_3",
+                    "value" : "turn off"
+                }
+            ]
+        }
+    ]
+}
