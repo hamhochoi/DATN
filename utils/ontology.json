@@ -27,14 +27,15 @@
 "platform" : {
     "platform_id" : "platform_id_2",
     "platform_name" : "openhab",
-    "has_source"    : [
-        {
-            "source_id" : "source_id_2_1"
-        },
-        {
-            "source_id" : "source_id_2_2"
-        }
-    ], 
+    "has_source_id" : "source_id_1",
+    // "has_source"    : [
+    //     {
+    //         "source_id" : "source_id_2_1"
+    //     },
+    //     {
+    //         "source_id" : "source_id_2_2"
+    //     }
+    // ], 
     "belong_smartcontext" : "smart_context_id_1"
 }
 
@@ -42,22 +43,24 @@
     "source_global_id" : "source_global_id_1", 
     "source_local_id"  : "source_local_id_1",
     "source_name"      : "hop_den_trong_phong_sinh_vien",
-    "has_thing"   : [
-        {
-            "thing_id" : "thing_id_1_1"
-        },
-        {
-            "thing_id" : "thing_id_1_2"
-        }
-    ],
-    "has_metric" : [
-        {
-            "metric_id" : "metric_id_1_1"
-        },
-        {
-            "metric_id" : "metric_id_1_2"
-        }
-    ],
+    // "has_thing"   : [
+    //     {
+    //         "thing_id" : "thing_id_1_1"
+    //     },
+    //     {
+    //         "thing_id" : "thing_id_1_2"
+    //     }
+    // ],
+    "has_thing_id" : "source_global_id_1",
+    // "has_metric" : [
+    //     {
+    //         "metric_id" : "metric_id_1_1"
+    //     },
+    //     {
+    //         "metric_id" : "metric_id_1_2"
+    //     }
+    // ],
+    "has_metric_id" : "metric_id_1",
     "has_type"        : "Sensor", 
     "belong_platform" : "platform_id_1"
 }
@@ -76,7 +79,6 @@
     "metric_status"    : "normal",
     "can_set_state"    : "True",
     "has_unit"         : "Degree Celsius", 
-    "has_data_point"   : ""
     "metric_belong_source"    : "source_id_1"
 }
 

@@ -2,39 +2,40 @@ class Languague():
     def __init__(self):
         self.list_key_words = [
             'SmartContext', \
-                'smartcontext_id', 'smartcontext_name', \
-                'sub_smartcontext_id', 'parent_smartcontext_id', \
-                'platform_id', \
+                'SmartContextId', 'SmartContextName', \
+                'SubSmartContextId', 'ParentSmartContextId', \
+                'PlatformId', \
             'Platform', \
-                'platform_id', \
-                'platform_name', \
-                'has_source', \
-                'belong_smartcontext', \
+                'PlatformId', \
+                'PlatformName', \
+                'PlatformPort', \
+                # 'HasSource', \
+                # 'belong_smartcontext', \
             'Source', \
-                'source_global_id', \
-                'source_local_id', \
-                'source_name', \
-                'has_thing', \
-                'has_metric', \
-                'has_type', \
-                'belong_platform', \
+                'SourceId', \
+                'LocalId', \
+                'SourceName', \
+                # 'has_thing', \
+                # 'has_metric', \
+                'SourceType', \
+                'PlatformId', \
             'Thing', \
-                'thing_id', \
-                'thing_name', \
-                'thing_belong_source', \
+                'ThingGlobalId', \
+                'ThingName', \
+                # 'thing_belong_source', \
             'Metric', \
-                'metric_global_id', \
-                'metric_local_id', \
-                'metric_name', \
-                'metric_status', \
-                'can_set_state', \
-                'has_unit', \
-                'metric_belong_source', \
+                'MetricId', \
+                'MetricLocalId', \
+                'MetricName', \
+                'MetricStatus', \
+                # 'can_set_state', \
+                'Unit', \
+                'SourceId', \
             'DataPoint', \
-                'belong_metric', \
-                'has_time_collect', \
-                'has_value', \
-                'has_data_type'
+                # 'belong_metric', \
+                'time', \
+                'value', \
+                'DataType'
         ]
 
         """Just ignore ident for now
@@ -42,35 +43,35 @@ class Languague():
         self.list_ident = []
         """
         self.smartcontext_level = [
-            "SmartContext", "smartcontext_id", \
-            "smartcontext_name", "sub_smartcontext_id", \
-            "parent_smartcontext_id", "platform_id" \
+            "SmartContext", "SmartContextId", \
+            "SmartContextName", "SubSmartContextId", \
+            "ParentSmartContextId", "PlatformId" \
         ]
         self.platform_level = [
-            "Platform", "platform_id", \
-            "platform_name", "has_source", \
-            "belong_smartcontext" \
+            "Platform", "PlatformId", \
+            "PlatformName", "PlatformPort"#, \
+            # "belong_smartcontext" \
         ]
         self.source_level = [
-            "Source", "source_global_id", \
-            "source_local_id", "source_name", \
-            "has_thing", "has_metric", \
-            "has_type", "belong_platform" \
+            "Source", "SourceId", \
+            "LocalId", "SourceName", \
+            # "has_thing", "has_metric", \
+            "SourceType", "PlatformId" \
         ]
         self.thing_level = [
-            "Thing", "thing_id", "thing_name", \
-            "thing_belong_source" \
+            "Thing", "ThingGlobalId", "ThingName"#, \
+            # "thing_belong_source" \
         ]
         self.metric_level = [
-            "Metric", "metric_global_id", \
-            "metric_local_id", "metric_name", \
-            "metric_status", "can_set_state", \
-            "has_unit", "metric_belong_source" \
+            "Metric", "MetricId", \
+            "MetricLocalId", "MetricName", \
+            "MetricStatus", #, "can_set_state", \
+            "Unit", "SourceId" \
         ]
         self.data_point_level = [
-            "DataPoint", "belong_metric", \
-            "has_time_collect", "has_value", \
-            "has_data_type" \
+            "DataPoint", "MetricId", \
+            "time", "value", \
+            "DataType" \
         ]
         self.list_ontology_object = [
             "SmartContext", "Platform", \
@@ -98,3 +99,29 @@ class Languague():
 
     def assignment_parser(self):
         pass
+
+    def get_level(self, value):
+        """Get level 
+
+        Return: 0 : if smartcontext_level
+                1 : if platform_level
+                2 : if source_level
+                3 : if thing_level
+                4 : if metric_level
+                5 : if data_point_level
+                -1: Error
+        """
+        if (value in self.smartcontext_level):
+            return 0
+        elif (value in self.platform_level):
+            return 1
+        elif (value in self.source_level):
+            return 2
+        elif (value in self.thing_level):
+            return 3
+        elif (value in self.metric_level):
+            return 4
+        elif (value in self.data_point_level):
+            return 5
+        else:
+            return -1
