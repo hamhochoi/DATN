@@ -1,0 +1,229 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+PHIẾU GIAO NHIỆM VỤ ĐỒ ÁN TỐT NGHIỆP
+
+1. Thông tin sinh viên
+
+Họ và tên sinh viên: Đỗ Chí Thành
+Điện thoại liên lạc: 0326118018        Email: dothanhwork2017@gmail.com
+Lớp : CNTT 2.4 K59            Hệ đào tạo: Đại học chính quy
+Đồ án tốt nghiệp được thực hiện tại: Đại học Bách Khoa Hà Nội
+Thời gian làm đồ án: Từ 11/02/2019 đến 24/05/2019
+
+2. Mục đích nội dung của ĐATN
+Xây dựng ngôn ngữ truy vấn ngữ nghĩa cho hệ thống IoT.
+
+3. Các nhiệm vụ cụ thể của ĐATN
+Tìm hiểu tổng quan về ngôn ngữ truy vấn ngữ nghĩa.
+Xây dựng cấu trúc dữ liệu.
+Xây dựng cú pháp của ngôn ngữ
+Xây dựng cơ chế truy vấn ngữ nghĩa
+
+4. Lời cam đoan của sinh viên
+
+Tôi - Đỗ Chí Thành - cam kết ĐATN là công trình nghiên cứu của bản thân tôi dưới sự hướng dẫn của TS. Vũ Văn Thiệu.
+Các kết quả nêu trong ĐATN là trung thực, không phải sao chép toàn văn của bất kỳ công trình nào khác.
+
+
+                         Hà nội, ngày   tháng năm                        Tác giả ĐATN
+            
+
+        
+Đỗ Chí Thành
+5. Xác nhận của giáo viên hướng dẫn về mức độ hoàn thành của ĐATN và cho phép bảo vệ:
+        
+                                     Hà nội, ngày   tháng năm
+                                    Giáo viên hướng dẫn
+
+
+
+                                    TS. Vũ Văn Thiệu
+        
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lời cảm ơn
+
+Trước hết, tôi xin chân thành cảm ơn TS. Vũ Văn Thiệu, bộ môn Khoa học máy tính, viện Công nghệ thông tin và truyền thông, đại học Bách Khoa Hà nội là người đã tận tình giúp đỡ tôi trong suốt thời gian làm đồ án này. 
+
+Đồng thời, tôi xin chân thành cảm ơn TS. Nguyễn Bình Minh, bộ môn Hệ thống thông tin và truyền thông, đại học Bách Khoa Hà Nội cùng bạn Đinh Hữu Hải Quân đã giúp đỡ tôi xây dựng hệ thống cross-platform.
+
+Tôi cũng xin cảm ơn các thầy, cô giáo ở viện Công nghệ thông tin và truyền thông và các thầy cô giáo trong trường ĐHBK Hà Nội đã giảng dạy, giúp đỡ tôi trong quá trình học tập tại trường, cho tôi nền tảng kiến thức chuyên môn vững chắc để hoàn thành tốt đồ án này. 
+
+Tuy đã cố gắng rất nhiều để hoàn thành tốt đồ án, nhưng do năng lực bản thân còn hạn chế nên không thể không có những thiếu sót trong đồ án này. Kính mong nhận được sự góp ý của thầy cô và các bạn.
+
+                                
+                                Sinh viên
+
+                            
+
+                            
+                                Đỗ Chí Thành
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mở đầu
+
+Trong xã hội hiện đại, Internet phát triển và sắp tới với sự phổ biến của mạng viễn thông thế hệ 5 (5G) sẽ khiến lĩnh vực IoT phát triển mạnh mẽ hơn. Trong thực tế, hiện tại, IoT đã rất phát triển, theo Gartner, thế giới sẽ có khoảng hơn 20 tỷ thiết bị IoT vào năm 2020 [1], và năm 2017 đã có khoảng 450 IoT Platform theo công ty nghiên cứu thị trường IoT-Analytics của Đức [2]. Một số IoT Platform đóng được dùng phổ biến như Google Cloud Platform, Saleforce IoT Cloud, IBM Wastson IoT, AWS IoT. Ngoài ra, các cộng đồng mã nguồn mở cũng có một số IoT Platform phổ biến như OpenHAB, HomeAssistant, ThingsBoard, ... Sự đa dạng của các IoT platform dẫn tới sự không thống nhất của các dữ liệu được tạo ra từ các platform, do mỗi IoT platform có một cách biểu biểu dữ liệu khác nhau. Do đó, tôi và các bạn Đinh Hữu Hải Quân, Nguyễn Ngọc Hoàn với sự hướng dẫn của anh Hà Quang Dương (học viên cao học) và của thầy Nguyễn Bình Minh đã xây dựng hệ thống cross-platform IoT, đóng vai trò là một driver, giúp chuẩn hóa dữ liệu của các IoT platform khác nhau về một dạng thống nhất. Hệ thống cũng có tính khả mở, cho phép các IoT platform khác có thể tham gia vào hệ thống một cách dễ dàng. 
+
+Sau khi đã có được dữ liệu theo một cấu trúc thống nhất, để sử được dữ liệu thu thập được, đặt ra một bài toán là tìm kiếm dữ liệu. Phương pháp truyền thống là tìm kiếm theo từ khóa xuất hiện, ví dụ câu tìm kiếm "Tìm các đèn trong phòng 609 thư viện Tạ Quang Bửu". Tuy nhiên, phương pháp tìm kiếm theo từ khóa có một nhược điểm là không hiểu được câu tìm kiếm, mà chỉ liệt kê các tài liệu chứa các từ khóa trong câu tìm kiếm. Với ví dụ trên, kết quả mong muốn là tìm kiếm các đèn trong phòng 609 thư viện Tạ Quang Bửu, nhưng kết quả trả về sẽ bao gồm cả các tài liệu về phòng 609 thư viện Tạ Quang Bửu, không phải là kết quả mong muốn. Do đó, tôi thực hiện đề tài "Xây dựng ngôn ngữ truy vấn ngữ nghĩa cho hệ thống cross-platform IoT". Mặc dù ngôn ngữ truy vấn ngữ nghĩa này được thiết kế cho hệ thống cross-platform IoT, tuy nhiên, ta có thể áp dụng với các hệ thống IoT khác một cách tương tự.
+
+
+
+
+
+
+
+Chương 1. Giới thiệu đề tài
+
+1. Giới thiệu về IoT
+
+Internet vạn vật hay mạng lưới vật kết nối, trong đó, các thiết bị, phương tiện, nhà cửa, ... được nhúng các thiết bị điện tử, phần mềm, cảm biến cùng khả năng kết nối tới mạng máy tính giúp cho các thiết bị này có thể thu thập và gửi dữ liệu. Hệ thống IoT cho phép vật được cảm nhận hoặc được điều khiển từ xa thông qua hạ tầng mạng hiện hữu, tạo cơ hội cho thế giới thực được tích hợp trực tiếp hơn vào hệ thống điện toán, hệ quả là hiệu năng, độ tin cậy và lợi ích kinh tế được tăng cường bên cạnh việc giảm thiểu sự can dự của con người. 
+
+1. Nhiệm vụ đề tài
+
+Để xây dựng ngôn ngữ truy vấn ngữ nghĩa cho dữ liệu của hệ thống cross-platform IoT, ta cần xây dựng:
+- Mô hình dữ liệu thống nhất
+    - Cú pháp của ngôn ngữ truy vấn
+    - Cơ chế truy vấn ngữ nghĩa.
+
+2. Cơ lý thuyết
+
+2.1. Ngôn ngữ truy vấn ngữ nghĩa
+
+Truy vấn ngữ nghĩa cho phép máy tính hiểu câu truy vấn và ngữ cảnh của câu truy vấn. Do đó, trả về các kết quả gần với mong muốn của người dùng hơn. Ngôn ngữ truy vấn ngữ nghĩa là ngôn ngữ truy vấn sử dụng truy vấn ngữ nghĩa để lấy dữ liệu nhằm trả lại các kết quả phù hợp với ngữ cảnh của câu truy vấn. Truy vấn ngữ nghĩa dựa trên việc biểu diễn rõ ràng mối quan hệ giữa các dữ liệu. Để biểu diễn mối quan hệ giữa các dữ liệu, người ta dùng Ontology.
+
+2.2. Ontology
+
+Ontology được sử dụng để biểu diễn tri thức trong một lĩnh vực cụ thể. Nó bao gồm cách biểu diễn, cách đặt tên, cách định nghĩa, các thuộc tính và mối quan hệ giữa các khái niệm, dữ liệu, thực thể trong lĩnh vực nó biểu diễn. Việc tạo ra một ontology cho một lĩnh vực sẽ giới hạn độ phức tạp; một ontology được tạo ra sẽ được hi vọng để cải thiện một vấn đề trong lĩnh vực mà nó biểu diễn.
+
+…..
+
+3. Hạ tầng IoT
+
+3.1 Phần cứng
+Các thiết bị IoT được cài đặt trên 3 khu vực trong phòng 609 thư viện Tạ Quang Bửu. Mỗi phòng tương ứng là một smart context; trong mỗi phòng, có một Fog node là một máy tính nhỏ Raspberry Pi 3, cài đặt IoT platform để quản lý các thiết bị trong phòng. Trong mỗi phòng, gồm :
+    - Một cảm biến chuyển động
+    - Một cảm biến ánh sáng
+    - Một cảm biến nhiệt độ, độ ẩm
+    - Ba đèn LED tượng trưng cho ba thiết bị IoT có khả năng thiết lập các trạng thái khác nhau (bật/tắt).
+Để lấy được dữ liệu từ các thiết bị trên, ta sử dụng board vi mạch xử lý Arduino Uno. Tuy nhiên, vi mạch này không có chức năng gửi dữ liệu thông qua mạng wifi, do đó, cần phải lắp thêm module ESP8266 để gửi dữ liệu từ Arduino, qua ESP8266 rồi gửi lên platform.
+
+3.2. Các giao thức sử dụng 
+
+Giao thức được dùng để truyền tải dữ liệu từ ESP8266 lên IoT platform là MQTT thông qua mạng wifi. MQTT (Message Queuing Telemetry Transport) là một giao thức gửi dạng publish/subscribe sử dụng cho các thiết bị IoT với băng thông thấp, độ tin cậy cao và khả năng được sử dụng trong mạng lưới không ổn định. Trong đó, broker được coi như trung tâm, nó là điểm giao của tất cả các kết nối đến từ client. Nhiệm vụ chính của broker là nhận message (gói tin) từ publisher, xếp các message theo hàng đợi rồi chuyển chúng tới một địa chỉ cụ thể. Nhiệm vụ phụ của broker là nó có thể đảm nhận thêm một vài tính năng liên quan tới quá trình truyền thông như: bảo mật message, lưu trữ message, logs,...
+Client thì được chia thành 2 nhóm là publisher và subscriber. Client là các chương trình được thiết kế để có thể hoạt động một cách linh hoạt (lightweight). Client chỉ làm ít nhất một trong 2 việc là publish các message lên một topic cụ thể hoặc subscribe một topic nào đó để nhận message từ topic này.
+
+Các khái niệm đáng chú ý trong giao thức MQTT
+Message
+Trong giao thức MQTT, message còn được gọi là "message payload", có định dạng mặc định là plain-text (chữ viết người đọc được), tuy nhiên người sử dụng có thể cấu hình thành các định dạng khác.
+Topic
+Topic có thể coi như một "đường truyền" logic giữa 2 điểm là publisher và subscriber. Về cơ bản, khi message được publish vào một topic thì tất cả những subscriber của topic đó sẽ nhận được message này.
+
+
+
+Nguồn: https://techmaster.vn/posts/34394/iot-giao-thuc-mqtt-va-ung-dung-trong-iot
+
+Mô hình triển khai:
+
+
+Hệ thống triển khai thực tế :
+//// TODO
+//// TODO
+//// TODO
+//// TODO
+//// TODO
+//// TODO
+
+
+
+
+
+
+
+
+
+Chương 2. Ngôn ngữ truy vấn ngữ nghĩa trong IoT cross-platform
+
+1. Ontology
+
+
+
+
+

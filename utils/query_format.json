@@ -1,39 +1,9 @@
 {
     "select" : "select_value",
     "from" : "from_value",
-    "where" : {
-        "condition" : {
-            "compare" : {
-                "keyword" : "source_id",
-                "comparation" : "=",
-                "expression" : "source_id_1"
-            },
-            "logic" : {
-                "operation" : "AND",
-                "condition_1" : {
-                    "compare" : {
-                        "keyword" : "metric_id",
-                        "comparation" : "=",
-                        "expression" : "metric_id_1"
-                    },
-                    "logic" : {},
-                    "in_bracket" : {}
-                }, 
-                "condition_2" : {
-                    "compare" : {
-                        "keyword" : "platform_id",
-                        "comparation" : "=",
-                        "expression" : "platform_id_1"
-                    },
-                    "logic" : {},
-                    "in_bracket" : {}
-                }
-            }, 
-            "in_bracket" : {}
-        }
-    },
+    "where" : "platform_id=openhab",    
     "Rule" : [
-        {   
+        {
             "if" : "temperature>10",     
             "then" : [    
                 {

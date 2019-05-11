@@ -1,0 +1,74 @@
+{
+    "select" : "value",
+    "from" : "from_value",
+    "where" : {
+        "condition" : {
+            "compare" : {},
+            "logic" : {
+                "operation" : "AND",
+                "condition_1" : {
+                    "compare" : {
+                        "keyword" : "MetricId",
+                        "comparator" : "=",
+                        "expression" : "metric_id_1"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }, 
+                "condition_2" : {
+                    "compare" : {
+                        "keyword" : "value",
+                        "comparator" : "=",
+                        "expression" : "32"
+                    },
+                    "logic" : {},
+                    "in_bracket" : {}
+                }
+            }, 
+            "in_bracket" : {}
+        }
+    },
+    "rule" : {   
+            "if" : {
+                "compare" : {},
+                "logic" : {
+                    "operation" : "AND",
+                    "condition_1" : {
+                        "compare" : {
+                            "keyword" : "MetricId",
+                            "comparator" : "=",
+                            "expression" : "metric_id_1"
+                        },
+                        "logic" : {},
+                        "in_bracket" : {}
+                    }, 
+                    "condition_2" : {
+                        "compare" : {
+                            "keyword" : "value",
+                            "comparator" : "=",
+                            "expression" : "27"
+                        },
+                        "logic" : {},
+                        "in_bracket" : {}
+                    }
+                }, 
+                "in_bracket" : {}
+            },
+            "then" : [
+                {
+                    "MetricId" : "led_id_1",
+                    "value" : "turn on"
+                },
+                {
+                    "MetricId" : "led_id_2",
+                    "value" : "turn off"
+                }
+            ], 
+            "else" : [ 
+                {
+                    "MetricId" : "led_id_3",
+                    "value" : "turn off"
+                }
+            ]
+        }
+}

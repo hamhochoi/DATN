@@ -16,7 +16,7 @@ class Languague():
                 'LocalId', \
                 'SourceName', \
                 # 'has_thing', \
-                # 'has_metric', \
+                'SourceStatus', \
                 'SourceType', \
                 'PlatformId', \
             'Thing', \
@@ -55,7 +55,7 @@ class Languague():
         self.source_level = [
             "Source", "SourceId", \
             "LocalId", "SourceName", \
-            # "has_thing", "has_metric", \
+            "SourceStatus",# "SourceStatus", \
             "SourceType", "PlatformId" \
         ]
         self.thing_level = [

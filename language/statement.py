@@ -10,11 +10,11 @@ class Statement(Languague):
         Languague.__init__(self)
 
 
-    def query_parser():
+    def query():
         pass
 
 
-    def rule_parser(self):
+    def rule(self):
         pass
 
 

@@ -17,7 +17,7 @@ cursor = db.cursor()
 ###########################################################
 # BASE API
 
-def api_get_measurement_from_datapoint_attribute(datapoint_attribute):
+def api_get_measurement_from_datapoint_attribute(datapoint_attribute, datapoint_value):
     metric_ids = api_get_all_metric_id()
     list_measurement = []
 
@@ -28,26 +28,18 @@ def api_get_measurement_from_datapoint_attribute(datapoint_attribute):
         points = results.get_points()
 
         for point in points:
-            if (point['DataType'] == datapoint_attribute or \
-                point['value'] == datapoint_attribute or \
-                str(point['value']) == str(datapoint_attribute) or \
-                point['time'] == datapoint_attribute
+            if (point[datapoint_attribute] == datapoint_value or \
+                str(point[datapoint_attribute]) == str(datapoint_value)
             ):
                 list_measurement.append(metric_id)
 
     return list_measurement
 
 
-def api_get_metric_id_from_metric_attribute(metric_attribute):
+def api_get_metric_id_from_metric_attribute(metric_attribute, metric_value):
     query = 'select MetricId from Metric \
-             where MetricId="{}" or SourceId="{}" or \
-                   MetricName="{}" or MetricType="{}" or \
-                   Unit="{}" or MetricDomain="{}" or \
-                   MetricStatus="{}" or MetricLocalId="{}" ;'\
-                   .format(metric_attribute, metric_attribute, \
-                           metric_attribute, metric_attribute, \
-                           metric_attribute, metric_attribute, \
-                           metric_attribute, metric_attribute)
+             where {}="{}"'.format(metric_attribute, metric_value)
+
     # print (query)
     list_result = []
     
@@ -62,10 +54,9 @@ def api_get_metric_id_from_metric_attribute(metric_attribute):
         traceback.print_exc()
 
 
-def api_get_thing_id_from_thing_attribute(thing_attribute):
+def api_get_thing_id_from_thing_attribute(thing_attribute, thing_value):
     query = 'select ThingGlobalId from Thing \
-             where ThingGlobalId="{}" or ThingName="{}" ;'\
-                   .format(thing_attribute, thing_attribute)
+             where {}="{}"'.format(thing_attribute, thing_value)
     # print (query)
     list_result = []
     
@@ -80,16 +71,9 @@ def api_get_thing_id_from_thing_attribute(thing_attribute):
         traceback.print_exc()
 
 
-def api_get_source_id_from_source_attribute(source_attribute):
+def api_get_source_id_from_source_attribute(source_attribute, source_value):
     query = 'select SourceId from IoTSource \
-             where SourceId="{}" or EndPoint="{}" or \
-                   SourceStatus="{}" or Description="{}" or\
-                   SourceType="{}" or Label="{}" or \
-                   PlatformId="{}" or LocalId="{}" ;'\
-                   .format(source_attribute, source_attribute, \
-                           source_attribute, source_attribute, \
-                           source_attribute, source_attribute, \
-                           source_attribute, source_attribute)
+             where {}="{}"'.format(source_attribute, source_value)
     # print (query)
     list_result = []
     
@@ -104,16 +88,10 @@ def api_get_source_id_from_source_attribute(source_attribute):
         traceback.print_exc()
 
 
-def api_get_platform_id_from_platform_attribute(platform_attribute):
+def api_get_platform_id_from_platform_attribute(platform_attribute, platform_value):
     query = 'select PlatformId from Platform \
-             where PlatformId="{}" or PlatformName="{}" or \
-                   PlatformType="{}" or PlatformHost="{}" or\
-                   PlatformPort="{}" or PlatformStatus="{}" or \
-                   LastResponse="{}" ;'\
-                   .format(platform_attribute, platform_attribute, \
-                           platform_attribute, platform_attribute, \
-                           platform_attribute, platform_attribute, \
-                           platform_attribute)
+             where {}="{}"'.format(platform_attribute, platform_value)
+
     # print (query)
     list_result = []
     
@@ -128,14 +106,10 @@ def api_get_platform_id_from_platform_attribute(platform_attribute):
         traceback.print_exc()
 
 
-def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute):
+def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute, smartcontext_value):
     query = 'select SmartContextId from SmartContext \
-             where SmartContextId="{}" or SmartContextName="{}" or \
-                   ParentSmartContextId="{}" or SubSmartContextId="{}" or\
-                   PlatformId="{}" ;'\
-                   .format(smartcontext_attribute, smartcontext_attribute, \
-                           smartcontext_attribute, smartcontext_attribute, \
-                           smartcontext_attribute)
+             where {}="{}"'.format(smartcontext_attribute, smartcontext_value)
+
     # print (query)
     list_result = []
     
@@ -180,18 +154,17 @@ def api_get_all_datapoint():
 
     metric_ids = api_get_all_metric_id()
     for metric_id in metric_ids:
-        metric_id = metric_id[0]
-        datapoints = api_get_datapoint_from_metric(metric_id)
+        datapoints = api_get_datapoint_from_metric(metric_attr="MetricId", metric_value=metric_id)
         list_datapoints.extend(datapoints)
 
     return list_datapoints
 
 
 def api_get_datapoint_from_measurement(measurement):
-    return api_get_datapoint_from_metric(measurement)
+    return api_get_datapoint_from_metric(metric_attr="MetricId", metric_value=measurement)
 
 
-def api_get_datapoint_from_datapoint_attr(datapoint_attr):
+def api_get_datapoint_from_datapoint_attr(datapoint_attr, datapoint_value):
     metric_ids = api_get_all_metric_id()
     list_point = []
 
@@ -202,17 +175,16 @@ def api_get_datapoint_from_datapoint_attr(datapoint_attr):
         points = results.get_points()
 
         for point in points:
-            if (point['DataType'] == datapoint_attr or \
-                point['value'] == datapoint_attr or \
-                point['time'] == datapoint_attr
+            if (point[datapoint_attr] == datapoint_value or \
+                str(point[datapoint_attr]) == str(datapoint_value)
             ):
-                list_point.append(point)
+                list_point.append(tuple(point.values()))
         
     return list_point
 
 
-def api_get_datapoint_from_metric(metric_attr):
-    metric_ids = api_get_metric_id_from_metric_attribute(metric_attr)
+def api_get_datapoint_from_metric(metric_attr, metric_value):
+    metric_ids = api_get_metric_id_from_metric_attribute(metric_attr, metric_value)
     list_point = []
     # print (metric_ids)
 
@@ -223,18 +195,18 @@ def api_get_datapoint_from_metric(metric_attr):
         points = results.get_points()
 
         for point in points:
-            list_point.append(point)
+            list_point.append(tuple(point.values()))
 
     return list_point
 
 
-def api_get_datapoint_from_source(source_attr):
+def api_get_datapoint_from_source(source_attr, source_value):
     list_datapoints = []
 
-    metrics = api_get_metric_from_source(source_attr)
+    metrics = api_get_metric_from_source(source_attr, source_value)
     for metric in metrics:
         metric_id = metric[0]
-        datapoints = api_get_datapoint_from_metric(metric_id)
+        datapoints = api_get_datapoint_from_metric(metric_attr="MetricId", metric_value=metric_id)
         # print (datapoints)
         if (datapoints != []):
             list_datapoints.extend(datapoints)
@@ -242,41 +214,41 @@ def api_get_datapoint_from_source(source_attr):
     return list_datapoints
 
 
-def api_get_datapoint_from_thing(thing_attr):
+def api_get_datapoint_from_thing(thing_attr, thing_value):
     list_datapoints = []
-    sources = api_get_source_from_thing(thing_attr)
+    sources = api_get_source_from_thing(thing_attr, thing_value)
 
     for source in sources:
         source_id = source[0]
-        datapoints = api_get_datapoint_from_source(source_id)
+        datapoints = api_get_datapoint_from_source(source_attr="SourceId", source_value=source_id)
         list_datapoints.extend(datapoints)
     
     # print (list_datapoints)
     return list_datapoints
 
 
-def api_get_datapoint_from_platform(platform_attr):
+def api_get_datapoint_from_platform(platform_attr, platform_value):
     list_datapoints = []
-    sources = api_get_source_from_platform(platform_attr)
+    sources = api_get_source_from_platform(platform_attr, platform_value)
 
     for source in sources:
         source_id = source[0]
-        datapoints = api_get_datapoint_from_source(source_id)
+        datapoints = api_get_datapoint_from_source(source_attr="SourceId", source_value=source_id)
         list_datapoints.extend(datapoints)
     
     # print (list_datapoints)
     return list_datapoints
 
 
-def api_get_datapoint_from_smartcontext(smartcontext_attr):
+def api_get_datapoint_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_datapoints = []
+    platforms = api_get_platform_from_smartcontext(smartcontext_attr, smartcontext_value)
 
-    platforms = api_get_platform_from_smartcontext(smartcontext_attr)
     # print (platforms)
     for platform in platforms:
         platform_id = platform[0]
         # print (platform_id)
-        datapoints = api_get_datapoint_from_platform(platform_id)
+        datapoints = api_get_datapoint_from_platform(platform_attr="PlatformId", platform_value=platform_id)
         list_datapoints.extend(datapoints)
 
     # print (list_datapoints)
@@ -324,8 +296,8 @@ def api_get_all_metric_id():
         traceback.print_exc()
 
 
-def api_get_metric_from_datapoint(datapoint_attr):
-    measurements = api_get_measurement_from_datapoint_attribute(datapoint_attr)
+def api_get_metric_from_datapoint(datapoint_attr, datapoint_value):
+    measurements = api_get_measurement_from_datapoint_attribute(datapoint_attr, datapoint_value)
     list_metric = []
 
     for measurement in measurements:
@@ -345,20 +317,10 @@ def api_get_metric_from_datapoint(datapoint_attr):
     return list_metric
 
 
-def api_get_metric_from_metric_attr(metric_attr):
+def api_get_metric_from_metric_attr(metric_attr, metric_value):
     query = 'select * from Metric \
-             where MetricId="{}" or \
-                   SourceId="{}" or \
-                   MetricName="{}" or \
-                   MetricType="{}" or \
-                   Unit="{}" or \
-                   MetricDomain="{}" or \
-                   MetricStatus="{}" or \
-                   MetricLocalId="{}"'\
-                   .format(metric_attr, metric_attr, \
-                           metric_attr, metric_attr, \
-                           metric_attr, metric_attr, \
-                           metric_attr, metric_attr)
+             where {}="{}"'.format(metric_attr, metric_value)
+
     # print (query)
     list_result = []
 
@@ -373,24 +335,24 @@ def api_get_metric_from_metric_attr(metric_attr):
         traceback.print_exc()
 
 
-def api_get_metric_from_thing(thing_attr):
+def api_get_metric_from_thing(thing_attr, thing_value):
     list_metrics = []
-    sources = api_get_source_from_thing(thing_attr)
+    sources = api_get_source_from_thing(thing_attr, thing_value)
     # print (sources)
 
     for source in sources:
         source_id = source[0]
         # print (source_id)
-        metrics = api_get_metric_from_source(source_id)
+        metrics = api_get_metric_from_source(source_attr="SourceId", source_value=source_id)
         list_metrics.extend(metrics)
 
     # print (list_metrics)
     return list(set(list_metrics))
 
 
-def api_get_metric_from_source(source_attr):
+def api_get_metric_from_source(source_attr, source_value):
     list_metric = []
-    source_ids = api_get_source_id_from_source_attribute(source_attr)
+    source_ids = api_get_source_id_from_source_attribute(source_attr, source_value)
 
     for source_id in source_ids:
         try:
@@ -405,30 +367,29 @@ def api_get_metric_from_source(source_attr):
     return list(set(list_metric))
 
 
-def api_get_metric_from_platform(platform_attr):
+def api_get_metric_from_platform(platform_attr, platform_value):
     list_metrics = []
 
-    sources = api_get_source_from_platform(platform_attr)
+    sources = api_get_source_from_platform(platform_attr, platform_value)
     for source in sources:
         source_id = source[0]
-        metrics = api_get_metric_from_source(source_id)
+        metrics = api_get_metric_from_source(source_attr="SourceId", source_value=source_id)
         list_metrics.extend(metrics)
 
     # print (list_metrics)
     return list(set(list_metrics))
 
 
-def api_get_metric_from_smartcontext(smartcontext_attr):
+def api_get_metric_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_metrics = []
+    smartcontexts = api_get_smartcontext_from_smartcontext_attr(smartcontext_attr, smartcontext_value)
 
-    sub_smartcontexts = api_get_sub_smartcontext_from_parent_smartcontext(smartcontext_attr)
-
-    for smartcontext in sub_smartcontexts:
+    for smartcontext in smartcontexts:
         smartcontext_id = smartcontext[0]
-        platforms = api_get_platform_from_smartcontext(smartcontext_id)
+        platforms = api_get_platform_from_smartcontext(smartcontext_attr="SmartContextId", smartcontext_value=smartcontext_id)
         for platform in platforms:
             platform_id = platform[0]
-            metrics = api_get_metric_from_platform(platform_id)
+            metrics = api_get_metric_from_platform(platform_attr="PlatformId", platform_value=platform_id)
             list_metrics.extend(metrics)
 
     # print (list_metrics)
@@ -476,38 +437,35 @@ def api_get_all_thing_id():
         traceback.print_exc()
 
 
-def api_get_thing_from_datapoint(datapoint_attr):
+def api_get_thing_from_datapoint(datapoint_attr, datapoint_value):
     list_thing = []
-    metric_ids = api_get_metric_from_datapoint(datapoint_attr)
+    metric_ids = api_get_metric_from_datapoint(datapoint_attr, datapoint_value)
     # print (metric_ids)
 
     for metric_id in metric_ids:
         metric_id = metric_id[0]
-        result = api_get_thing_from_metric(metric_id)
+        result = api_get_thing_from_metric(metric_attr="MetricId", metric_value=metric_id)
         list_thing.extend(result)
 
     return list_thing
 
 
-def api_get_thing_from_metric(metric_attr):
+def api_get_thing_from_metric(metric_attr, metric_value):
     list_things = []
 
-    sources = api_get_source_from_metric(metric_attr)
+    sources = api_get_source_from_metric(metric_attr, metric_value)
     for source in sources:
         source_id = source[0]
-        things = api_get_thing_from_source(source_id)
+        things = api_get_thing_from_source(source_attr="SourceId", source_value=source_id)
         list_things.extend(things)
-
 
     # print (list_things)
     return list(set(list_things)) 
 
 
-def api_get_thing_from_thing_attr(thing_attr):
+def api_get_thing_from_thing_attr(thing_attr, thing_value):
     query = 'select * from Thing \
-             where ThingGlobalId="{}" or \
-                   Thingname="{}"'\
-                   .format(thing_attr, thing_attr)
+             where {}="{}"'.format(thing_attr, thing_value)
     # print (query)
     list_result = []
     
@@ -522,8 +480,8 @@ def api_get_thing_from_thing_attr(thing_attr):
         traceback.print_exc()
 
 
-def api_get_thing_from_source(source_attr):
-    source_ids = api_get_source_id_from_source_attribute(source_attr)
+def api_get_thing_from_source(source_attr, source_value):
+    source_ids = api_get_source_id_from_source_attribute(source_attr, source_value)
     list_thing = []
 
     for source_id in source_ids:
@@ -543,13 +501,13 @@ def api_get_thing_from_source(source_attr):
     return list(set(list_thing))
 
 
-def api_get_thing_from_platform(platform_attr):
+def api_get_thing_from_platform(platform_attr, platform_value):
     list_things = []
 
-    sources = api_get_source_from_platform(platform_attr)
+    sources = api_get_source_from_platform(platform_attr, platform_value)
     for source in sources:
         source_id = source[0]
-        things = api_get_thing_from_source(source_id)
+        things = api_get_thing_from_source(source_attr="SourceId", source_value=source_id)
         list_things.extend(things)
 
 
@@ -557,18 +515,17 @@ def api_get_thing_from_platform(platform_attr):
     return list(set(list_things)) 
 
 
-def api_get_thing_from_smartcontext(smartcontext_attr):
+def api_get_thing_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_things = []
+    smartcontexts = api_get_smartcontext_from_smartcontext_attr(smartcontext_attr, smartcontext_value)
 
-    sub_smartcontexts = api_get_sub_smartcontext_from_parent_smartcontext(smartcontext_attr)
-    for smartcontext in sub_smartcontexts:
+    for smartcontext in smartcontexts:
         smartcontext_id = smartcontext[0]
-        platforms = api_get_platform_from_smartcontext(smartcontext_id)
+        platforms = api_get_platform_from_smartcontext(smartcontext_attr="SmartContextId", smartcontext_value=smartcontext_id)
         for platform in platforms:
             platform_id = platform[0]
-            things = api_get_thing_from_platform(platform_id)
+            things = api_get_thing_from_platform(platform_attr="PlatformId", platform_value=platform_id)
             list_things.extend(things)
-
     
     return list(set(list_things))
 
@@ -613,19 +570,19 @@ def api_get_all_source_id():
         traceback.print_exc()
 
 
-def api_get_source_from_datapoint(datapoint_attr):
+def api_get_source_from_datapoint(datapoint_attr, datapoint_value):
     list_source = []
-    metric_ids = api_get_metric_from_datapoint(datapoint_attr)
+    metric_ids = api_get_metric_from_datapoint(datapoint_attr, datapoint_value)
     for metric_id in metric_ids:
         metric_id = metric_id[0]
-        result = api_get_source_from_metric(metric_id)
+        result = api_get_source_from_metric(metric_attr="MetricId", metric_value=metric_id)
         list_source.extend(result)
 
     return list_source
 
 
-def api_get_source_from_metric(metric_attr):
-    metric_ids = api_get_metric_id_from_metric_attribute(metric_attr)
+def api_get_source_from_metric(metric_attr, metric_value):
+    metric_ids = api_get_metric_id_from_metric_attribute(metric_attr, metric_value)
     list_source = []
 
     for metric_id in metric_ids:
@@ -646,8 +603,8 @@ def api_get_source_from_metric(metric_attr):
     return list(set(list_source))
 
 
-def api_get_source_from_thing(thing_attr):
-    thing_ids = api_get_thing_id_from_thing_attribute(thing_attr)
+def api_get_source_from_thing(thing_attr, thing_value):
+    thing_ids = api_get_thing_id_from_thing_attribute(thing_attr, thing_value)
     list_source = []
 
     for thing_id in thing_ids:
@@ -669,20 +626,9 @@ def api_get_source_from_thing(thing_attr):
     return list(set(list_source))
 
 
-def api_get_source_from_source_attr(source_attr):
+def api_get_source_from_source_attr(source_attr, source_value):
     query = 'select * from IoTSource \
-             where SourceId="{}" or \
-                   EndPoint="{}" or \
-                   SourceStatus="{}" or \
-                   Description="{}" or \
-                   SourceType="{}" or \
-                   Label="{}" or \
-                   PlatformId="{}" or \
-                   LocalId="{}"'\
-                   .format(source_attr, source_attr, \
-                           source_attr, source_attr, \
-                           source_attr, source_attr, \
-                           source_attr, source_attr)
+             where {}="{}"'.format(source_attr, source_value)
     # print (query)
     list_result = []
     
@@ -697,8 +643,8 @@ def api_get_source_from_source_attr(source_attr):
         traceback.print_exc()
 
 
-def api_get_source_from_platform(platform_attr):
-    platform_ids = api_get_platform_id_from_platform_attribute(platform_attr)
+def api_get_source_from_platform(platform_attr, platform_value):
+    platform_ids = api_get_platform_id_from_platform_attribute(platform_attr, platform_value)
     list_source = []
     
     for platform_id in platform_ids:
@@ -720,19 +666,17 @@ def api_get_source_from_platform(platform_attr):
     return list(set(list_source))
 
 
-def api_get_source_from_smartcontext(smartcontext_attr):
+def api_get_source_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_sources = []
-    sub_smartcontexts = api_get_sub_smartcontext_from_parent_smartcontext(smartcontext_attr)
+    smartcontexts = api_get_smartcontext_from_smartcontext_attr(smartcontext_attr, smartcontext_value)
     
-    for smartcontext in sub_smartcontexts:
+    for smartcontext in smartcontexts:
         smartcontext_id = smartcontext[0]
-
-        platforms = api_get_platform_from_smartcontext(smartcontext_id)
+        platforms = api_get_platform_from_smartcontext(smartcontext_attr, smartcontext_value)
         for platform in platforms:
             platform_id = platform[0]
-            sources = api_get_source_from_platform(platform_id)
+            sources = api_get_source_from_platform(platform_attr="PlatformId", platform_value=platform_id)
             list_sources.extend(sources)
-
 
     return list(set(list_sources))
 
@@ -775,47 +719,47 @@ def api_get_all_platform_id():
         traceback.print_exc()
 
 
-def api_get_platform_from_datapoint(datapoint_attr):
-    metric_ids = api_get_metric_from_datapoint(datapoint_attr)
+def api_get_platform_from_datapoint(datapoint_attr, datapoint_value):
+    metric_ids = api_get_metric_from_datapoint(datapoint_attr, datapoint_value)
     list_platform = []
 
     for metric_id in metric_ids:
         metric_id = metric_id[0]
-        result = api_get_platform_from_metric(metric_id)
+        result = api_get_platform_from_metric(metric_attr="MetricId", metric_value=metric_id)
         list_platform.extend(result)
 
     return list_platform
 
 
-def api_get_platform_from_metric(metric_attr):
+def api_get_platform_from_metric(metric_attr, metric_value):
     list_platforms = []
-    sources = api_get_source_from_metric(metric_attr)
+    sources = api_get_source_from_metric(metric_attr, metric_value)
     # print (sources)
 
     for source in sources:
         source_id = source[0]
         # print (source_id)
-        platforms = api_get_platform_from_source(source_id)
+        platforms = api_get_platform_from_source(source_attr="SourceId", source_value=source_id)
         list_platforms.extend(platforms)
 
     return list(set(list_platforms))
 
 
-def api_get_platform_from_thing(thing_attr):
+def api_get_platform_from_thing(thing_attr, thing_value):
     list_platforms = []
 
-    sources = api_get_source_from_thing(thing_attr)
+    sources = api_get_source_from_thing(thing_attr, thing_value)
     for source in sources:
         source_id = source[0]
-        platforms = api_get_platform_from_source(source_id)
+        platforms = api_get_platform_from_source(source_attr="SourceId", source_value=source_id)
         list_platforms.extend(platforms)
 
     return list(set(list_platforms))
 
 
-def api_get_platform_from_source(source_attr):
+def api_get_platform_from_source(source_attr, source_value):
     list_platform = []
-    source_ids = api_get_source_id_from_source_attribute(source_attr)
+    source_ids = api_get_source_id_from_source_attribute(source_attr, source_value)
 
     for source_id in source_ids:
         query = 'select Platform.PlatformId, PlatformName, PlatformType, \
@@ -836,19 +780,10 @@ def api_get_platform_from_source(source_attr):
     return list(set(list_platform))
 
 
-def api_get_platform_from_platform_attr(platform_attr):
+def api_get_platform_from_platform_attr(platform_attr, platform_value):
     query = 'select * from  Platform\
-             where PlatformId="{}" or \
-                   PlatformName="{}" or \
-                   PlatformType="{}" or \
-                   PlatformHost="{}" or \
-                   PlatformPort="{}" or \
-                   PlatformStatus="{}" or \
-                   LastResponse="{}"' \
-                   .format(platform_attr, platform_attr, \
-                           platform_attr, platform_attr, \
-                           platform_attr, platform_attr, \
-                           platform_attr)
+             where {}="{}"'.format(platform_attr, platform_value)
+
     # print (query)
     list_result = []
     
@@ -863,9 +798,9 @@ def api_get_platform_from_platform_attr(platform_attr):
         traceback.print_exc()
 
 
-def api_get_platform_from_smartcontext(smartcontext_attr):
+def api_get_platform_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_platforms = []
-    smartcontext_ids = api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attr)
+    smartcontext_ids = api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attr, smartcontext_value)
 
     for smartcontext_id in smartcontext_ids:
         query = 'select Platform.PlatformId, PlatformName, PlatformType, \
@@ -945,56 +880,56 @@ def api_get_all_smartcontext_id():
         traceback.print_exc()
 
 
-def api_get_smartcontext_from_datapoint(datapoint_attr):
-    measurements = api_get_measurement_from_datapoint_attribute(datapoint_attr)
+def api_get_smartcontext_from_datapoint(datapoint_attr, datapoint_value):
+    measurements = api_get_measurement_from_datapoint_attribute(datapoint_attr, datapoint_value)
     list_smartcontext = []
 
     for measurement in measurements:
-        results = api_get_smartcontext_from_metric(measurement)
+        results = api_get_smartcontext_from_metric(metric_attr="MetricId", metric_value=measurement)
         list_smartcontext.extend(results)
 
     return list_smartcontext
 
 
-def api_get_smartcontext_from_metric(metric_attr):
+def api_get_smartcontext_from_metric(metric_attr, metric_value):
     list_smartcontexts = []
 
-    platforms = api_get_platform_from_metric(metric_attr)
+    platforms = api_get_platform_from_metric(metric_attr, metric_value)
     for platform in platforms:
         platform_id = platform[0]
-        smartcontexts = api_get_smartcontext_from_platform(platform_id)
+        smartcontexts = api_get_smartcontext_from_platform(platform_attr="PlatformId", platform_value=platform_id)
         list_smartcontexts.extend(smartcontexts)
 
     return list(set(list_smartcontexts))
 
 
-def api_get_smartcontext_from_thing(thing_attr):
+def api_get_smartcontext_from_thing(thing_attr, thing_value):
     list_smartcontexts = []
-
-    platforms = api_get_platform_from_thing(thing_attr)
+    platforms = api_get_platform_from_thing(thing_attr, thing_value)
+    
     for platform in platforms:
         platform_id = platform[0]
-        smartcontexts = api_get_smartcontext_from_platform(platform_id)
+        smartcontexts = api_get_smartcontext_from_platform(platform_attr="PlatformId", platform_value=platform_id)
         list_smartcontexts.extend(smartcontexts)
 
     return list(set(list_smartcontexts))
 
 
-def api_get_smartcontext_from_source(source_attr):
+def api_get_smartcontext_from_source(source_attr, source_value):
     list_smartcontexts = []
-    platforms = api_get_platform_from_source(source_attr)
+    platforms = api_get_platform_from_source(source_attr, source_value)
     # print len(platforms)
 
     for platform in platforms:
         platform_id = platform[0]
-        smartcontexts = api_get_smartcontext_from_platform(platform_id)
+        smartcontexts = api_get_smartcontext_from_platform(platform_attr="SourceId", platform_value=platform_id)
         list_smartcontexts.extend(smartcontexts)
 
     return list(set(list_smartcontexts))
 
 
-def api_get_smartcontext_from_platform(platform_attr):
-    platform_ids = api_get_platform_id_from_platform_attribute(platform_attr)
+def api_get_smartcontext_from_platform(platform_attr, platform_value):
+    platform_ids = api_get_platform_id_from_platform_attribute(platform_attr, platform_value)
     list_smartcontexts = []
 
     for platform_id in platform_ids:
@@ -1022,16 +957,10 @@ def api_get_smartcontext_from_platform(platform_attr):
     return list(set(list_smartcontexts))
 
 
-def api_get_smartcontext_from_smartcontext_attr(smartcontext_attr):
+def api_get_smartcontext_from_smartcontext_attr(smartcontext_attr, smartcontext_value):
     query = 'select * from SmartContext \
-             where SmartContextId="{}" or \
-                   SmartContextName="{}" or \
-                   ParentSmartContextId="{}" or \
-                   SubSmartContextId="{}" or \
-                   PlatformId="{}"'\
-                   .format(smartcontext_attr, smartcontext_attr, \
-                           smartcontext_attr, smartcontext_attr, \
-                           smartcontext_attr)
+             where {}="{}"'.format(smartcontext_attr, smartcontext_value)
+
     # print (query)
     list_result = []
     
@@ -1118,63 +1047,63 @@ def api_get_parent_smartcontext_from_sub_smartcontext(sub_smartcontext_id):
 
 
 if __name__ == "__main__":
-    # x = api_get_all_datapoint()
+    x = api_get_all_datapoint()
     # x = api_get_all_metric_id()
     # x = api_get_all_thing_id()
     # x = api_get_all_source_id()
     # x = api_get_all_platform_id()
     # x = api_get_all_smartcontext_id()
 
-    # x = api_get_datapoint_from_datapoint_attr('int')
-    # x = api_get_metric_from_metric_attr('source_id_1')
-    # x = api_get_thing_from_thing_attr('Temperature')
-    # x = api_get_source_from_source_attr('platform_id_1')
-    # x = api_get_platform_from_platform_attr('OpenHAB1')
-    # x = api_get_smartcontext_from_smartcontext_attr('smartcontext_id_1')
+    # x = api_get_datapoint_from_datapoint_attr('DataType', 'int')
+    # x = api_get_metric_from_metric_attr('SourceId', 'source_id_1')
+    # x = api_get_thing_from_thing_attr('ThingName', 'Temperature')
+    # x = api_get_source_from_source_attr('PlatformId', 'platform_id_1')
+    # x = api_get_platform_from_platform_attr('PlatformName', 'OpenHAB1')
+    # x = api_get_smartcontext_from_smartcontext_attr('SmartContextName', 'HPCC')
 
-    # x = api_get_measurement_from_datapoint_attribute('int')
-    # x = api_get_metric_id_from_metric_attribute('Temperature')
-    # x = api_get_thing_id_from_thing_attribute('Temperature')
-    # x = api_get_source_id_from_source_attribute('active')
-    # x = api_get_platform_id_from_platform_attribute('8080')
-    # x = api_get_smartcontext_id_from_smartcontext_attribute('HPCC')
+    # x = api_get_measurement_from_datapoint_attribute('DataType', 'int')
+    # x = api_get_metric_id_from_metric_attribute('MetricName', 'Temperature')
+    # x = api_get_thing_id_from_thing_attribute('ThingName' , 'Temperature')
+    # x = api_get_source_id_from_source_attribute('SourceStatus', 'active')
+    # x = api_get_platform_id_from_platform_attribute('PlatformPort' , '8080')
+    # x = api_get_smartcontext_id_from_smartcontext_attribute('SmartContextName', 'HPCC')
 
-    # x = api_get_datapoint_from_metric('Temperature')
-    # x = api_get_metric_from_datapoint('int')
-    # x = api_get_metric_from_source('Thing')
-    # x = api_get_source_from_metric('Temperature')
-    # x = api_get_source_from_platform(8080)
-    # x = api_get_platform_from_source('Thing')
-    # x = api_get_thing_from_source('Thing')
-    # x = api_get_source_from_thing('Temperature')
-    # x = api_get_platform_from_smartcontext('HPCC')
-    # x = api_get_smartcontext_from_platform(8080)
+    # x = api_get_datapoint_from_metric('MetricName', 'Temperature')
+    # x = api_get_metric_from_datapoint('DataType', 'int')
+    # x = api_get_metric_from_source('SourceType', 'Thing')
+    # x = api_get_source_from_metric('MetricName', 'Temperature')
+    # x = api_get_source_from_platform('PlatformPort', 8080)
+    # x = api_get_platform_from_source('SourceType', 'Thing')
+    # x = api_get_thing_from_source('SourceType', 'Thing')
+    # x = api_get_source_from_thing('ThingName', 'Temperature')
+    # x = api_get_platform_from_smartcontext('SmartContextName', 'HPCC')
+    # x = api_get_smartcontext_from_platform('PlatformPort', 8080)
     # x = api_get_sub_smartcontext_from_parent_smartcontext('smartcontext_id_1')
     # x = api_get_parent_smartcontext_from_sub_smartcontext('smartcontext_id_2')
 
-    # x = api_get_datapoint_from_source('active')
-    # x = api_get_datapoint_from_thing('Temperature')
-    # x = api_get_datapoint_from_platform(8080)
-    # x = api_get_datapoint_from_smartcontext('parent_parent_smartcontext_id_1')
+    # x = api_get_datapoint_from_source('SourceStatus', 'active')
+    # x = api_get_datapoint_from_thing('ThingName', 'Temperature')
+    # x = api_get_datapoint_from_platform('PlatformPort', 8080)
+    # x = api_get_datapoint_from_smartcontext('SmartContextId', 'parent_parent_smartcontext_id_1')
 
-    # x = api_get_metric_from_thing('Temperature')
-    # x = api_get_metric_from_platform(8080)
-    # x = api_get_metric_from_smartcontext('smartcontext_id_1')
+    # x = api_get_metric_from_thing('ThingName', 'Temperature')
+    # x = api_get_metric_from_platform('PlatformPort', 8080)
+    # x = api_get_metric_from_smartcontext('SmartContextId', 'smartcontext_id_1')
     
-    # x = api_get_thing_from_datapoint(32)
-    # x = api_get_thing_from_platform(8080)
-    # x = api_get_thing_from_smartcontext('smartcontext_id_1')
-    # x = api_get_thing_from_metric('active')
+    # x = api_get_thing_from_datapoint('value', 32)
+    # x = api_get_thing_from_platform('PlatformPort', 8080)
+    # x = api_get_thing_from_smartcontext('SmartContextId', 'smartcontext_id_1')
+    # x = api_get_thing_from_metric('MetricStatus', 'active')
 
-    x = api_get_source_from_smartcontext('HPCC')
+    # x = api_get_source_from_smartcontext('SmartContextName', 'HPCC')
 
-    # x = api_get_platform_from_metric('Temperature')
-    # x = api_get_platform_from_thing('Temperature')
+    # x = api_get_platform_from_metric('MetricName', 'Temperature')
+    # x = api_get_platform_from_thing('ThingName', 'Temperature')
 
-    # x = api_get_smartcontext_from_source('active')
-    # x = api_get_smartcontext_from_thing("source_id_6")
-    # x = api_get_smartcontext_from_metric('metric_local_id_2')
-    # x = api_get_smartcontext_from_datapoint('int')
+    # x = api_get_smartcontext_from_source('SourceStatus', 'active')
+    # x = api_get_smartcontext_from_thing('ThingGlobalId', "source_id_6")
+    # x = api_get_smartcontext_from_metric('MetricLocalId', 'metric_local_id_2')
+    # x = api_get_smartcontext_from_datapoint('DataType', 'int')
 
 
     print (x)
