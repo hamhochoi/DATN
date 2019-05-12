@@ -590,42 +590,42 @@ if __name__ == "__main__":
     # x = api_get_metric_from_metric_attr("MetricId", 'humidity_homeassistant')
     # x = api_get_source_from_source_attr("SourceId", 'motion_openhab')
     # x = api_get_platform_from_platform_attr("PlatformId", 'openhab_id')
-    # x = api_get_smartcontext_from_smartcontext_attr('smartcontext_name', 'phong_sinh_vien')
+    # x = api_get_smartcontext_from_smartcontext_attr('SmartContextName', 'phong_sinh_vien')
 
-    # x = api_get_datapoint_id_from_datapoint_attribute('data_type', 'int')
-    # x = api_get_metric_id_from_metric_attribute('metric_name', 'temperature_phong_may_chu')
-    # x = api_get_source_id_from_source_attribute('source_status', 'active')
-    # x = api_get_platform_id_from_platform_attribute('platform_port' , '8080')
-    # x = api_get_smartcontext_id_from_smartcontext_attribute('smartcontext_name', 'HPCC')
+    # x = api_get_datapoint_id_from_datapoint_attribute('DatapointId', 'humidity_homeassistant_datapoint')
+    # x = api_get_metric_id_from_metric_attribute('MetricName', 'temperature_phong_may_chu')
+    # x = api_get_source_id_from_source_attribute('SourceStatus', 'active')
+    # x = api_get_platform_id_from_platform_attribute('PlatformPort', '8080')
+    # x = api_get_smartcontext_id_from_smartcontext_attribute('SmartContextName', 'HPCC')
 
     # x = api_get_datapoint_from_metric("MetricId", 'humidity_thingsboard')
-    # x = api_get_metric_from_datapoint('data_type', 'float')
-    # x = api_get_metric_from_source('source_type', 'thing')
+    # x = api_get_metric_from_datapoint('DataType', 'float')
+    # x = api_get_metric_from_source('SourceType', 'thing')
     # x = api_get_source_from_metric("MetricId", 'humidity_homeassistant')
-    # x = api_get_source_from_platform('platform_port', "8080")
-    # x = api_get_platform_from_source('source_type', 'thing')
-    # x = api_get_platform_from_smartcontext('smartcontext_name', 'HPCC')
-    # x = api_get_smartcontext_from_platform('platform_port', "8123")
+    # x = api_get_source_from_platform('PlatformPort', "8080")
+    # x = api_get_platform_from_source('SourceType', 'thing')
+    # x = api_get_platform_from_smartcontext('SmartContextName', 'HPCC')
+    # x = api_get_smartcontext_from_platform('PlatformPort', "8123")
     # x = api_get_sub_smartcontext_from_parent_smartcontext('HPCC_id')
     # x = api_get_parent_smartcontext_from_sub_smartcontext('phong_sinh_vien_id')
 
-    # x = api_get_datapoint_from_source('source_status', 'active')
-    # x = api_get_datapoint_from_platform('platform_port', "8080")
+    # x = api_get_datapoint_from_source('SourceStatus', 'active')
+    # x = api_get_datapoint_from_platform('PlatformPort', "8080")
     # x = api_get_datapoint_from_smartcontext("SmartContextId", 'phong_can_bo_id')
 
-    # x = api_get_metric_from_platform('platform_port', "8080")
+    # x = api_get_metric_from_platform('PlatformPort', "8080")
     # x = api_get_metric_from_smartcontext("SmartContextId", 'HPCC_id')
     
 
-    # x = api_get_source_from_smartcontext('smartcontext_name', 'phong_sinh_vien')
-    x = api_get_source_from_datapoint('value', '64.0')
+    # x = api_get_source_from_smartcontext('SmartContextName', 'phong_sinh_vien')
+    # x = api_get_source_from_datapoint('value', '64.0')
     
 
     # x = api_get_platform_from_metric("MetricId", 'light_openhab')
 
-    # x = api_get_smartcontext_from_source('source_status', 'active')
+    # x = api_get_smartcontext_from_source('SourceStatus', 'active')
     # x = api_get_smartcontext_from_metric("MetricId", 'humidity_thingsboard')
-    # x = api_get_smartcontext_from_datapoint('DataType', 'int')
+    x = api_get_smartcontext_from_datapoint('DataType', 'int')
 
 
     print (x)

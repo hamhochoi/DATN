@@ -167,6 +167,7 @@ if __name__ == "__main__":
     with open(os.getcwd()  + '/utils/statement_format.json', 'r') as json_file:
         query = json.load(json_file)
         select_value = query['select']
+        # print (select_value)
         where_condition = query['where']['condition']
 
         _, resutl = Query().query(select_value, where_condition)
