@@ -1,0 +1,11 @@
+{
+    "MetricId" : "motion_openhab",
+    "MetricLocalId" : "motion_metric_id",
+    "MetricStatus" : "active",
+    "MetricName" : "motion_phong_sinh_vien",
+    "CanSetState" : "false",
+    "MetricType" : "gauge",
+    "Unit" : "",
+    "MetricDomain" : "sensor",
+    "HasDatapoint" : "motion_openhab_datapoint"
+}

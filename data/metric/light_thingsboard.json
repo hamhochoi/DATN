@@ -1,0 +1,11 @@
+{
+    "MetricId" : "light_thingsboard",
+    "MetricLocalId" : "light_metric_id",
+    "MetricStatus" : "active",
+    "MetricName" : "light_phong_can_bo",
+    "CanSetState" : "false",
+    "MetricType" : "gauge",
+    "Unit" : "",
+    "MetricDomain" : "sensor",
+    "HasDatapoint" : "light_thingsboard_datapoint"
+}

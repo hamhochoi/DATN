@@ -1,0 +1,10 @@
+{
+    "SourceId" : "temperature-humidity-light_homeassistant",
+    "EndPoint" : "http://192.168.0.199:8123/source",
+    "SourceStatus" : "active",
+    "Description" : "",
+    "SourceType" : "thing",
+    "Label" : "sensor",
+    "LocalId" : "temperature-humidity-light_id",
+    "HasMetric" : ["temperature_homeassistant", "humidity_homeassistant", "light_homeassistant"]
+}

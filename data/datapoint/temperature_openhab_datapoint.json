@@ -1,0 +1,6 @@
+{
+    "DatapointId" : "temperature_openhab_datapoint",
+    "DataType" : "float",
+    "value" : "25.0",
+    "time" : "15:00:00-12-05-2019"
+}

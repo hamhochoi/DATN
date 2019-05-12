@@ -1,0 +1,6 @@
+{
+    "DatapointId" : "light_thingsboard_datapoint",
+    "DataType" : "int",
+    "value" : "0",
+    "time" : "15:00:00-12-05-2019"
+}

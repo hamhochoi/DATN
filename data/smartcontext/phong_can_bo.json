@@ -1,0 +1,7 @@
+{
+    "SmartContextId"      : "phong_can_bo_id",
+    "SmartContextName"    : "phong_can_bo",
+    "ParentSmartContextId" : ["HPCC_id"],
+    "SubSmartContextId" : [],
+    "HasPlatform" : ["thingsboard_id"]
+}

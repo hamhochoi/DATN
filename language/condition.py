@@ -14,9 +14,24 @@ class Condition(Languague):
     def __init__(self):
         Languague.__init__(self)
 
-    
-    def condition_parser(self):
-        pass
+    def intersection(self, a, b):
+        # get intersect 2 lists
+        result = []
+        for x in a:
+            if (x in b):
+                result.append(x)
+
+        return result
+
+
+    def union(self, a, b):
+        # get union of 2 lists
+        result = a
+        for x in b:
+            if (x not in a):
+                result.append(x)
+
+        return result
 
 
     def check_keyword_syntax_valid(self, keyword):
@@ -80,6 +95,7 @@ class Condition(Languague):
 
         # CHECK SEMANTIC
         keyword_level = self.get_level(keyword)
+
         # print (comparator)
         # print ("keyword level: {}".format(keyword_level))
         # print ("object level : {}".format(object_to_check_level))
@@ -117,7 +133,6 @@ class Condition(Languague):
                 else:
                     return False, None
             elif (keyword_level == 2):  # keyword == source
-
                 if (object_to_check_level == 0):    # Need to get smartcontext from source_attr
                     result = api_get_smartcontext_from_source(keyword, expression)
                 elif (object_to_check_level == 1):  # Need to get platform from source_attr
@@ -133,7 +148,6 @@ class Condition(Languague):
                 else:
                     return False, None
             elif (keyword_level == 3):  # keyword == thing
-                
                 if (object_to_check_level == 0):    # Need to get smartcontext from thing_attr
                     result = api_get_smartcontext_from_thing(keyword, expression)
                 elif (object_to_check_level == 1):  # Need to get platform from thing_attr
@@ -186,7 +200,6 @@ class Condition(Languague):
         return True, result
 
 
-
     def check_logic_field(self, logic_json, object_to_check_level):
         """ Check if logic_json is syntax valid
         """
@@ -218,14 +231,17 @@ class Condition(Languague):
         ###################################################
         ###################################################
         ## CHECK SEMANTIC
+
         if (is_condition_1_valid == True and \
             is_condition_2_valid == True and \
             is_operation_valid   == True
         ):
             if (operation == "AND"):
-                result = list(set(result_1) & set(result_2))
+                # result = list(set(result_1) & set(result_2))
+                result = self.intersection(result_1, result_2)
             elif (operation == "OR"):
-                result = list(set(result_1) | set(result_2))
+                # result = list(set(result_1) | set(result_2))
+                result = self.union(result_1, result_2)
 
         return True, result
 

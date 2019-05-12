@@ -1,0 +1,11 @@
+{
+    "MetricId" : "temperature_thingsboard",
+    "MetricLocalId" : "temperature_metric_id",
+    "MetricStatus" : "active",
+    "MetricName" : "temperature_phong_can_bo",
+    "CanSetState" : "false",
+    "MetricType" : "gauge",
+    "Unit" : "",
+    "MetricDomain" : "sensor",
+    "HasDatapoint" : "temperature_thingsboard_datapoint"
+}

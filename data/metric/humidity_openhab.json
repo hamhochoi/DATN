@@ -1,0 +1,11 @@
+{
+    "MetricId" : "humidity_openhab",
+    "MetricLocalId" : "humidity_metric_id",
+    "MetricStatus" : "active",
+    "MetricName" : "humidity_phong_sinh_vien",
+    "CanSetState" : "false",
+    "MetricType" : "gauge",
+    "Unit" : "",
+    "MetricDomain" : "sensor",
+    "HasDatapoint" : "humidity_openhab_datapoint"
+}

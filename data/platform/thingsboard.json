@@ -1,0 +1,9 @@
+{
+    "PlatformId" : "thingsboard_id",
+    "PlatformName" : "thingsboard",
+    "PlatformType" : "",
+    "PlatformHost" : "http://192.168.0.198",
+    "PlatformPort" : "8080",
+    "PlatformStatus" : "active",
+    "HasSource"    : ["temperature-humidity-light_thingsboard", "motion_thingsboard"]
+}

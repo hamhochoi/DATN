@@ -1,0 +1,11 @@
+{
+    "MetricId" : "motion_thingsboard",
+    "MetricLocalId" : "motion_metric_id",
+    "MetricStatus" : "active",
+    "MetricName" : "motion_phong_can_bo",
+    "CanSetState" : "false",
+    "MetricType" : "gauge",
+    "Unit" : "",
+    "MetricDomain" : "sensor",
+    "HasDatapoint" : "motion_thingsboard_datapoint"
+}

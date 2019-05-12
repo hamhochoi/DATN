@@ -1,0 +1,9 @@
+{
+    "PlatformId" : "openhab_id",
+    "PlatformName" : "openhab",
+    "PlatformType" : "",
+    "PlatformHost" : "http://192.168.0.197",
+    "PlatformPort" : "8080",
+    "PlatformStatus" : "active",
+    "HasSource"    : ["temperature-humidity-light_openhab", "motion_openhab"]
+}

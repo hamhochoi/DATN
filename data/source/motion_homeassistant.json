@@ -1,0 +1,10 @@
+{
+    "SourceId" : "motion_homeassistant",
+    "EndPoint" : "http://192.168.0.199:8123/source",
+    "SourceStatus" : "active",
+    "Description" : "",
+    "SourceType" : "thing",
+    "Label" : "sensor",
+    "LocalId" : "motion_id",
+    "HasMetric" : ["motion_homeassistant"]
+}

@@ -1,0 +1,9 @@
+{
+    "PlatformId" : "homeassistant_id",
+    "PlatformName" : "homeassistant",
+    "PlatformType" : "",
+    "PlatformHost" : "http://192.168.0.199",
+    "PlatformPort" : "8123",
+    "PlatformStatus" : "active",
+    "HasSource"    : ["temperature-humidity-light_homeassistant", "motion_homeassistant"]
+}

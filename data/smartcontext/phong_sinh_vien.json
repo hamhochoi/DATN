@@ -1,0 +1,7 @@
+{
+    "SmartContextId"      : "phong_sinh_vien_id",
+    "SmartContextName"    : "phong_sinh_vien",
+    "ParentSmartContextId" : ["HPCC_id"],
+    "SubSmartContextId" : [],
+    "HasPlatform" : ["openhab_id"]
+}

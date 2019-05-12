@@ -1,5 +1,5 @@
 {
-    "select" : "value",
+    "select" : "DataPoint",
     "from" : "from_value",
     "where" : {
         "condition" : {
@@ -10,7 +10,7 @@
                     "compare" : {
                         "keyword" : "MetricId",
                         "comparator" : "=",
-                        "expression" : "metric_id_1"
+                        "expression" : "humidity_homeassistant"
                     },
                     "logic" : {},
                     "in_bracket" : {}
@@ -19,7 +19,7 @@
                     "compare" : {
                         "keyword" : "value",
                         "comparator" : "=",
-                        "expression" : "32"
+                        "expression" : "64.0"
                     },
                     "logic" : {},
                     "in_bracket" : {}
@@ -37,7 +37,7 @@
                         "compare" : {
                             "keyword" : "MetricId",
                             "comparator" : "=",
-                            "expression" : "metric_id_1"
+                            "expression" : "humidity_homeassistant"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -46,7 +46,7 @@
                         "compare" : {
                             "keyword" : "value",
                             "comparator" : "=",
-                            "expression" : "27"
+                            "expression" : "64.0"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -56,17 +56,17 @@
             },
             "then" : [
                 {
-                    "MetricId" : "led_id_1",
+                    "metric_id" : "led_id_1",
                     "value" : "turn on"
                 },
                 {
-                    "MetricId" : "led_id_2",
+                    "metric_id" : "led_id_2",
                     "value" : "turn off"
                 }
             ], 
             "else" : [ 
                 {
-                    "MetricId" : "led_id_3",
+                    "metric_id" : "led_id_3",
                     "value" : "turn off"
                 }
             ]

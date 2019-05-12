@@ -1,0 +1,7 @@
+{
+    "SmartContextId"      : "phong_may_chu_id",
+    "SmartContextName"    : "phong_may_chu",
+    "ParentSmartContextId" : ["HPCC_id"],
+    "SubSmartContextId" : [],
+    "HasPlatform" : ["homeassistant_id"]
+}

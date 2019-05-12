@@ -1,0 +1,7 @@
+{
+    "SmartContextId"      : "HPCC_id",
+    "SmartContextName"    : "HPCC",
+    "ParentSmartContextId" : [],
+    "SubSmartContextId" : ["phong_sinh_vien_id", "phong_can_bo_id", "phong_may_chu_id"],
+    "HasPlatform" : []
+}

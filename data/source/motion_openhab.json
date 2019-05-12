@@ -1,0 +1,10 @@
+{
+    "SourceId" : "motion_openhab",
+    "EndPoint" : "http://192.168.0.197:8080/source",
+    "SourceStatus" : "active",
+    "Description" : "",
+    "SourceType" : "thing",
+    "Label" : "sensor",
+    "LocalId" : "motion_id",
+    "HasMetric" : ["motion_openhab"]
+}

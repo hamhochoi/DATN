@@ -4,35 +4,39 @@ class Languague():
             'SmartContext', \
                 'SmartContextId', 'SmartContextName', \
                 'SubSmartContextId', 'ParentSmartContextId', \
-                'PlatformId', \
+                'HasPlatform', \
             'Platform', \
                 'PlatformId', \
                 'PlatformName', \
                 'PlatformPort', \
-                # 'HasSource', \
-                # 'belong_smartcontext', \
+                'HasSource', \
+                'PlatformType', \
+                'PlatformHost', \
+                'PlatformStatus', \
             'Source', \
                 'SourceId', \
                 'LocalId', \
-                'SourceName', \
-                # 'has_thing', \
+                'HasMetric', \
                 'SourceStatus', \
                 'SourceType', \
-                'PlatformId', \
-            'Thing', \
-                'ThingGlobalId', \
-                'ThingName', \
+                'EndPoint', \
+                'Label', \
+            # 'Thing', \
+            #     'ThingGlobalId', \
+            #     'ThingName', \
                 # 'thing_belong_source', \
             'Metric', \
                 'MetricId', \
                 'MetricLocalId', \
                 'MetricName', \
                 'MetricStatus', \
-                # 'can_set_state', \
+                'CanSetState', \
                 'Unit', \
-                'SourceId', \
+                'MetricType', \
+                'MetricDomain', \
+                'HasDatapoint', \
             'DataPoint', \
-                # 'belong_metric', \
+                'DataPointId', \
                 'time', \
                 'value', \
                 'DataType'
@@ -45,37 +49,54 @@ class Languague():
         self.smartcontext_level = [
             "SmartContext", "SmartContextId", \
             "SmartContextName", "SubSmartContextId", \
-            "ParentSmartContextId", "PlatformId" \
+            "ParentSmartContextId", "HasPlatform" \
         ]
         self.platform_level = [
-            "Platform", "PlatformId", \
-            "PlatformName", "PlatformPort"#, \
-            # "belong_smartcontext" \
+                'Platform', \
+                'PlatformId', \
+                'PlatformName', \
+                'PlatformPort', \
+                'HasSource', \
+                'PlatformType', \
+                'PlatformHost', \
+                'PlatformStatus' \
         ]
         self.source_level = [
-            "Source", "SourceId", \
-            "LocalId", "SourceName", \
-            "SourceStatus",# "SourceStatus", \
-            "SourceType", "PlatformId" \
+                'Source', \
+                'SourceId', \
+                'LocalId', \
+                'HasMetric', \
+                'SourceStatus', \
+                'SourceType', \
+                'EndPoint', \
+                'Label' \
         ]
         self.thing_level = [
             "Thing", "ThingGlobalId", "ThingName"#, \
             # "thing_belong_source" \
         ]
         self.metric_level = [
-            "Metric", "MetricId", \
-            "MetricLocalId", "MetricName", \
-            "MetricStatus", #, "can_set_state", \
-            "Unit", "SourceId" \
+                'Metric', \
+                'MetricId', \
+                'MetricLocalId', \
+                'MetricName', \
+                'MetricStatus', \
+                'CanSetState', \
+                'Unit', \
+                'MetricType', \
+                'MetricDomain', \
+                'HasDatapoint' \
         ]
         self.data_point_level = [
-            "DataPoint", "MetricId", \
-            "time", "value", \
-            "DataType" \
+                'DataPoint', \
+                'DataPointId', \
+                'time', \
+                'value', \
+                'DataType'
         ]
         self.list_ontology_object = [
             "SmartContext", "Platform", \
-            "Source", "Thing", \
+            "Source", # "Thing", \
             "Metric", "DataPoint" \
         ]
 
