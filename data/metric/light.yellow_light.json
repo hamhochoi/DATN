@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "light.yellow_light", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["light.yellow_light_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "Yellow Light", "MetricId": "light.yellow_light"}

@@ -6,5 +6,5 @@
     "SourceType" : "thing",
     "Label" : "sensor",
     "LocalId" : "motion_id",
-    "HasMetric" : ["motion_openhab"]
+    "HasMetric" : ["LedDo", "LedXanh", "LedVang", "Motion"]
 }

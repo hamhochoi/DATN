@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "Temperature", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["Temperature_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "Temperature", "MetricId": "Temperature"}

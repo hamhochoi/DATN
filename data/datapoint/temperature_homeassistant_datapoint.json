@@ -1,6 +1,0 @@
-{
-    "DatapointId" : "temperature_homeassistant_datapoint",
-    "DataType" : "float",
-    "value" : "26.0",
-    "time" : "15:00:00-12-05-2019"
-}

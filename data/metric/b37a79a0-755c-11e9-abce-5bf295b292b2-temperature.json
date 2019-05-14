@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "b37a79a0-755c-11e9-abce-5bf295b292b2-temperature", "MetricId": "b37a79a0-755c-11e9-abce-5bf295b292b2-temperature", "CanSetState": "false", "HasDatapoint": ["b37a79a0-755c-11e9-abce-5bf295b292b2-temperature_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "temperature", "MetricDomain": "sensor"}

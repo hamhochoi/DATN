@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "binary_sensor.motion_detection", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["binary_sensor.motion_detection_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "Motion Detection", "MetricId": "binary_sensor.motion_detection"}

@@ -6,5 +6,5 @@
     "SourceType" : "thing",
     "Label" : "sensor",
     "LocalId" : "temperature-humidity-light_id",
-    "HasMetric" : ["temperature_homeassistant", "humidity_homeassistant", "light_homeassistant"]
+    "HasMetric" : ["sensor.light", "sensor.temperature", "sensor.humidity"]
 }

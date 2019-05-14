@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "LedDo", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["LedDo_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "LedDo", "MetricId": "LedDo"}

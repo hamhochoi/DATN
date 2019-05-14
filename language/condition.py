@@ -14,6 +14,7 @@ class Condition(Languague):
     def __init__(self):
         Languague.__init__(self)
 
+
     def intersection(self, a, b):
         # get intersect 2 lists
         result = []
@@ -237,7 +238,8 @@ class Condition(Languague):
             is_operation_valid   == True
         ):
             if (operation == "AND"):
-                # result = list(set(result_1) & set(result_2))
+                print (result_1)
+                print (result_2)
                 result = self.intersection(result_1, result_2)
             elif (operation == "OR"):
                 # result = list(set(result_1) | set(result_2))

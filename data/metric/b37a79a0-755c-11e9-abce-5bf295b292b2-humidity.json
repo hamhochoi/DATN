@@ -1,0 +1,13 @@
+{
+    "MetricType":"gauge",
+    "MetricLocalId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",
+    "MetricId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",
+    "CanSetState":"false",
+    "HasDatapoint":[
+        "b37a79a0-755c-11e9-abce-5bf295b292b2-humidity_datapoint"
+    ],
+    "MetricStatus":"active",
+    "Unit":"",
+    "MetricName":"humidity",
+    "MetricDomain":"sensor"
+}

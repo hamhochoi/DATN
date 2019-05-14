@@ -1,0 +1,57 @@
+{
+    "select" : "Platform",
+    "where" : {
+        "condition" : {
+            "compare" : {
+                "keyword" : "MetricId",
+                "comparator" : "=",
+                "expression" : "Humidity"
+            },
+            "logic" : {},
+            "in_bracket" : {}
+        }
+    },
+    "rule" : {   
+            "if" : {
+                "compare" : {},
+                "logic" : {
+                    "operation" : "AND",
+                    "condition_1" : {
+                        "compare" : {
+                            "keyword" : "MetricId",
+                            "comparator" : "=",
+                            "expression" : "humidity_homeassistant"
+                        },
+                        "logic" : {},
+                        "in_bracket" : {}
+                    }, 
+                    "condition_2" : {
+                        "compare" : {
+                            "keyword" : "value",
+                            "comparator" : "=",
+                            "expression" : "64.0"
+                        },
+                        "logic" : {},
+                        "in_bracket" : {}
+                    }
+                }, 
+                "in_bracket" : {}
+            },
+            "then" : [
+                {
+                    "metric_id" : "led_id_1",
+                    "value" : "turn on"
+                },
+                {
+                    "metric_id" : "led_id_2",
+                    "value" : "turn off"
+                }
+            ], 
+            "else" : [ 
+                {
+                    "metric_id" : "led_id_3",
+                    "value" : "turn off"
+                }
+            ]
+    }
+}

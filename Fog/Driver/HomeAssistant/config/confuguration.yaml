@@ -1,0 +1,108 @@
+
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 10.8142
+  longitude: 106.6438
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 5
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Ho_Chi_Minh
+
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+
+
+light:
+  - platform: mqtt
+    name: "Green Light"
+    state_topic: 'light/status'
+    command_topic: 'zone_3/box_1/led'
+    # command_topic: 'zone_3/box_1/led'
+    payload_on: '{"name":"Green Light",
+                  "value":"ON"}'
+    payload_off: '{"name":"Green Light",
+                   "value":"OFF"}'
+    # payload_on: '{"xanh":"ON"}'
+    # payload_off: '{"xanh":"OFF"}'
+  - platform: mqtt
+    name: "Red Light"
+    state_topic: 'light/status'
+    command_topic: 'zone_3/box_1/led'
+    payload_on: '{"name":"Red Light",
+                  "value":"ON"}'
+    payload_off: '{"name":"Red Light",
+                   "value":"OFF"}'
+  - platform: mqtt
+    name: "Yellow Light"
+    state_topic: 'light/status'
+    command_topic: 'zone_3/box_1/led'
+    payload_on: '{"name":"Yellow Light",
+                  "value":"ON"}'
+    payload_off: '{"name":"Yellow Light",
+                   "value":"OFF"}'
+
+binary_sensor:
+  - platform: mqtt
+    name: "Motion Detection"
+    state_topic: "zone_3/box_1/motion/id_1"
+    device_class: motion
+    value_template: '{{ value_json.motion }}'
+    payload_on: "1"
+    payload_off: "0"
+
+sensor:
+
+  - platform: mqtt
+    name: "Temperature"
+    # state_topic: "temperature/status"
+    state_topic: "zone_3/box_1/light/id_1"
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    name: "Humidity"
+    state_topic: "zone_3/box_1/light/id_1"
+    value_template: '{{ value_json.humidity }}'
+    unit_of_measurement: '%'
+  - platform: mqtt
+    name: "Light"
+    state_topic: "zone_3/box_1/light/id_1"
+    value_template: '{{ value_json.light }}'
+
+mqtt:
+  broker: broker.hivemq.com

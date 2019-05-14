@@ -1,7 +1,7 @@
 {
-    "PlatformId" : "homeassistant_id",
+    "PlatformId" : "611dc2c1-086d-487f-b44a-2d819764603a",
     "PlatformName" : "homeassistant",
-    "PlatformType" : "",
+    "PlatformType" : "HomeAssistant",
     "PlatformHost" : "http://192.168.0.199",
     "PlatformPort" : "8123",
     "PlatformStatus" : "active",

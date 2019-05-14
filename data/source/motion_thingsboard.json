@@ -6,5 +6,9 @@
     "SourceType" : "thing",
     "Label" : "sensor",
     "LocalId" : "motion_id",
-    "HasMetric" : ["motion_thingsboard"]
+    "HasMetric" : ["b9743eb0-f93b-11e8-8f0a-fd53779c32fb-3",
+                   "b9743eb0-f93b-11e8-8f0a-fd53779c32fb-4",
+                   "b9743eb0-f93b-11e8-8f0a-fd53779c32fb-3",
+                   "b9743eb0-f93b-11e8-8f0a-fd53779c32fb-motion"
+                ]
 }

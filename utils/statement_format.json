@@ -1,30 +1,13 @@
 {
-    "select" : "DataPoint",
-    "from" : "from_value",
+    "select" : "Metric",
     "where" : {
         "condition" : {
-            "compare" : {},
-            "logic" : {
-                "operation" : "AND",
-                "condition_1" : {
-                    "compare" : {
-                        "keyword" : "MetricId",
-                        "comparator" : "=",
-                        "expression" : "humidity_homeassistant"
-                    },
-                    "logic" : {},
-                    "in_bracket" : {}
-                }, 
-                "condition_2" : {
-                    "compare" : {
-                        "keyword" : "value",
-                        "comparator" : "=",
-                        "expression" : "64.0"
-                    },
-                    "logic" : {},
-                    "in_bracket" : {}
-                }
-            }, 
+            "compare" : {
+                "keyword" : "MetricId",
+                "comparator" : "=",
+                "expression" : "Humidity"
+            },
+            "logic" : {},
             "in_bracket" : {}
         }
     },
@@ -37,7 +20,7 @@
                         "compare" : {
                             "keyword" : "MetricId",
                             "comparator" : "=",
-                            "expression" : "humidity_homeassistant"
+                            "expression" : "Humidity"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -46,7 +29,7 @@
                         "compare" : {
                             "keyword" : "value",
                             "comparator" : "=",
-                            "expression" : "64.0"
+                            "expression" : "55"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -56,19 +39,19 @@
             },
             "then" : [
                 {
-                    "metric_id" : "led_id_1",
-                    "value" : "turn on"
+                    "MetricId" : "LedXanh",
+                    "value" : "off"
                 },
                 {
-                    "metric_id" : "led_id_2",
-                    "value" : "turn off"
+                    "MetricId" : "LedVang",
+                    "value" : "off"
                 }
             ], 
             "else" : [ 
                 {
-                    "metric_id" : "led_id_3",
-                    "value" : "turn off"
+                    "MetricId" : "LedDo",
+                    "value" : "off"
                 }
             ]
-        }
+    }
 }

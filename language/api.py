@@ -4,6 +4,8 @@ import traceback
 import numpy as np
 import os
 import json
+from Fog.Filter.Filter import Filter
+import time
 
 
 
@@ -12,7 +14,7 @@ metric_folder       = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - s
 source_folder       = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - student.hust.edu.vn/OD/20182/DATN/data/source"
 platform_folder     = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - student.hust.edu.vn/OD/20182/DATN/data/platform"
 smartcontext_folder = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - student.hust.edu.vn/OD/20182/DATN/data/smartcontext"
-
+filter_ = Filter(broker_fog="broker.hivemq.com")
 
 
 
@@ -83,6 +85,9 @@ def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute, 
 # GET DATAPOINT
 
 def api_get_all_datapoint():
+    filter_.api_get_state()
+    time.sleep(2)
+
     datapoints = []
 
     datapoint_paths = [os.path.join(datapoint_folder, datapoint_id) for datapoint_id in os.listdir(datapoint_folder)]
@@ -100,7 +105,7 @@ def api_get_datapoint_from_datapoint_attr(datapoint_attr, datapoint_value):
     return_datapoints = []
 
     for datapoint in datapoints:
-        if (datapoint[datapoint_attr] == datapoint_value):
+        if (str(datapoint[datapoint_attr]) == str(datapoint_value)):
             return_datapoints.append(datapoint)
 
     return return_datapoints
@@ -109,9 +114,10 @@ def api_get_datapoint_from_datapoint_attr(datapoint_attr, datapoint_value):
 def api_get_datapoint_from_metric(metric_attr, metric_value):
     metrics = api_get_metric_from_metric_attr(metric_attr, metric_value)
     datapoints = []
+    # print (metrics)
 
     for metric in metrics:
-        datapoint_id = metric["HasDatapoint"]
+        datapoint_id = metric["HasDatapoint"][0]
         datapoint_attr = "DatapointId"
         datapoint = api_get_datapoint_from_datapoint_attr(datapoint_attr, datapoint_id)
         datapoints.extend(datapoint)
@@ -586,7 +592,7 @@ if __name__ == "__main__":
     # x = api_get_all_platform()
     # x = api_get_all_smartcontext()
 
-    # x = api_get_datapoint_from_datapoint_attr('value', '25.0')
+    x = api_get_datapoint_from_datapoint_attr('value', '55')
     # x = api_get_metric_from_metric_attr("MetricId", 'humidity_homeassistant')
     # x = api_get_source_from_source_attr("SourceId", 'motion_openhab')
     # x = api_get_platform_from_platform_attr("PlatformId", 'openhab_id')
@@ -598,7 +604,7 @@ if __name__ == "__main__":
     # x = api_get_platform_id_from_platform_attribute('PlatformPort', '8080')
     # x = api_get_smartcontext_id_from_smartcontext_attribute('SmartContextName', 'HPCC')
 
-    # x = api_get_datapoint_from_metric("MetricId", 'humidity_thingsboard')
+    # x = api_get_datapoint_from_metric("MetricId", 'Humidity')
     # x = api_get_metric_from_datapoint('DataType', 'float')
     # x = api_get_metric_from_source('SourceType', 'thing')
     # x = api_get_source_from_metric("MetricId", 'humidity_homeassistant')
@@ -625,7 +631,7 @@ if __name__ == "__main__":
 
     # x = api_get_smartcontext_from_source('SourceStatus', 'active')
     # x = api_get_smartcontext_from_metric("MetricId", 'humidity_thingsboard')
-    x = api_get_smartcontext_from_datapoint('DataType', 'int')
+    # x = api_get_smartcontext_from_datapoint('DataType', 'int')
 
 
     print (x)

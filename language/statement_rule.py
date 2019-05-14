@@ -7,6 +7,8 @@ from language import Languague
 import traceback
 import requests
 import random
+from Fog.Filter.Filter import Filter
+
 
 
 
@@ -15,6 +17,7 @@ class Rule(Statement):
         Statement.__init__(self)
         BROKER_CLOUD = "159.65.7.246"
         self.host_api_set_state = "http://{}:5000/api/metric".format(BROKER_CLOUD)
+        self.filter_ = Filter(broker_fog="broker.hivemq.com")
 
 
     def rule(self, rule):
@@ -37,6 +40,8 @@ class Rule(Statement):
             if_field   = rule['if']
             datapoint_level = 5 
             check_condition_result, result = Condition().check_condition(json.dumps(if_field), datapoint_level)
+            print (check_condition_result, result)
+
 
             if (check_condition_result == True and len(result) != 0):
                 then_field = rule['then']
@@ -45,22 +50,22 @@ class Rule(Statement):
                 action_list = []
                 for action in actions:
                     metric_id = action["MetricId"]
-                    source_id   = api_get_source_from_metric(metric_attr="MetricId", 
-                                                             metric_value=metric_id)
-                    value     = action["value"]
-                    
+                    platform = api_get_platform_from_metric(metric_attr="MetricId", metric_value=metric_id)[0]
+                    platform_id = platform["PlatformId"]
+                    topic = str(platform_id) + '/request/api_set_state'
+
+                    value     = action["value"]                    
                     message = {
                         "header" : {},
                         "body":{
-                            "SourceId"  : source_id,
                             "MetricId"  : metric_id,
                             "new_value" : value
                         }
                     }
 
-                    # r = requests.post(url=self.host_api_set_state, json=message)
-                    # print (r.status_code)
-                    print ("Called Quan's API")
+                    self.filter_.api_set_state(topic, json.dumps(message))
+                    print ("called Quan's API")
+                    time.sleep(1)
             else:
                 else_field = rule['else']
                 else_field = json.dumps(else_field)
@@ -68,22 +73,21 @@ class Rule(Statement):
                 action_list = []
                 for action in actions:
                     metric_id = action["MetricId"]
-                    source_id   = api_get_source_from_metric(metric_attr="MetricId", 
-                                                             metric_value=metric_id)
+                    platform = api_get_platform_from_metric(metric_attr="MetricId", metric_value=metric_id)[0]
+                    platform_id = platform["PlatformId"]
                     value     = action["value"]
                     
                     message = {
                         "header" : {},
                         "body":{
-                            "SourceId"  : source_id,
                             "MetricId"  : metric_id,
                             "new_value" : value
                         }
                     }
 
-                    # r = requests.post(url=self.host_api_set_state, json=message)
-                    # print (r.status_code)
-                    print ("called Quan's API")
+                    topic = str(platform_id) + '/request/api_set_state'
+                    self.filter_.api_set_state(topic, json.dumps(message))
+                    print ("called set state API")
             return True
         except:
             traceback.print_exc()

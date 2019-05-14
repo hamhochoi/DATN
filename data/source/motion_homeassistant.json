@@ -6,5 +6,5 @@
     "SourceType" : "thing",
     "Label" : "sensor",
     "LocalId" : "motion_id",
-    "HasMetric" : ["motion_homeassistant"]
+    "HasMetric" : ["binary_sensor.motion_detection", "light.green_light", "light.red_light", "light.yellow_light"]
 }

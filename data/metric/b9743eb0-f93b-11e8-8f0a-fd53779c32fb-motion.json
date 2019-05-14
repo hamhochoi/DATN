@@ -1,0 +1,1 @@
+{"MetricType": "gauge", "MetricLocalId": "b9743eb0-f93b-11e8-8f0a-fd53779c32fb-motion", "MetricId": "b9743eb0-f93b-11e8-8f0a-fd53779c32fb-motion", "CanSetState": "false", "HasDatapoint": ["b9743eb0-f93b-11e8-8f0a-fd53779c32fb-motion_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "motion", "MetricDomain": "sensor"}

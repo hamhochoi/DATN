@@ -164,13 +164,14 @@ class Query(Statement):
 
 
 if __name__ == "__main__":
-    with open(os.getcwd()  + '/utils/statement_format.json', 'r') as json_file:
+    with open(os.getcwd()  + '/utils/statement_compare.json', 'r') as json_file:
         query = json.load(json_file)
-        select_value = query['select']
-        # print (select_value)
+        select_values = query['select'].split(",")
+        # print (select_values)
         where_condition = query['where']['condition']
 
-        _, resutl = Query().query(select_value, where_condition)
-        print (resutl)
+        for select_value in select_values:
+            _, resutl = Query().query(select_value, where_condition)
+            print (resutl)
 
     
