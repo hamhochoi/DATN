@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{CHAKRABORTY1992961}
+Kanad Chakraborty, Kishan Mehrotra, Chilukuri~K. Mohan, and Sanjay Ranka.
+\newblock Forecasting the behavior of multivariate time series using neural
+  networks.
+\newblock {\em Neural Networks}, 5(6):961 -- 970, 1992.
+
+\bibitem{Egrioglu200910589}
+Erol Egrioglu, Cagdas~Hakan Aladag, Ufuk Yolcu, Vedide~R. Uslu, and Murat~A.
+  Basaran.
+\newblock A new approach based on artificial neural networks for high order
+  multivariate fuzzy time series.
+\newblock {\em Expert Systems with Applications}, 36(7):10589 -- 10594, 2009.
+
+\bibitem{lstm_model}
+Christopher~Olah et~al.
+\newblock Understanding lstm networks.
+\newblock \url{http://colah.github.io/posts/2015-08-Understanding-LSTMs/}.
+
+\bibitem{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning Book}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{Hochreiter:1997:LSM:1246443.1246450}
+Sepp Hochreiter and J\"{u}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock {\em Neural Comput.}, 9(8):1735--1780, November 1997.
+
+\bibitem{KUMAR2018676}
+Jitendra Kumar, Rimsha Goomer, and Ashutosh~Kumar Singh.
+\newblock Long short term memory recurrent neural network (lstm-rnn) based
+  workload forecasting model for cloud datacenters.
+\newblock {\em Procedia Computer Science}, 125:676 -- 682, 2018.
+\newblock The 6th International Conference on Smart Computing and
+  Communications.
+
+\bibitem{fuzzyorigin}
+Qiang Song and Brad S.~Chissom.
+\newblock Fuzzy time series and its model.
+\newblock 54:269–277, 03 1993.
+
+\bibitem{7725658}
+D.~Tran, N.~Tran, B.~M. Nguyen, and H.~Le.
+\newblock Pd-gabp 2014; a novel prediction model applying for elastic
+  applications in distributed environment.
+\newblock In {\em 2016 3rd National Foundation for Science and Technology
+  Development Conference on Information and Computer Science (NICS)}, pages
+  240--245, Sept 2016.
+
+\bibitem{TRAN2017365}
+Dang Tran, Nhuan Tran, Giang Nguyen, and Binh~Minh Nguyen.
+\newblock A proactive cloud scaling model based on fuzzy time series and sla
+  awareness.
+\newblock {\em Procedia Computer Science}, 108:365 -- 374, 2017.
+\newblock International Conference on Computational Science, ICCS 2017, 12-14
+  June 2017, Zurich, Switzerland.
+
+\bibitem{915346}
+A.~Tucker, S.~Swift, and X.~Liu.
+\newblock Variable grouping in multivariate time series via correlation.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B
+  (Cybernetics)}, 31(2):235--245, Apr 2001.
+
+\bibitem{vazquez2015time}
+Carlos Vazquez, Ram Krishnan, and Eugene John.
+\newblock Time series forecasting of cloud data center workloads for dynamic
+  resource provisioning.
+\newblock {\em Journal of Wireless Mobile Networks, Ubiquitous Computing, and
+  Dependable Applications (JoWUA)}, 6(3):87--110, 2015.
+
+\bibitem{Yu:2004:EFS:1005332.1044700}
+Lei Yu and Huan Liu.
+\newblock Efficient feature selection via analysis of relevance and redundancy.
+\newblock {\em J. Mach. Learn. Res.}, 5:1205--1224, December 2004.
+
+\end{thebibliography}
