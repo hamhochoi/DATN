@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  18 MAY 2019 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  19 MAY 2019 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1741,15 +1741,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--50
 
 
 
+] [3
+
+
 ]) (./abstract/abstract.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[3
+) [4
 
-
-]) [4] (./thesis.toc [5
+] (./thesis.toc [5
 
 
 ])
@@ -1759,11 +1761,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
  [6] (./thesis.lof [7
 
 
-])
+]
+Overfull \vbox (1.62167pt too high) has occurred while \output is active []
+
+
+[8])
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [8] (./chapter1/chapter1.tex
+ [9] (./chapter1/chapter1.tex
 Ch\uhorn \ohorn ng 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1775,7 +1781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[9
+[10
 
 
 ]
@@ -1783,12 +1789,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[10]) (./chapter2/chapter2.tex [11]
+[11]) (./chapter2/chapter2.tex [12]
 Ch\uhorn \ohorn ng 2.
-[12
+[13
 
-] [13] [14]
-<image/internet-of-things1.jpg, id=198, 783.92876pt x 419.5675pt>
+] [14] [15]
+<image/internet-of-things1.jpg, id=218, 783.92876pt x 419.5675pt>
 File: image/internet-of-things1.jpg Graphic file (type jpg)
 
 <use image/internet-of-things1.jpg>
@@ -1799,10 +1805,10 @@ Overfull \hbox (29.34315pt too wide) in paragraph at lines 36--37
  [] 
  []
 
-[15
+[16
 
  <./image/internet-of-things1.jpg>]
-<image/IoTPlatform.png, id=204, 770.88pt x 475.7775pt>
+<image/IoTPlatform.png, id=224, 770.88pt x 475.7775pt>
 File: image/IoTPlatform.png Graphic file (type png)
 
 <use image/IoTPlatform.png>
@@ -1813,8 +1819,8 @@ Overfull \hbox (21.51384pt too wide) in paragraph at lines 54--55
  [] 
  []
 
-[16] [17 <./image/IoTPlatform.png>] [18] [19]
-<image/otology_example.png, id=226, 773.89125pt x 502.87875pt>
+[17] [18 <./image/IoTPlatform.png>] [19] [20]
+<image/otology_example.png, id=246, 773.89125pt x 502.87875pt>
 File: image/otology_example.png Graphic file (type png)
 
 <use image/otology_example.png>
@@ -1825,34 +1831,34 @@ Overfull \hbox (23.3206pt too wide) in paragraph at lines 101--103
  [] 
  []
 
-[20
+[21
 
- <./image/otology_example.png>] [21] [22] [23] [24] [25] [26])
-(./chapter3/chapter3.tex [27]
+ <./image/otology_example.png>] [22] [23] [24] [25] [26] [27])
+(./chapter3/chapter3.tex [28]
 Ch\uhorn \ohorn ng 3.
-[28
+[29
 
-] <image/hop_1.png, id=267, 256.887pt x 144.54pt>
+] <image/hop_1.png, id=287, 256.887pt x 144.54pt>
 File: image/hop_1.png Graphic file (type png)
  <use image/hop_1.png>
 Package pdftex.def Info: image/hop_1.png used on input line 18.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_2.png, id=268, 256.887pt x 144.54pt>
+<image/hop_2.png, id=288, 256.887pt x 144.54pt>
 File: image/hop_2.png Graphic file (type png)
  <use image/hop_2.png>
 Package pdftex.def Info: image/hop_2.png used on input line 25.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
- [29
+ [30
 
  <./image/hop_1.png> <./image/hop_2.png>]
-<image/mqtt.png, id=274, 582.175pt x 304.13625pt>
+<image/mqtt.png, id=294, 582.175pt x 304.13625pt>
 File: image/mqtt.png Graphic file (type png)
  <use image/mqtt.png>
 Package pdftex.def Info: image/mqtt.png used on input line 44.
 (pdftex.def)             Requested size: 349.3077pt x 182.48315pt.
- [30 <./image/mqtt.png (PNG copy)>]
-<image/mo_hinh_trien_khai_phan_cung.png, id=279, 212.795pt x 463.7325pt>
+ [31 <./image/mqtt.png (PNG copy)>]
+<image/mo_hinh_trien_khai_phan_cung.png, id=300, 212.795pt x 463.7325pt>
 File: image/mo_hinh_trien_khai_phan_cung.png Graphic file (type png)
 
 <use image/mo_hinh_trien_khai_phan_cung.png>
@@ -1873,19 +1879,19 @@ File: image/hop_2.png Graphic file (type png)
 Package pdftex.def Info: image/hop_2.png used on input line 63.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_3.png, id=280, 616.266pt x 281.853pt>
+<image/hop_3.png, id=301, 616.266pt x 281.853pt>
 File: image/hop_3.png Graphic file (type png)
  <use image/hop_3.png>
 Package pdftex.def Info: image/hop_3.png used on input line 70.
 (pdftex.def)             Requested size: 246.50203pt x 112.7392pt.
 
-<image/hop_4.png, id=281, 456.9435pt x 256.887pt>
+<image/hop_4.png, id=302, 456.9435pt x 256.887pt>
 File: image/hop_4.png Graphic file (type png)
  <use image/hop_4.png>
 Package pdftex.def Info: image/hop_4.png used on input line 71.
 (pdftex.def)             Requested size: 228.47118pt x 128.44318pt.
 
-<image/hop_5.jpg, id=282, 256.887pt x 144.54pt>
+<image/hop_5.jpg, id=303, 256.887pt x 144.54pt>
 File: image/hop_5.jpg Graphic file (type jpg)
  <use image/hop_5.jpg>
 Package pdftex.def Info: image/hop_5.jpg used on input line 72.
@@ -1894,287 +1900,376 @@ Package pdftex.def Info: image/hop_5.jpg used on input line 72.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31
+[32
 
- <./image/mo_hinh_trien_khai_phan_cung.png>] [32 <./image/hop_3.png> <./image/h
+ <./image/mo_hinh_trien_khai_phan_cung.png>] [33 <./image/hop_3.png> <./image/h
 op_4.png> <./image/hop_5.jpg>]
-<image/openhab.png, id=294, 1370.11874pt x 711.65875pt>
+<image/openhab.png, id=315, 1370.11874pt x 711.65875pt>
 File: image/openhab.png Graphic file (type png)
 
 <use image/openhab.png>
 Package pdftex.def Info: image/openhab.png used on input line 93.
 (pdftex.def)             Requested size: 411.03879pt x 213.49927pt.
- [33 <./image/openhab.png>]
-<image/homeassistant.png, id=300, 1370.11874pt x 710.655pt>
+ [34 <./image/openhab.png>]
+<image/homeassistant.png, id=320, 1370.11874pt x 710.655pt>
 File: image/homeassistant.png Graphic file (type png)
 
 <use image/homeassistant.png>
 Package pdftex.def Info: image/homeassistant.png used on input line 103.
 (pdftex.def)             Requested size: 411.03879pt x 213.19814pt.
 
-<image/thingsboard.png, id=301, 1370.11874pt x 709.65125pt>
+<image/thingsboard.png, id=321, 1370.11874pt x 709.65125pt>
 File: image/thingsboard.png Graphic file (type png)
 
 <use image/thingsboard.png>
 Package pdftex.def Info: image/thingsboard.png used on input line 113.
 (pdftex.def)             Requested size: 411.03879pt x 212.897pt.
- [34
+ [35
 
  <./image/homeassistant.png> <./image/thingsboard.png>] <image/ssn_ontology.png
-, id=306, 985.6825pt x 578.16pt>
+, id=326, 985.6825pt x 578.16pt>
 File: image/ssn_ontology.png Graphic file (type png)
 
 <use image/ssn_ontology.png>
-Package pdftex.def Info: image/ssn_ontology.png used on input line 141.
+Package pdftex.def Info: image/ssn_ontology.png used on input line 139.
 (pdftex.def)             Requested size: 394.266pt x 231.2599pt.
 
-Overfull \hbox (32.36147pt too wide) in paragraph at lines 143--144
+Overfull \hbox (32.36147pt too wide) in paragraph at lines 141--142
  \T5/cmr/m/n/10.95 https://corescholar.libraries.wright.edu/knoesis/610/?utm_so
 urce=corescholar.libraries.wright.edu 
  []
 
-[35] [36 <./image/ssn_ontology.png>]
-<image/iot-a.png, id=316, 575.14874pt x 644.4075pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[36] [37 <./image/ssn_ontology.png>]
+<image/iot-a.png, id=337, 575.14874pt x 644.4075pt>
 File: image/iot-a.png Graphic file (type png)
  <use image/iot-a.png>
-Package pdftex.def Info: image/iot-a.png used on input line 151.
+Package pdftex.def Info: image/iot-a.png used on input line 149.
 (pdftex.def)             Requested size: 287.57367pt x 322.20296pt.
 
-Overfull \hbox (8.92783pt too wide) in paragraph at lines 153--154
+Overfull \hbox (8.92783pt too wide) in paragraph at lines 151--152
  \T5/cmr/m/n/12 https://www.researchgate.net/profile/Suparna_De/publication/330
 729011/figure/fig1/ 
  []
 
-[37
+[38
 
- <./image/iot-a.png>] <image/iot-lite.jpg, id=323, 722.7pt x 406.51875pt>
+ <./image/iot-a.png>] <image/iot-lite.jpg, id=343, 722.7pt x 406.51875pt>
 File: image/iot-lite.jpg Graphic file (type jpg)
 
 <use image/iot-lite.jpg>
-Package pdftex.def Info: image/iot-lite.jpg used on input line 161.
+Package pdftex.def Info: image/iot-lite.jpg used on input line 159.
 (pdftex.def)             Requested size: 433.62334pt x 243.91312pt.
- [38
+ [39
 
- <./image/iot-lite.jpg>] [39] [40] [41] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+ <./image/iot-lite.jpg>] [40] [41] [42] [43]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
-[43] <image/smartcontext_instance.png, id=349, 816.04875pt x 174.6525pt>
+[44] <image/smartcontext_instance.png, id=369, 816.04875pt x 174.6525pt>
 File: image/smartcontext_instance.png Graphic file (type png)
 
 <use image/smartcontext_instance.png>
-Package pdftex.def Info: image/smartcontext_instance.png used on input line 330
+Package pdftex.def Info: image/smartcontext_instance.png used on input line 328
 .
 (pdftex.def)             Requested size: 408.02338pt x 87.32603pt.
 
-<image/platform_instance.png, id=350, 757.83125pt x 234.8775pt>
+<image/platform_instance.png, id=370, 757.83125pt x 234.8775pt>
 File: image/platform_instance.png Graphic file (type png)
 
 <use image/platform_instance.png>
-Package pdftex.def Info: image/platform_instance.png used on input line 337.
+Package pdftex.def Info: image/platform_instance.png used on input line 335.
 (pdftex.def)             Requested size: 378.9147pt x 117.43846pt.
 
-<image/source_instance.png, id=351, 1020.81375pt x 218.8175pt>
+<image/source_instance.png, id=371, 1020.81375pt x 218.8175pt>
 File: image/source_instance.png Graphic file (type png)
 
 <use image/source_instance.png>
-Package pdftex.def Info: image/source_instance.png used on input line 344.
+Package pdftex.def Info: image/source_instance.png used on input line 342.
 (pdftex.def)             Requested size: 408.31827pt x 87.52544pt.
- [44
+ [45
 
  <./image/smartcontext_instance.png> <./image/platform_instance.png> <./image/s
 ource_instance.png>]
-<image/metric_instance.png, id=356, 637.38126pt x 287.0725pt>
+<image/metric_instance.png, id=376, 637.38126pt x 287.0725pt>
 File: image/metric_instance.png Graphic file (type png)
 
 <use image/metric_instance.png>
-Package pdftex.def Info: image/metric_instance.png used on input line 353.
+Package pdftex.def Info: image/metric_instance.png used on input line 351.
 (pdftex.def)             Requested size: 382.4317pt x 172.24483pt.
 
-<image/datapoint_instance.png, id=357, 701.62125pt x 155.58125pt>
+<image/datapoint_instance.png, id=377, 701.62125pt x 155.58125pt>
 File: image/datapoint_instance.png Graphic file (type png)
 
 <use image/datapoint_instance.png>
-Package pdftex.def Info: image/datapoint_instance.png used on input line 360.
+Package pdftex.def Info: image/datapoint_instance.png used on input line 358.
 (pdftex.def)             Requested size: 420.97598pt x 93.34946pt.
- [45
+ [46
 
  <./image/metric_instance.png> <./image/datapoint_instance.png>]
-<image/ontology-2.pdf, id=362, 4080.24374pt x 2281.52374pt>
+<image/ontology-2.pdf, id=382, 4080.24374pt x 2281.52374pt>
 File: image/ontology-2.pdf Graphic file (type pdf)
 
 <use image/ontology-2.pdf>
-Package pdftex.def Info: image/ontology-2.pdf used on input line 368.
+Package pdftex.def Info: image/ontology-2.pdf used on input line 366.
 (pdftex.def)             Requested size: 816.0343pt x 456.29668pt.
 
-<image/mapping_service.png, id=363, 573.14125pt x 326.21875pt>
+<image/mapping_service.png, id=383, 442.65375pt x 336.25626pt>
 File: image/mapping_service.png Graphic file (type png)
 
 <use image/mapping_service.png>
-Package pdftex.def Info: image/mapping_service.png used on input line 379.
-(pdftex.def)             Requested size: 343.8874pt x 195.73274pt.
- [46
+Package pdftex.def Info: image/mapping_service.png used on input line 377.
+(pdftex.def)             Requested size: 265.59428pt x 201.75531pt.
+ [47
 
  <./image/ontology-2.pdf>]
-<image/language_diagram-use_case.png, id=388, 633.36626pt x 352.31625pt>
-File: image/language_diagram-use_case.png Graphic file (type png)
+<image/openhab_dataformat.png, id=408, 549.05125pt x 322.20375pt>
+File: image/openhab_dataformat.png Graphic file (type png)
 
-<use image/language_diagram-use_case.png>
-Package pdftex.def Info: image/language_diagram-use_case.png used on input line
- 388.
-(pdftex.def)             Requested size: 380.02269pt x 211.39137pt.
- [47 <./image/mapping_service.png> <./image/language_diagram-use_case.png>]
-<image/language_model-statement.png, id=397, 1434.35875pt x 302.12875pt>
-File: image/language_model-statement.png Graphic file (type png)
+<use image/openhab_dataformat.png>
+Package pdftex.def Info: image/openhab_dataformat.png used on input line 386.
+(pdftex.def)             Requested size: 329.43329pt x 193.32373pt.
 
-<use image/language_model-statement.png>
-Package pdftex.def Info: image/language_model-statement.png used on input line 
-401.
-(pdftex.def)             Requested size: 430.31094pt x 90.63931pt.
+<image/homeassistant_dataformat.png, id=409, 523.9575pt x 211.79124pt>
+File: image/homeassistant_dataformat.png Graphic file (type png)
 
-<image/language_model-condition.png, id=398, 1462.46375pt x 442.65375pt>
-File: image/language_model-condition.png Graphic file (type png)
-
-<use image/language_model-condition.png>
-Package pdftex.def Info: image/language_model-condition.png used on input line 
-410.
-(pdftex.def)             Requested size: 438.74251pt x 132.79713pt.
+<use image/homeassistant_dataformat.png>
+Package pdftex.def Info: image/homeassistant_dataformat.png used on input line 
+393.
+(pdftex.def)             Requested size: 314.37692pt x 127.07571pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_model-action.png, id=399, 1000.73875pt x 206.7725pt>
+<image/ontology_dataformat.png, id=410, 569.12625pt x 525.965pt>
+File: image/ontology_dataformat.png Graphic file (type png)
+
+<use image/ontology_dataformat.png>
+Package pdftex.def Info: image/ontology_dataformat.png used on input line 401.
+(pdftex.def)             Requested size: 341.47838pt x 315.58142pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<image/language_diagram-use_case.png, id=411, 633.36626pt x 352.31625pt>
+File: image/language_diagram-use_case.png Graphic file (type png)
+
+<use image/language_diagram-use_case.png>
+Package pdftex.def Info: image/language_diagram-use_case.png used on input line
+ 410.
+(pdftex.def)             Requested size: 380.02269pt x 211.39137pt.
+ [48 <./image/mapping_service.png> <./image/openhab_dataformat.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[49 <./image/homeassistant_dataformat.png> <./image/ontology_dataformat.png (PN
+G copy)>]
+<image/language_model-statement.png, id=422, 1434.35875pt x 302.12875pt>
+File: image/language_model-statement.png Graphic file (type png)
+
+<use image/language_model-statement.png>
+Package pdftex.def Info: image/language_model-statement.png used on input line 
+425.
+(pdftex.def)             Requested size: 430.31094pt x 90.63931pt.
+ [50 <./image/language_diagram-use_case.png> <./image/language_model-statement.
+png>]
+<image/language_model-condition.png, id=429, 1462.46375pt x 442.65375pt>
+File: image/language_model-condition.png Graphic file (type png)
+
+<use image/language_model-condition.png>
+Package pdftex.def Info: image/language_model-condition.png used on input line 
+434.
+(pdftex.def)             Requested size: 438.74251pt x 132.79713pt.
+
+<image/language_model-action.png, id=430, 1000.73875pt x 206.7725pt>
 File: image/language_model-action.png Graphic file (type png)
 
 <use image/language_model-action.png>
-Package pdftex.def Info: image/language_model-action.png used on input line 419
+Package pdftex.def Info: image/language_model-action.png used on input line 443
 .
 (pdftex.def)             Requested size: 400.28842pt x 82.70752pt.
- [48 <./image/language_model-statement.png>] <image/language_model-expression.p
-ng, id=405, 1069.9975pt x 213.79875pt>
+
+<image/language_model-expression.png, id=431, 1069.9975pt x 213.79875pt>
 File: image/language_model-expression.png Graphic file (type png)
 
 <use image/language_model-expression.png>
 Package pdftex.def Info: image/language_model-expression.png used on input line
- 427.
+ 451.
 (pdftex.def)             Requested size: 427.99142pt x 85.51797pt.
 
-<image/language_model-term.png, id=406, 758.835pt x 180.675pt>
+<image/language_model-term.png, id=432, 758.835pt x 180.675pt>
 File: image/language_model-term.png Graphic file (type png)
 
 <use image/language_model-term.png>
-Package pdftex.def Info: image/language_model-term.png used on input line 434.
+Package pdftex.def Info: image/language_model-term.png used on input line 458.
 (pdftex.def)             Requested size: 303.52863pt x 72.2687pt.
 
-<image/language_model-const.png, id=407, 688.5725pt x 159.59625pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<image/language_model-const.png, id=433, 688.5725pt x 159.59625pt>
 File: image/language_model-const.png Graphic file (type png)
 
 <use image/language_model-const.png>
-Package pdftex.def Info: image/language_model-const.png used on input line 441.
+Package pdftex.def Info: image/language_model-const.png used on input line 465.
 
 (pdftex.def)             Requested size: 275.4241pt x 63.83736pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49 <./image/language_model-condition.png> <./image/language_model-action.png> 
-<./image/language_model-expression.png> <./image/language_model-term.png>]
-[50 <./image/language_model-const.png>]
-<image/language_diagram-class_diagram.png, id=422, 1321.93875pt x 563.10374pt>
+[51 <./image/language_model-condition.png> <./image/language_model-action.png> 
+<./image/language_model-expression.png>] [52 <./image/language_model-term.png> 
+<./image/language_model-const.png>]
+<image/language_diagram-class_diagram.png, id=448, 1321.93875pt x 563.10374pt>
 File: image/language_diagram-class_diagram.png Graphic file (type png)
 
 <use image/language_diagram-class_diagram.png>
 Package pdftex.def Info: image/language_diagram-class_diagram.png used on input
- line 450.
+ line 474.
 (pdftex.def)             Requested size: 528.76614pt x 225.2375pt.
 
-Overfull \hbox (87.74841pt too wide) in paragraph at lines 450--451
+Overfull \hbox (87.74841pt too wide) in paragraph at lines 474--475
  [] 
  []
 
-<image/language_diagram-statement.png, id=423, 342.27875pt x 302.12875pt>
+<image/language_diagram-statement.png, id=449, 342.27875pt x 302.12875pt>
 File: image/language_diagram-statement.png Graphic file (type png)
 
 <use image/language_diagram-statement.png>
 Package pdftex.def Info: image/language_diagram-statement.png used on input lin
-e 461.
+e 485.
 (pdftex.def)             Requested size: 136.90906pt x 120.84935pt.
 
-<image/language_diagram-statement_query.png, id=424, 522.95375pt x 312.16624pt>
+<image/language_diagram-statement_query.png, id=450, 522.95375pt x 312.16624pt>
 File: image/language_diagram-statement_query.png Graphic file (type png)
 <use image/language_diagram-statement_query.png>
 Package pdftex.def Info: image/language_diagram-statement_query.png used on inp
-ut line 468.
+ut line 492.
 (pdftex.def)             Requested size: 209.1778pt x 124.86427pt.
 
-<image/language_diagram-statement_rule.png, id=425, 683.55376pt x 312.16624pt>
+<image/language_diagram-statement_rule.png, id=451, 683.55376pt x 312.16624pt>
 File: image/language_diagram-statement_rule.png Graphic file (type png)
 
 <use image/language_diagram-statement_rule.png>
 Package pdftex.def Info: image/language_diagram-statement_rule.png used on inpu
-t line 475.
+t line 499.
 (pdftex.def)             Requested size: 273.41666pt x 124.86427pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-condition.png, id=426, 352.31625pt x 321.2pt>
+<image/language_diagram-condition.png, id=452, 352.31625pt x 321.2pt>
 File: image/language_diagram-condition.png Graphic file (type png)
 
 <use image/language_diagram-condition.png>
 Package pdftex.def Info: image/language_diagram-condition.png used on input lin
-e 482.
+e 506.
 (pdftex.def)             Requested size: 140.924pt x 128.47772pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-expression.png, id=427, 407.5225pt x 302.12875pt>
+<image/language_diagram-expression.png, id=453, 407.5225pt x 302.12875pt>
 File: image/language_diagram-expression.png Graphic file (type png)
 
 <use image/language_diagram-expression.png>
 Package pdftex.def Info: image/language_diagram-expression.png used on input li
-ne 489.
+ne 513.
 (pdftex.def)             Requested size: 163.0061pt x 120.84935pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-action.png, id=428, 357.335pt x 111.41624pt>
+<image/language_diagram-action.png, id=454, 357.335pt x 111.41624pt>
 File: image/language_diagram-action.png Graphic file (type png)
 
 <use image/language_diagram-action.png>
-Package pdftex.def Info: image/language_diagram-action.png used on input line 4
-96.
+Package pdftex.def Info: image/language_diagram-action.png used on input line 5
+20.
 (pdftex.def)             Requested size: 142.93146pt x 44.5657pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-term.png, id=429, 342.27875pt x 302.12875pt>
+<image/language_diagram-term.png, id=455, 342.27875pt x 302.12875pt>
 File: image/language_diagram-term.png Graphic file (type png)
 
 <use image/language_diagram-term.png>
-Package pdftex.def Info: image/language_diagram-term.png used on input line 503
+Package pdftex.def Info: image/language_diagram-term.png used on input line 527
 .
 (pdftex.def)             Requested size: 136.90906pt x 120.84935pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[51
+[53
 
  <./image/language_diagram-class_diagram.png> <./image/language_diagram-stateme
-nt.png> <./image/language_diagram-statement_query.png>] [52 <./image/language_d
+nt.png> <./image/language_diagram-statement_query.png>] [54 <./image/language_d
 iagram-statement_rule.png> <./image/language_diagram-condition.png> <./image/la
 nguage_diagram-expression.png> <./image/language_diagram-action.png>]
-[53 <./image/language_diagram-term.png>]) (./chapter4/chapter4.tex [54]
-[55]
+[55 <./image/language_diagram-term.png>]) (./chapter4/chapter4.tex [56]
+[57]
 Ch\uhorn \ohorn ng 4.
-) (./reference/reference.tex [56
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+<image/demo_query.png, id=485, 432.61626pt x 268.00125pt>
+File: image/demo_query.png Graphic file (type png)
+
+<use image/demo_query.png>
+Package pdftex.def Info: image/demo_query.png used on input line 8.
+(pdftex.def)             Requested size: 216.3076pt x 134.00029pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--23
+
+ []
+
+[58
+
+ <./image/demo_query.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+<image/add_thingsboard.png, id=490, 439.6425pt x 269.005pt>
+File: image/add_thingsboard.png Graphic file (type png)
+
+<use image/add_thingsboard.png>
+Package pdftex.def Info: image/add_thingsboard.png used on input line 31.
+(pdftex.def)             Requested size: 219.82071pt x 134.50217pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--46
+
+ []
+
+[59 <./image/add_thingsboard.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--60
+
+ []
+
+) (./reference/reference.tex [60]
 Ch\uhorn \ohorn ng 5.
 
 Overfull \hbox (56.14546pt too wide) in paragraph at lines 9--11
@@ -2188,7 +2283,7 @@ Overfull \hbox (5.641pt too wide) in paragraph at lines 11--15
 ou-need-to-know-
  []
 
-) [57
+) [61
 
 
 ]
@@ -2204,10 +2299,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
- 22494 strings out of 493029
- 394324 string characters out of 6136233
+ 22527 strings out of 493029
+ 395136 string characters out of 6136233
  477668 words of memory out of 5000000
- 25370 multiletter control sequences out of 15000+600000
+ 25390 multiletter control sequences out of 15000+600000
  21438 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,10n,77p,2226b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2216,10 +2311,10 @@ r/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/vntex/vnr/vnr10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/vntex/vnr/vnr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vn
 r/vnr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnsl12.pfb>
-Output written on thesis.pdf (57 pages, 1968033 bytes).
+Output written on thesis.pdf (61 pages, 2065262 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 140 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

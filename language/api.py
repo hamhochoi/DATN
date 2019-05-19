@@ -195,11 +195,14 @@ def api_get_all_metric():
 
 def api_get_metric_from_datapoint(datapoint_attr, datapoint_value):
     datapoint_ids = api_get_datapoint_id_from_datapoint_attribute(datapoint_attr, datapoint_value)
+    # print (datapoint_ids)
     metrics = []
 
     for datapoint_id in datapoint_ids:
+        print (datapoint_id)
         metric_attr = "HasDatapoint"
         metric = api_get_metric_from_metric_attr(metric_attr, datapoint_id)
+        print (metric)
         if (metric != []):
             metrics.extend(metric)
 
@@ -482,6 +485,7 @@ def api_get_smartcontext_from_datapoint(datapoint_attr, datapoint_value):
     for datapoint_id in datapoint_ids:
         datapoint_attr = "DatapointId"
         metrics = api_get_metric_from_datapoint(datapoint_attr, datapoint_id)
+        # print (metrics)
 
         for metric in metrics:
             metric_id = metric["MetricId"]
@@ -592,7 +596,7 @@ if __name__ == "__main__":
     # x = api_get_all_platform()
     # x = api_get_all_smartcontext()
 
-    x = api_get_datapoint_from_datapoint_attr('value', '55')
+    # x = api_get_datapoint_from_datapoint_attr('value', '55')
     # x = api_get_metric_from_metric_attr("MetricId", 'humidity_homeassistant')
     # x = api_get_source_from_source_attr("SourceId", 'motion_openhab')
     # x = api_get_platform_from_platform_attr("PlatformId", 'openhab_id')
@@ -631,7 +635,7 @@ if __name__ == "__main__":
 
     # x = api_get_smartcontext_from_source('SourceStatus', 'active')
     # x = api_get_smartcontext_from_metric("MetricId", 'humidity_thingsboard')
-    # x = api_get_smartcontext_from_datapoint('DataType', 'int')
+    x = api_get_smartcontext_from_datapoint('DataType', 'int')
 
 
     print (x)

@@ -1,5 +1,60 @@
-\chapter{ Kết luận, hướng phát triển}
+\chapter{Thử nghiệm hệ thống}
 
-Sau khi đã thực hiện các công việc như đã trình bày trong chương 2, tôi đã xây dựng được một ngôn ngữ truy vấn có khả năng dựa trên mối quan hệ giữa các khái niệm trong ontology để thực hiện các câu truy vấn thể hiện được tính ngữ nghĩa, chính xác hơn với ngữ cảnh mà người truy vấn mong muốn. 
-Tuy nhiên, do giới hạn về thời gian, hệ thống xây dựng còn khá đơn giản, chưa xử lý được các câu truy vấn ngữ nghĩa phức tạp. Do đó, trong thời gian tới, tôi sẽ tiếp tục phải cải tiến cấu trúc ngôn ngữ truy vấn xây dựng, đồng thời chỉnh sửa ontology nếu cần thiết để phù hợp hơn với những phát sinh trong tương lai. 
-Phần mã nguồn của tôi tuy đã cố gắng viết sạch, dễ nhìn và cũng đã thực hiện unit test cho các API, tuy nhiên vẫn chưa kiểm tra hết được các khả năng có thể xảy ra lỗi. Do đó, trong tương lai, tôi cũng sẽ bổ sung các unit test cho toàn bộ phần mã nguồn quan trọng để đảm bảo hệ thống có ít lỗi nhất trong khả năng của mình.
+Để chứng minh tính đúng đắn của hệ thống, tôi thực hiện thử nghiệm hệ thống với một câu truy vấn: Liệt kê các thiết bị trong trung tâm HPCC. \\
+
+Câu truy vấn tương ứng trong hệ thống của tôi là:
+\begin{figure}
+	\center
+	\includegraphics[scale=0.5]{image/demo_query}
+	\caption{Câu truy vấn thực nghiệm}
+\end{figure}
+
+Kết quả thu được là :\\
+
+
+TODO\\
+TODO \\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+
+
+
+Để chứng minh hệ thống có tính khả mở, tôi thêm một nền tảng IoT là ThingsBoard vào hệ thống bằng việc viết thêm một driver để ánh xạ dữ liệu từ định dạng của ThingsBoard về định dạng của ontology. Tôi sẽ thực hiện câu truy vấn: Lấy tất cả các platform có trong trung tâm HPCC để chứng minh đã thêm được ThingsBoard vào hệ thống. \\
+
+Câu truy vấn tương ứng trong hệ thống là:
+\begin{figure}
+	\center
+	\includegraphics[scale=0.5]{image/add_thingsboard}
+	\caption{Thêm ThingsBoard vào hệ thống}
+\end{figure}
+
+Kết quả thu được trước khi thêm Thingsboard: \\
+
+
+TODO\\
+TODO \\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+
+
+
+Kết quả thu được sau khi thêm Thingsboard:\\
+
+
+TODO\\
+TODO \\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+TODO\\
+

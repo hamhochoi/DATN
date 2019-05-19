@@ -104,23 +104,6 @@ class Languague():
         self.list_logic = ["AND", "OR"]
 
 
-    def get_key_word_from_db(self):
-        pass
-
-
-
-
-    def query_parser(self):
-        pass
-
-
-    def rule_parser(self):
-        pass
-
-
-    def assignment_parser(self):
-        pass
-
     def get_level(self, value):
         """Get level 
 

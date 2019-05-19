@@ -61,7 +61,7 @@ class Condition(Languague):
 
         Params: 
             compare_json    : a condition (in json format)
-            list_object_to_check_level : level of object to check the condition (json format)
+            list_object_to_check_level : level of object to check the condition (string)
 
         Return: 
             True, result : if syntax and semantic valid
@@ -105,6 +105,7 @@ class Condition(Languague):
             if (keyword_level == 0):    # keyword == smartcontext
                 if (object_to_check_level == 0):    # Need to get smartcontext from smartcontext_attr
                     result = api_get_smartcontext_from_smartcontext_attr(keyword, expression)
+                    print (result)
                 elif (object_to_check_level == 1):  # Need to get platform from smartcontext_attr
                     result = api_get_platform_from_smartcontext(keyword, expression)
                 elif (object_to_check_level == 2):  # Need to get source from smartcontext_attr

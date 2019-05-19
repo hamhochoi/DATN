@@ -18,5 +18,5 @@ class Statement(Languague):
         pass
 
 
-    def assignment_parser(self):
-        pass
+    # def assignment_parser(self):
+    #     pass

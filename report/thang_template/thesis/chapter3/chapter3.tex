@@ -116,9 +116,7 @@ Thingsboard là một nền tảng IoT mã nguồn mở giúp thu thập dữ li
 \end{figure}
 
 
-\section{Thiết kế ngôn ngữ truy vấn cho IoT}
-
-\subsection{Xây dựng ontology}
+\section{Xây dựng ontology}
 Tuân theo các nguyên tắc và các bước xây dựng ontology, tôi thực hiện việc xây dựng ontology theo các bước sau:
 
 \underline{Bước 1:} Xác định lĩnh vực và phạm vi của ontology \\
@@ -370,7 +368,7 @@ Sau các bước trên, ta lập được một ontology về lĩnh vực IoT nh
 \end{figure}
 
 
-\subsection{Cơ chế ánh xạ các dữ liệu trong IoT theo ontology}
+\section{Xây dựng driver ánh xạ các dữ liệu trong IoT theo ontology}
 Các dữ liệu từ các cảm biến, thiết bị IoT rất khác nhau về cấu trúc. Do trong đề tài này, tất cả các cảm biến, thiết bị đều được gắn với một platform; mỗi platform biểu diễn dữ liệu thu được từ các cảm biến, thiết bị theo một định dạng chuẩn riêng ta phải ánh xạ các định dạng dữ liệu chuẩn của các platform về một dạng chung. Để làm được điều này, ta phải viết các driver cho mỗi platform, nhiệm vụ của driver là ánh xạ định dạng dữ liệu của mỗi platform về định dạng dữ liệu chung của ontology.
 Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùng ngôn ngữ hình thức để biểu diễn các khái niệm trong ontology. Ở đề tài này, tôi dùng định dạng json để biểu diễn các khái niệm, các thuộc tính của các khái niệm cũng như mối quan hệ giữa các khái niệm. 
 %\clearpage
@@ -380,8 +378,32 @@ Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùn
 	\caption{Mô hình ánh xạ dữ liệu về một chuẩn của ontology}
 \end{figure}
 
-\subsection{Cơ chế truy vấn ngữ nghĩa}
-\subsubsection{Biểu đồ use case tổng quát}
+
+Định dạng dữ liệu của OpenHAB:
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{image/openhab_dataformat}
+	\caption{Định dạng dữ liệu của OpenHAB}
+\end{figure}
+
+Định dạng dữ liệu của HomeAssistant
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{image/homeassistant_dataformat}
+	\caption{Định dạng dữ liệu của HomeAssistant}
+\end{figure}
+
+
+Định dạng dữ liệu của ontology:
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{image/ontology_dataformat}
+	\caption{Định dạng dữ liệu của Ontology}
+\end{figure}
+
+\section{Cơ chế truy vấn ngữ nghĩa}
+\subsection{Biểu đồ use case tổng quát}
 
 \begin{figure}[h!]
 	\center
@@ -389,7 +411,9 @@ Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùn
 	\caption{Biểu đồ use case tổng quát}
 \end{figure}
 
-\subsubsection{Xây dựng cơ chế truy vấn}
+
+
+\subsection{Cơ chế truy vấn ngữ nghĩa}
 Từ các thực thể được biểu diễn theo ontology, ta phải xây dựng cơ chế để lấy được thông tin của các thực thể, mối quan hệ giữa các thực thể. Để làm được điều này, tôi xây dựng tập các API dựa vào mối quan hệ giữa các khái niệm để đạt được tính ngữ nghĩa. Đồng thời, tôi định nghĩa một ngôn ngữ truy vấn đơn giản, sử dụng tập API trên để tạo ra các câu truy vấn ngữ nghĩa.
 
 Mục đích của ngôn ngữ muốn tạo ra là tạo được các câu truy vấn, tương ứng với nhanh query trong sơ đồ. Để thực hiện câu truy vấn, ta cần chỉ rõ muốn lấy thuộc tính hay khái niệm nào, tập các thuộc tính và khái niệm được gọi là keyword. Ngoài việc chỉ rõ các thuộc tính, khái niệm cần truy vấn, ta cũng cần chỉ rõ điều kiện thực hiện câu truy vấn. Điều kiện này được chứa trong thành phần "Condition". Một chức năng khác mà ta mong muốn ngôn ngữ có thể thực hiện là kiểm tra các điều kiện, nếu điều kiện thỏa mãn thì thực hiện một hành động nào đó, hành động này tương ứng với việc điều khiển các thiết bị IoT dựa trên các API mà các platform cung cấp. Chức năng này được gọi là rule. 
@@ -443,7 +467,7 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 \end{figure}
 \clearpage
 
-\subsubsection{Biểu đồ lớp của các thành phần của cơ chế truy vấn}
+\subsection{Biểu đồ lớp của các thành phần của cơ chế truy vấn}
 
 \begin{figure}[h!]
 	\center
@@ -454,7 +478,7 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 
 
 
-\subsubsection{Biểu đồ hoạt động các thành phần của cơ chế truy vấn}
+\subsection{Biểu đồ hoạt động các thành phần của cơ chế truy vấn}
 
 \begin{figure}[h!]
 	\center

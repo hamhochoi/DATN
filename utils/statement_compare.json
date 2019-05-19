@@ -1,16 +1,19 @@
 {
-    "select" : "Source",
+    "select" : "Platform",
     "where" : {
         "condition" : {
             "compare" : {
-                "keyword" : "MetricId",
+                "keyword" : "SmartContextName",
                 "comparator" : "=",
-                "expression" : "Humidity"
+                "expression" : "HPCC"
             },
             "logic" : {},
             "in_bracket" : {}
         }
-    },
+    }
+}
+
+,
     "rule" : {   
             "if" : {
                 "compare" : {},
