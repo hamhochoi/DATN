@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  20 MAY 2019 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  20 MAY 2019 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1222,24 +1222,9 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \f@ncyO@olf=\skip79
 \f@ncyO@orf=\skip80
 )
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 42.
-
-
-Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 43.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 44.
-
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 45.
-
    defining Unicode char U+0190 (decimal 400)
    defining Unicode char U+025B (decimal 603)
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count138
@@ -1737,11 +1722,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--50
 
  []
 
-) (./acknowledgements/acknowledgements.tex [2
+[2
 
 
 
-] [3
+]) (./acknowledgements/acknowledgements.tex [3] [4
 
 
 ]) (./abstract/abstract.tex
@@ -1749,23 +1734,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [4
+) [5
 
-] (./thesis.toc [5
+] (./thesis.toc [6
 
 
 ])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
- [6] (./thesis.lof [7
+ [7] (./thesis.lof [8
 
 
 ])
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [8] (./chapter1/chapter1.tex
+ [9] (./chapter1/chapter1.tex
 Ch\uhorn \ohorn ng 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1777,7 +1762,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[9
+[10
 
 
 ]
@@ -1785,12 +1770,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[10]) (./chapter2/chapter2.tex [11]
+[11]) (./chapter2/chapter2.tex [12]
 Ch\uhorn \ohorn ng 2.
-[12
 
-] [13] [14]
-<image/internet-of-things1.jpg, id=202, 783.92876pt x 419.5675pt>
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+[13
+
+] [14] [15]
+<image/internet-of-things1.jpg, id=212, 783.92876pt x 419.5675pt>
 File: image/internet-of-things1.jpg Graphic file (type jpg)
 
 <use image/internet-of-things1.jpg>
@@ -1802,27 +1792,27 @@ Overfull \hbox (29.34315pt too wide) in paragraph at lines 36--37
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--49
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
 
  []
 
-[15
+[16
 
  <./image/internet-of-things1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[16] <image/mqtt.png, id=212, 582.175pt x 304.13625pt>
+[17] <image/mqtt.png, id=222, 582.175pt x 304.13625pt>
 File: image/mqtt.png Graphic file (type png)
  <use image/mqtt.png>
 Package pdftex.def Info: image/mqtt.png used on input line 60.
 (pdftex.def)             Requested size: 349.3077pt x 182.48315pt.
 
-[17
+[18
 
  <./image/mqtt.png (PNG copy)>]
-<image/IoTPlatform.png, id=218, 770.88pt x 475.7775pt>
+<image/IoTPlatform.png, id=230, 770.88pt x 475.7775pt>
 File: image/IoTPlatform.png Graphic file (type png)
 
 <use image/IoTPlatform.png>
@@ -1833,28 +1823,28 @@ Overfull \hbox (21.51384pt too wide) in paragraph at lines 76--77
  [] 
  []
 
-[18
+[19
 
- <./image/IoTPlatform.png>] [19] [20]
-<image/otology_example.png, id=235, 773.89125pt x 502.87875pt>
+ <./image/IoTPlatform.png>] [20] [21]
+<image/otology_example.png, id=247, 773.89125pt x 502.87875pt>
 File: image/otology_example.png Graphic file (type png)
 
 <use image/otology_example.png>
-Package pdftex.def Info: image/otology_example.png used on input line 123.
+Package pdftex.def Info: image/otology_example.png used on input line 122.
 (pdftex.def)             Requested size: 464.33833pt x 301.72957pt.
 
-Overfull \hbox (23.3206pt too wide) in paragraph at lines 123--125
+Overfull \hbox (23.3206pt too wide) in paragraph at lines 122--124
  [] 
  []
 
-[21
+[22
 
- <./image/otology_example.png>] [22]
+ <./image/otology_example.png>] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
-[23] <image/ssn_ontology.png, id=250, 985.6825pt x 578.16pt>
+[24] <image/ssn_ontology.png, id=267, 985.6825pt x 578.16pt>
 File: image/ssn_ontology.png Graphic file (type png)
 
 <use image/ssn_ontology.png>
@@ -1866,8 +1856,8 @@ Overfull \hbox (32.36147pt too wide) in paragraph at lines 172--173
 urce=corescholar.libraries.wright.edu 
  []
 
-[24 <./image/ssn_ontology.png>] [25]
-<image/iot-a.png, id=261, 575.14874pt x 644.4075pt>
+[25 <./image/ssn_ontology.png>] [26]
+<image/iot-a.png, id=281, 575.14874pt x 644.4075pt>
 File: image/iot-a.png Graphic file (type png)
  <use image/iot-a.png>
 Package pdftex.def Info: image/iot-a.png used on input line 180.
@@ -1878,28 +1868,28 @@ Overfull \hbox (8.92783pt too wide) in paragraph at lines 182--183
 729011/figure/fig1/ 
  []
 
-[26
+[27
 
- <./image/iot-a.png>] <image/iot-lite.jpg, id=267, 722.7pt x 406.51875pt>
+ <./image/iot-a.png>] <image/iot-lite.jpg, id=289, 722.7pt x 406.51875pt>
 File: image/iot-lite.jpg Graphic file (type jpg)
 
 <use image/iot-lite.jpg>
 Package pdftex.def Info: image/iot-lite.jpg used on input line 190.
 (pdftex.def)             Requested size: 433.62334pt x 243.91312pt.
- [27
+ [28
 
- <./image/iot-lite.jpg>] [28] [29])
-(./chapter3/chapter3.tex [30]
+ <./image/iot-lite.jpg>] [29] [30] [31])
+(./chapter3/chapter3.tex [32]
 Ch\uhorn \ohorn ng 3.
-[31
+[33
 
-] <image/hop_1.png, id=290, 256.887pt x 144.54pt>
+] <image/hop_1.png, id=317, 256.887pt x 144.54pt>
 File: image/hop_1.png Graphic file (type png)
  <use image/hop_1.png>
 Package pdftex.def Info: image/hop_1.png used on input line 19.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_2.png, id=291, 256.887pt x 144.54pt>
+<image/hop_2.png, id=318, 256.887pt x 144.54pt>
 File: image/hop_2.png Graphic file (type png)
  <use image/hop_2.png>
 Package pdftex.def Info: image/hop_2.png used on input line 26.
@@ -1909,10 +1899,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[32
+[34
 
  <./image/hop_1.png> <./image/hop_2.png>]
-<image/mo_hinh_trien_khai_phan_cung.png, id=297, 212.795pt x 463.7325pt>
+<image/mo_hinh_trien_khai_phan_cung.png, id=324, 212.795pt x 463.7325pt>
 File: image/mo_hinh_trien_khai_phan_cung.png Graphic file (type png)
 
 <use image/mo_hinh_trien_khai_phan_cung.png>
@@ -1933,19 +1923,19 @@ File: image/hop_2.png Graphic file (type png)
 Package pdftex.def Info: image/hop_2.png used on input line 50.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_3.png, id=298, 616.266pt x 281.853pt>
+<image/hop_3.png, id=325, 616.266pt x 281.853pt>
 File: image/hop_3.png Graphic file (type png)
  <use image/hop_3.png>
 Package pdftex.def Info: image/hop_3.png used on input line 57.
 (pdftex.def)             Requested size: 246.50203pt x 112.7392pt.
 
-<image/hop_4.png, id=299, 456.9435pt x 256.887pt>
+<image/hop_4.png, id=326, 456.9435pt x 256.887pt>
 File: image/hop_4.png Graphic file (type png)
  <use image/hop_4.png>
 Package pdftex.def Info: image/hop_4.png used on input line 58.
 (pdftex.def)             Requested size: 228.47118pt x 128.44318pt.
 
-<image/hop_5.jpg, id=300, 256.887pt x 144.54pt>
+<image/hop_5.jpg, id=327, 256.887pt x 144.54pt>
 File: image/hop_5.jpg Graphic file (type jpg)
  <use image/hop_5.jpg>
 Package pdftex.def Info: image/hop_5.jpg used on input line 59.
@@ -1954,48 +1944,48 @@ Package pdftex.def Info: image/hop_5.jpg used on input line 59.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33
+[35
 
- <./image/mo_hinh_trien_khai_phan_cung.png>] [34 <./image/hop_3.png> <./image/h
+ <./image/mo_hinh_trien_khai_phan_cung.png>] [36 <./image/hop_3.png> <./image/h
 op_4.png> <./image/hop_5.jpg>]
-<image/openhab.png, id=312, 1370.11874pt x 711.65875pt>
+<image/openhab.png, id=338, 1370.11874pt x 711.65875pt>
 File: image/openhab.png Graphic file (type png)
 
 <use image/openhab.png>
 Package pdftex.def Info: image/openhab.png used on input line 80.
 (pdftex.def)             Requested size: 411.03879pt x 213.49927pt.
- [35 <./image/openhab.png>]
-<image/homeassistant.png, id=317, 1370.11874pt x 710.655pt>
+ [37 <./image/openhab.png>]
+<image/homeassistant.png, id=344, 1370.11874pt x 710.655pt>
 File: image/homeassistant.png Graphic file (type png)
 
 <use image/homeassistant.png>
 Package pdftex.def Info: image/homeassistant.png used on input line 90.
 (pdftex.def)             Requested size: 411.03879pt x 213.19814pt.
 
-<image/thingsboard.png, id=318, 1370.11874pt x 709.65125pt>
+<image/thingsboard.png, id=345, 1370.11874pt x 709.65125pt>
 File: image/thingsboard.png Graphic file (type png)
 
 <use image/thingsboard.png>
 Package pdftex.def Info: image/thingsboard.png used on input line 100.
 (pdftex.def)             Requested size: 411.03879pt x 212.897pt.
- [36
+ [38
 
- <./image/homeassistant.png> <./image/thingsboard.png>] [37] <image/ontology-2.
-pdf, id=328, 4080.24374pt x 2281.52374pt>
+ <./image/homeassistant.png> <./image/thingsboard.png>] [39] <image/ontology-2.
+pdf, id=354, 4080.24374pt x 2281.52374pt>
 File: image/ontology-2.pdf Graphic file (type pdf)
 
 <use image/ontology-2.pdf>
 Package pdftex.def Info: image/ontology-2.pdf used on input line 112.
 (pdftex.def)             Requested size: 816.0343pt x 456.29668pt.
- [38
+ [40
 
- <./image/ontology-2.pdf>] [39] [40] [41]
-[42] [43]
+ <./image/ontology-2.pdf>] [41] [42] [43]
+[44] [45]
 Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-[44]
+[46]
 Overfull \hbox (84.47122pt too wide) in paragraph at lines 296--303
 | \T5/cmr/m/n/12 "SubSmartContextId" : ["phong_sinh_vien_id", "phong_can_bo_id"
 , "phong_may_chu_id"], 
@@ -2018,31 +2008,35 @@ Overfull \hbox (44.13528pt too wide) in paragraph at lines 330--340
 _light", "light.red_light",
  []
 
-[45
+[47
 
-] [46]
+] [48]
 Overfull \hbox (2.39601pt too wide) in paragraph at lines 349--362
 | \T5/cmr/m/n/12 "HasDatapoint":[ "b37a79a0-755c-11e9-abce-5bf295b292b2-humidit
 y_datapoint"
  []
 
-<image/mapping_service.png, id=386, 442.65375pt x 336.25626pt>
+<image/mapping_service.png, id=412, 524.96124pt x 503.8825pt>
 File: image/mapping_service.png Graphic file (type png)
 
 <use image/mapping_service.png>
 Package pdftex.def Info: image/mapping_service.png used on input line 385.
-(pdftex.def)             Requested size: 265.59428pt x 201.75531pt.
- [47
+(pdftex.def)             Requested size: 314.97917pt x 302.33183pt.
+ [49
 
 ]
-<image/openhab_dataformat.png, id=391, 549.05125pt x 322.20375pt>
+<image/openhab_dataformat.png, id=418, 549.05125pt x 322.20375pt>
 File: image/openhab_dataformat.png Graphic file (type png)
 
 <use image/openhab_dataformat.png>
 Package pdftex.def Info: image/openhab_dataformat.png used on input line 394.
 (pdftex.def)             Requested size: 329.43329pt x 193.32373pt.
- [48 <./image/mapping_service.png> <./image/openhab_dataformat.png>]
-<image/homeassistant_dataformat.png, id=397, 523.9575pt x 211.79124pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[50 <./image/mapping_service.png>] [51 <./image/openhab_dataformat.png>]
+<image/homeassistant_dataformat.png, id=428, 523.9575pt x 211.79124pt>
 File: image/homeassistant_dataformat.png Graphic file (type png)
 
 <use image/homeassistant_dataformat.png>
@@ -2050,7 +2044,7 @@ Package pdftex.def Info: image/homeassistant_dataformat.png used on input line
 402.
 (pdftex.def)             Requested size: 314.37692pt x 127.07571pt.
 
-<image/language_model-statement.png, id=398, 1434.35875pt x 302.12875pt>
+<image/language_model-statement.png, id=429, 1434.35875pt x 302.12875pt>
 File: image/language_model-statement.png Graphic file (type png)
 
 <use image/language_model-statement.png>
@@ -2061,10 +2055,10 @@ Package pdftex.def Info: image/language_model-statement.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49
+[52
 
  <./image/homeassistant_dataformat.png>]
-<image/language_model-condition.png, id=404, 1462.46375pt x 442.65375pt>
+<image/language_model-condition.png, id=434, 1462.46375pt x 442.65375pt>
 File: image/language_model-condition.png Graphic file (type png)
 
 <use image/language_model-condition.png>
@@ -2072,7 +2066,7 @@ Package pdftex.def Info: image/language_model-condition.png used on input line
 433.
 (pdftex.def)             Requested size: 438.74251pt x 132.79713pt.
 
-<image/language_model-action.png, id=405, 1000.73875pt x 206.7725pt>
+<image/language_model-action.png, id=435, 1000.73875pt x 206.7725pt>
 File: image/language_model-action.png Graphic file (type png)
 
 <use image/language_model-action.png>
@@ -2080,7 +2074,7 @@ Package pdftex.def Info: image/language_model-action.png used on input line 442
 .
 (pdftex.def)             Requested size: 400.28842pt x 82.70752pt.
 
-<image/language_model-expression.png, id=406, 1069.9975pt x 213.79875pt>
+<image/language_model-expression.png, id=436, 1069.9975pt x 213.79875pt>
 File: image/language_model-expression.png Graphic file (type png)
 
 <use image/language_model-expression.png>
@@ -2091,7 +2085,7 @@ Package pdftex.def Info: image/language_model-expression.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_model-term.png, id=407, 758.835pt x 180.675pt>
+<image/language_model-term.png, id=437, 758.835pt x 180.675pt>
 File: image/language_model-term.png Graphic file (type png)
 
 <use image/language_model-term.png>
@@ -2101,7 +2095,7 @@ Package pdftex.def Info: image/language_model-term.png used on input line 457.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_model-const.png, id=408, 688.5725pt x 159.59625pt>
+<image/language_model-const.png, id=438, 688.5725pt x 159.59625pt>
 File: image/language_model-const.png Graphic file (type png)
 
 <use image/language_model-const.png>
@@ -2112,10 +2106,10 @@ Package pdftex.def Info: image/language_model-const.png used on input line 464.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50 <./image/language_model-statement.png> <./image/language_model-condition.pn
-g> <./image/language_model-action.png>] [51 <./image/language_model-expression.
+[53 <./image/language_model-statement.png> <./image/language_model-condition.pn
+g> <./image/language_model-action.png>] [54 <./image/language_model-expression.
 png> <./image/language_model-term.png> <./image/language_model-const.png>]
-<image/language_diagram-use_case.png, id=423, 633.36626pt x 352.31625pt>
+<image/language_diagram-use_case.png, id=454, 633.36626pt x 352.31625pt>
 File: image/language_diagram-use_case.png Graphic file (type png)
 
 <use image/language_diagram-use_case.png>
@@ -2123,7 +2117,7 @@ Package pdftex.def Info: image/language_diagram-use_case.png used on input line
  474.
 (pdftex.def)             Requested size: 380.02269pt x 211.39137pt.
 
-<image/language_diagram-class_diagram.png, id=424, 1321.93875pt x 563.10374pt>
+<image/language_diagram-class_diagram.png, id=455, 1321.93875pt x 563.10374pt>
 File: image/language_diagram-class_diagram.png Graphic file (type png)
 
 <use image/language_diagram-class_diagram.png>
@@ -2135,7 +2129,7 @@ Overfull \hbox (21.66777pt too wide) in paragraph at lines 483--484
  [] 
  []
 
-<image/language_diagram-statement.png, id=425, 342.27875pt x 302.12875pt>
+<image/language_diagram-statement.png, id=456, 342.27875pt x 302.12875pt>
 File: image/language_diagram-statement.png Graphic file (type png)
 
 <use image/language_diagram-statement.png>
@@ -2147,7 +2141,7 @@ e 492.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<image/language_diagram-statement_query.png, id=426, 522.95375pt x 312.16624pt>
+<image/language_diagram-statement_query.png, id=457, 522.95375pt x 312.16624pt>
 File: image/language_diagram-statement_query.png Graphic file (type png)
 <use image/language_diagram-statement_query.png>
 Package pdftex.def Info: image/language_diagram-statement_query.png used on inp
@@ -2158,7 +2152,7 @@ ut line 499.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<image/language_diagram-statement_rule.png, id=427, 683.55376pt x 312.16624pt>
+<image/language_diagram-statement_rule.png, id=458, 683.55376pt x 312.16624pt>
 File: image/language_diagram-statement_rule.png Graphic file (type png)
 
 <use image/language_diagram-statement_rule.png>
@@ -2169,7 +2163,7 @@ t line 506.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-condition.png, id=428, 352.31625pt x 321.2pt>
+<image/language_diagram-condition.png, id=459, 352.31625pt x 321.2pt>
 File: image/language_diagram-condition.png Graphic file (type png)
 
 <use image/language_diagram-condition.png>
@@ -2180,7 +2174,7 @@ e 513.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-expression.png, id=429, 407.5225pt x 302.12875pt>
+<image/language_diagram-expression.png, id=460, 407.5225pt x 302.12875pt>
 File: image/language_diagram-expression.png Graphic file (type png)
 
 <use image/language_diagram-expression.png>
@@ -2191,7 +2185,7 @@ ne 520.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-action.png, id=430, 357.335pt x 111.41624pt>
+<image/language_diagram-action.png, id=461, 357.335pt x 111.41624pt>
 File: image/language_diagram-action.png Graphic file (type png)
 
 <use image/language_diagram-action.png>
@@ -2202,7 +2196,7 @@ Package pdftex.def Info: image/language_diagram-action.png used on input line 5
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<image/language_diagram-term.png, id=431, 342.27875pt x 302.12875pt>
+<image/language_diagram-term.png, id=462, 342.27875pt x 302.12875pt>
 File: image/language_diagram-term.png Graphic file (type png)
 
 <use image/language_diagram-term.png>
@@ -2218,18 +2212,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-[52
+[55
 
  <./image/language_diagram-use_case.png> <./image/language_diagram-class_diagra
 m.png>]
 Overfull \vbox (40.3096pt too high) has occurred while \output is active []
 
 
-[53 <./image/language_diagram-statement.png> <./image/language_diagram-statemen
+[56 <./image/language_diagram-statement.png> <./image/language_diagram-statemen
 t_query.png> <./image/language_diagram-statement_rule.png> <./image/language_di
-agram-condition.png>] [54 <./image/language_diagram-expression.png> <./image/la
-nguage_diagram-action.png> <./image/language_diagram-term.png>] [55])
-(./chapter4/chapter4.tex [56]
+agram-condition.png>] [57 <./image/language_diagram-expression.png> <./image/la
+nguage_diagram-action.png> <./image/language_diagram-term.png>] [58])
+(./chapter4/chapter4.tex [59]
 Ch\uhorn \ohorn ng 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -2241,14 +2235,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--28
 
  []
 
-[57
+[60
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[58] [59]
+[61] [62]
 Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
@@ -2268,7 +2262,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[60
+[63
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 133--134
@@ -2280,29 +2274,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-[61] [62]
+[64] [65]
 Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
-) (./reference/reference.tex [63]
+) (./reference/reference.tex [66]
 Ch\uhorn \ohorn ng 5.
-
-Overfull \hbox (56.14546pt too wide) in paragraph at lines 9--11
-[]\T5/cmr/m/n/12 internet of things (IoT), https://internetofthingsagenda.techt
-arget.com/ definition/Internet-
- []
-
-
-Overfull \hbox (5.641pt too wide) in paragraph at lines 11--15
-\T5/cmr/m/n/12 online.com/designspark/eleven-internet-of-things-iot-protocols-y
-ou-need-to-know-
- []
-
-) [64
+[67
 
 
 ]
+LaTeX Font Info:    Try loading font information for T5+cmtt on input line 9.
+ (/usr/share/texlive/texmf-dist/tex/latex/vntex/t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (3.2279pt too wide) in paragraph at lines 8--10
+\T5/cmtt/m/n/12 gartner-says-8-billion-connected-things-will-be-in-use-in-2017-
+up-31- 
+ []
+
+
+Overfull \hbox (3.2279pt too wide) in paragraph at lines 14--16
+\T5/cmtt/m/n/12 https://internetofthingsagenda.techtarget.com/definition/Intern
+et-of- 
+ []
+
+[68
+
+])
+Overfull \vbox (1.62167pt too high) has occurred while \output is active []
+
+
+[69]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
  (./thesis.aux)
@@ -2315,22 +2319,24 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
- 22489 strings out of 493029
- 393922 string characters out of 6136233
- 476669 words of memory out of 5000000
- 25359 multiletter control sequences out of 15000+600000
- 21438 words of font info for 49 fonts, out of 8000000 for 9000
+ 22528 strings out of 493029
+ 394610 string characters out of 6136233
+ 476913 words of memory out of 5000000
+ 25383 multiletter control sequences out of 15000+600000
+ 22570 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,77p,2226b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,77p,2226b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/vntex/vnr/vnr10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/vntex/vnr/vnr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vn
-r/vnr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnsl12.pfb>
-Output written on thesis.pdf (64 pages, 1902359 bytes).
+r/vnr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnsl12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on thesis.pdf (69 pages, 1935218 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 149 named destinations out of 1000 (max. 500000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 159 named destinations out of 1000 (max. 500000)
  188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
