@@ -3,5 +3,5 @@
     "SmartContextName"    : "phong_may_chu",
     "ParentSmartContextId" : ["HPCC_id"],
     "SubSmartContextId" : [],
-    "HasPlatform" : ["homeassistant_id"]
+    "HasPlatform" : ["611dc2c1-086d-487f-b44a-2d819764603a"]
 }

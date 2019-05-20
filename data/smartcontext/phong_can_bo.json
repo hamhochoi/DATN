@@ -3,5 +3,5 @@
     "SmartContextName"    : "phong_can_bo",
     "ParentSmartContextId" : ["HPCC_id"],
     "SubSmartContextId" : [],
-    "HasPlatform" : ["thingsboard_id"]
+    "HasPlatform" : ["0bafb5bf-5c16-4122-9782-d240914705d3"]
 }

@@ -1,4 +1,5 @@
-\chapter{Xây dựng hệ thống IoT và thiết kế ngôn ngữ truy vấn ngữ nghĩa}
+\newcommand{\blank}[1]{\hspace*{#1}\linebreak[0]}
+\chapter{Xây dựng hệ thống IoT và thiết kế cơ chế truy vấn ngữ nghĩa}
 
 \section{Xây dựng hệ thống IoT}
 \subsection{Phần cứng}
@@ -10,7 +11,7 @@ Các thiết bị IoT được cài đặt trên 3 khu vực trong phòng 609 th
 	\item Một cảm biến nhiệt độ, độ ẩm
 	\item Ba đèn LED tượng trưng cho ba thiết bị IoT có khả năng thiết lập các trạng thái khác nhau (bật/tắt).
 \end{itemize}
-Các thiết bị trong mỗi phòng được gom thành hai "vật" tương ứng với hai hộp. "Vật" 1 chứa cảm biến chuyển động và ba đèn LED; "vật" 2 chứa cảm biến ánh sáng, cảm biến nhiệt độ-độ ẩm. 
+Các cảm biến và đèn LED trong mỗi phòng được cài đặt vào hai hộp đại diện cho hai thiết bị thông minh. Thiết bị thứ nhất chứa cảm biến chuyển động và ba đèn LED; thiết bị thứ hai chứa cảm biến ánh sáng, cảm biến nhiệt độ-độ ẩm. 
 \clearpage
 
 \begin{figure}
@@ -24,33 +25,19 @@ Các thiết bị trong mỗi phòng được gom thành hai "vật" tương ứ
 	\center
 	\includegraphics[scale=1]{image/hop_2}
 	\label{fig:2hop}
-	\caption{Hai hộp đại diện cho hai "vật"}
+	\caption{Hai hộp đại diện cho hai thiết bị thông minh}
 \end{figure}
 
 Để lấy được dữ liệu từ các thiết bị trên, ta sử dụng board vi mạch xử lý Arduino Uno. Tuy nhiên, vi mạch này không có chức năng gửi dữ liệu thông qua mạng wifi, do đó, cần phải lắp thêm module ESP8266 để gửi dữ liệu từ Arduino, qua ESP8266 rồi gửi lên platform.
 
 \subsection{Các giao thức sử dụng}
-Giao thức được dùng để truyền tải dữ liệu từ ESP8266 lên nền tảng IoT là MQTT thông qua mạng wifi. MQTT (Message Queuing Telemetry Transport) là một giao thức gửi dạng publish/subscribe sử dụng cho các thiết bị IoT với băng thông thấp, độ tin cậy cao và khả năng được sử dụng trong mạng lưới không ổn định. Trong đó, broker được coi như trung tâm, nó là điểm giao của tất cả các kết nối đến từ client. Nhiệm vụ chính của broker là nhận message (gói tin) từ publisher, xếp các message theo hàng đợi rồi chuyển chúng tới một địa chỉ cụ thể. Nhiệm vụ phụ của broker là nó có thể đảm nhận thêm một vài tính năng liên quan tới quá trình truyền thông như: bảo mật message, lưu trữ message, logs,...
-Client thì được chia thành 2 nhóm là publisher và subscriber. Client là các chương trình được thiết kế để có thể hoạt động một cách linh hoạt (lightweight). Client chỉ làm ít nhất một trong 2 việc là publish các message lên một topic cụ thể hoặc subscribe một topic nào đó để nhận message từ topic này.
+Giao thức được dùng để truyền tải dữ liệu từ ESP8266 lên nền tảng IoT là MQTT thông qua mạng wifi. Sau khi đã xác định được các thành phần phần cứng và giao thức sử dụng để truyền tin giữa các thiết bị tới nền tảng IoT, tôi xây dựng mô hình triển khai như sau: \\
 
-Các khái niệm đáng chú ý trong giao thức MQTT
-Message
-Trong giao thức MQTT, message còn được gọi là "message payload", có định dạng mặc định là plain-text (chữ viết người đọc được), tuy nhiên người sử dụng có thể cấu hình thành các định dạng khác.
-Topic
-Topic có thể coi như một "đường truyền" logic giữa 2 điểm là publisher và subscriber. Về cơ bản, khi message được publish vào một topic thì tất cả những subscriber của topic đó sẽ nhận được message này.
-%\clearpage
-\begin{figure}[h]
-	\center
-	\includegraphics[scale=0.6]{image/mqtt}\\
-	\caption{Giao thức truyền tin MQTT}
-	Nguồn: https://techmaster.vn/posts/34394/iot-giao-thuc-mqtt-va-ung-dung-trong-iot
-\end{figure}
-Mô hình triển khai:
 \clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.6]{image/mo_hinh_trien_khai_phan_cung}
-	\caption{Mô hình triển khai phần cứng}
+	\caption{Mô hình triển khai hệ thống}
 	
 	\label{fig:mo_hinh_trien_khai_phan_cung}
 \end{figure}
@@ -117,8 +104,17 @@ Thingsboard là một nền tảng IoT mã nguồn mở giúp thu thập dữ li
 
 
 \section{Xây dựng ontology}
-Tuân theo các nguyên tắc và các bước xây dựng ontology, tôi thực hiện việc xây dựng ontology theo các bước sau:
+Sau một thời gian làm việc, tôi đã xây dựng được một ontology như hình vẽ:
 
+\clearpage
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.2, center]{image/ontology-2}
+	\caption{ontology cho lĩnh vực nhà thông minh}
+\end{figure}
+
+
+Dưới đây là các bước xây dựng ontology mà tôi đã thực hiện:\\
 \underline{Bước 1:} Xác định lĩnh vực và phạm vi của ontology \\
 Lĩnh vực cần xây dựng ontology là IoT. Tuy nhiên, lĩnh vực IoT rất rộng lớn, gồm đa dạng các thiết bị, cảm biến và gồm nhiều khái niệm. Do đó, việc giới hạn phạm vi xây dựng ontology trong đề tài này là công việc quan trọng. Từ đó, tôi giới hạn phạm vi nghiên cứu của đề tài là lĩnh vực IoT trong nhà thông minh gồm có các thành phần: các cảm biến, các thiết bị, các nền tảng IoT, các ứng dụng/phạm vi sử dụng các nền tảng IoT. 
 Mục đích sử dụng của ontology là để tạo ra các câu truy vấn ngữ nghĩa đơn giản. Một số câu hỏi ontology cần có thể trả lời được như:
@@ -130,39 +126,7 @@ Mục đích sử dụng của ontology là để tạo ra các câu truy vấn 
 Ngoài ra, ontology cũng cần có khả năng mở rộng so với các thành phần trong ngôi nhà thông minh. 
 
 \underline{Bước 2:} Xem xét việc kế thừa các Ontology có sẵn: \\
-Trong các ontology về IoT, SSN ontology là ontology được nhắc đến rất phổ biến. Ontology này mô tả các cảm biến, các quan sát và các khái niệm liên quan. Nó không mô tả các thành phần như thời gian, địa điểm, ... Những thành phần này, có thể được thêm vào từ các ontology khác thông qua ngôn ngữ OWL (Web Ontology Language).
-SSN ontology được phát triển bởi W3C Semantic Sensor Network Incubator Group (SSN-XG). Việc thiếu các khái niệm để mô tả cụ thể các loại cảm biến, đơn vị của các giá trị thu được, thời gian, địa điểm, ... khiến cho SSN ontology khó tích hợp được vào các lĩnh vực cụ thể mà đôi khi không theo chuẩn chung.
-%\clearpage
-
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.4]{image/ssn_ontology} \\
-	\caption{SSN ontology}
-	\small nguồn: https://corescholar.libraries.wright.edu/knoesis/610/?utm\_source=corescholar.libraries.wright.edu \%2Fknoesis\%2F610\&utm\_medium=PDF\&utm\_campaign=PDFCoverPages
-\end{figure}
-
-Một ontology khác là ontology IoT-A, cung cấp các khái niệm chính như Service, và các khái niệm chủ yếu theo liên quan tới các Service. Nó chỉ tái sử dụng khái niệm ssn:condition. Hơn nữa, nó rất phức tạp, không sử dụng các ontology chuẩn, và gặp nhiều vấn đề về tính dư thừa. 
-\clearpage
-
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.5]{image/iot-a}
-	\caption{IoT-A ontology}
-	nguồn: https://www.researchgate.net/profile/Suparna\_De/publication/330729011/figure/fig1/ AS:720756187090946@1548853074205/Internet-of-Things-Architecture-IoT-A-Resource-Model.png
-\end{figure}
-
-IoT-Lite ontology là một ontology rút gọn của SSN ontology để biểu diễn các tài nguyên, thực thể và các dịch vụ trong IoT. Sự rút này cho phép IoT-Lite không quá lớn và không cần thời gian dài để xử lý khi thực hiện một truy vấn trên ontology này. Tuy nhiên, nó cũng cho phép khả năng mở rộng để biểu diễn các khái niệm trong IoT một cách chi tiết hơn, trong các lĩnh vực khác. Nó cũng có thể được kết hợp với các ontology biểu diễn dữ liệu IoT dạng stream như SAO ontology. 
-\clearpage
-
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.6]{image/iot-lite} \\
-	\caption{IoT-Lite ontology}
-	nguồn: https://www.w3.org/Submission/2015/SUBM-iot-lite-20151126/figures/Ontology.jpg
-\end{figure}
-
-
-Mặc dù đã tồn tại nhiều ontology, tuy nhiên, các ontology này chủ yếu được viết theo ngôn ngữ RDF, OWL dựa trên nền tảng web. Hơn nữa, các ontology này khá phức tạp, không phù hợp với phạm vi của đề tài. Do đó, tôi chỉ kế thừa các khái niệm, thuộc tính và các mối quan hệ trong các ontology này để xây dựng ontology của mình.
+Mặc dù đã tồn tại nhiều ontology như đã liệt kê trong chương 2, tuy nhiên, các ontology này chủ yếu được viết theo ngôn ngữ RDF, OWL dựa trên nền tảng web. Hơn nữa, các ontology này khá phức tạp, không phù hợp với phạm vi của đề tài. Do đó, tôi chỉ kế thừa các khái niệm, thuộc tính và các mối quan hệ trong các ontology này để xây dựng ontology của mình.
 
 \underline{Bước 3:} Liệt kê các thuật ngữ quan trọng trong Ontology	\\
 Một số khái niệm quan trọng trong lĩnh vực nhà thông minh: 
@@ -323,54 +287,98 @@ Các thuộc tính của các khái niệm trong ontology:
 
 \hspace{0mm}Một thực thể Smart context: \\
 \clearpage
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.5]{image/smartcontext_instance}
-	\caption{Thực thể smartcontext}
-\end{figure}
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.5]{image/smartcontext_instance}
+%	\caption{Thực thể smartcontext}
+%\end{figure}
+
+\{\\
+\blank{1cm}"SmartContextId" : "HPCC\_id", \\
+\blank{1cm}"SmartContextName" : "HPCC",	\\
+\blank{1cm}"ParentSmartContextId" : [],	\\
+\blank{1cm}"SubSmartContextId" : ["phong\_sinh\_vien\_id", "phong\_can\_bo\_id", "phong\_may\_chu\_id"], \\
+\blank{1cm}"HasPlatform" : []\\
+\}
+
+
 
 \hspace{0mm}Một thực thể Platform: \\
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.5]{image/platform_instance}
-	\caption{Thực thể platform}
-\end{figure}
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.5]{image/platform_instance}
+%	\caption{Thực thể platform}
+%\end{figure}
+
+\{\\
+\blank{1cm}"PlatformId" : "611dc2c1-086d-487f-b44a-2d819764603a", \\
+\blank{1cm}"PlatformName" : "homeassistant",	\\
+\blank{1cm}"PlatformType" : "",	\\
+\blank{1cm}"PlatformHost" : "http://192.168.0.199",\\
+\blank{1cm}"PlatformPort" : "8123",\\
+\blank{1cm}"PlatformStatus" : "active",\\
+\blank{1cm}"HasSource" : ["temperature-humidity-light\_homeassistant", "motion\_homeassistant"]\\
+\}
 
 \hspace{0mm}Một thực thể Source:
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.4]{image/source_instance}
-	\caption{Thực thể Source}
-\end{figure}
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.4]{image/source_instance}
+%	\caption{Thực thể Source}
+%\end{figure}
 
+\{\\
+\blank{1cm}"SourceId" : "motion\_homeassistant",\\
+\blank{1cm}"EndPoint" : "http://192.168.0.199:8123/source",\\
+\blank{1cm}"SourceStatus" : "active",\\
+\blank{1cm}"Description" : "",\\
+\blank{1cm}"SourceType" : "thing",\\
+\blank{1cm}"Label" : "sensor",\\
+\blank{1cm}"LocalId" : "motion\_id",\\
+\blank{1cm}"HasMetric" : ["binary\_sensor.motion\_detection", "light.green\_light", "light.red\_light", "light.yellow\_light"] \\
+\}
 
 \hspace{0mm}Một thực thể Metric:
 \clearpage
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.6]{image/metric_instance}
-	\caption{Thực thể Metric}
-\end{figure}
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.6]{image/metric_instance}
+%	\caption{Thực thể Metric}
+%\end{figure}
+
+\{\\
+\blank{1cm}"MetricType":"gauge",\\
+\blank{1cm}"MetricLocalId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",\\
+\blank{1cm}"MetricId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",\\
+\blank{1cm}"CanSetState":"false",\\
+\blank{1cm}"HasDatapoint":[
+        "b37a79a0-755c-11e9-abce-5bf295b292b2-humidity\_datapoint"
+    ],\\
+\blank{1cm}"MetricStatus":"active",\\
+\blank{1cm}"Unit":"",\\
+\blank{1cm}"MetricName":"humidity",\\
+\blank{1cm}"MetricDomain":"sensor"\\
+\}
 
 \hspace{0mm}Một thực thể Data Point:
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.6]{image/datapoint_instance}
-	\caption{Thực thể Data Point}
-\end{figure}
 
-Sau các bước trên, ta lập được một ontology về lĩnh vực IoT nhà thông minh:
-\clearpage
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.2, center]{image/ontology-2}
-	\caption{ontology cho lĩnh vực nhà thông minh}
-\end{figure}
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.6]{image/datapoint_instance}
+%	\caption{Thực thể Data Point}
+%\end{figure}
+
+\{\\
+\blank{1cm}"DataType":"int",\\
+\blank{1cm}"time":"2019-05-13 18:21:26.213131",\\
+\blank{1cm}"DatapointId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity\_datapoint"\\
+\blank{1cm}"value":70\\
+\}
 
 
 \section{Xây dựng driver ánh xạ các dữ liệu trong IoT theo ontology}
-Các dữ liệu từ các cảm biến, thiết bị IoT rất khác nhau về cấu trúc. Do trong đề tài này, tất cả các cảm biến, thiết bị đều được gắn với một platform; mỗi platform biểu diễn dữ liệu thu được từ các cảm biến, thiết bị theo một định dạng chuẩn riêng ta phải ánh xạ các định dạng dữ liệu chuẩn của các platform về một dạng chung. Để làm được điều này, ta phải viết các driver cho mỗi platform, nhiệm vụ của driver là ánh xạ định dạng dữ liệu của mỗi platform về định dạng dữ liệu chung của ontology.
-Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùng ngôn ngữ hình thức để biểu diễn các khái niệm trong ontology. Ở đề tài này, tôi dùng định dạng json để biểu diễn các khái niệm, các thuộc tính của các khái niệm cũng như mối quan hệ giữa các khái niệm. 
+Các dữ liệu từ các cảm biến, thiết bị IoT rất khác nhau về cấu trúc. Do trong đề tài này, tất cả các cảm biến, thiết bị đều được gắn với một platform; mỗi platform biểu diễn dữ liệu thu được từ các cảm biến, thiết bị theo một định dạng chuẩn riêng ta phải ánh xạ các định dạng dữ liệu chuẩn của các platform về một dạng chung. Để làm được điều này, ta phải viết các driver cho mỗi platform, nhiệm vụ của driver là ánh xạ định dạng dữ liệu của mỗi platform về định dạng dữ liệu chung của ontology. Để chứng minh khả năng mở rộng của hệ thống, tôi xây dựng driver cho hai nền tảng IoT là HomeAssistant và OpenHAB để ánh xạ định dạng dữ liệu của hai nền tảng này về định dạng của ontology. Sau đó, đến phần thực nghiệm khả năng mở rộng của hệ thống tôi sẽ thêm một nền tảng IoT khác là Thingsboard rồi tích hợp vào hệ thống bằng cách viết thêm một driver cho nền tảng này.\\
+%Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùng ngôn ngữ hình thức để biểu diễn các khái niệm trong ontology. Ở đề tài này, tôi dùng định dạng json để biểu diễn các khái niệm, các thuộc tính của các khái niệm cũng như mối quan hệ giữa các khái niệm. 
 %\clearpage
 \begin{figure}[h!]
 	\center
@@ -388,36 +396,27 @@ Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùn
 \end{figure}
 
 Định dạng dữ liệu của HomeAssistant
+\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.6]{image/homeassistant_dataformat}
 	\caption{Định dạng dữ liệu của HomeAssistant}
 \end{figure}
 
+Sau khi qua thành phần ánh xạ, dữ liệu của hai nền tảng IoT sẽ được chuẩn hóa về định dạng của ontology.
+%Định dạng dữ liệu của ontology:
+%\begin{figure}[h!]
+%	\center
+%	\includegraphics[scale=0.6]{image/ontology_dataformat}
+%	\caption{Định dạng dữ liệu của Ontology}
+%\end{figure}
 
-Định dạng dữ liệu của ontology:
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.6]{image/ontology_dataformat}
-	\caption{Định dạng dữ liệu của Ontology}
-\end{figure}
-
-\section{Cơ chế truy vấn ngữ nghĩa}
-\subsection{Biểu đồ use case tổng quát}
-
-\begin{figure}[h!]
-	\center
-	\includegraphics[scale=0.6]{image/language_diagram-use_case}
-	\caption{Biểu đồ use case tổng quát}
-\end{figure}
-
-
+\section{Xây dựng cơ chế truy vấn ngữ nghĩa}
 
 \subsection{Cơ chế truy vấn ngữ nghĩa}
 Từ các thực thể được biểu diễn theo ontology, ta phải xây dựng cơ chế để lấy được thông tin của các thực thể, mối quan hệ giữa các thực thể. Để làm được điều này, tôi xây dựng tập các API dựa vào mối quan hệ giữa các khái niệm để đạt được tính ngữ nghĩa. Đồng thời, tôi định nghĩa một ngôn ngữ truy vấn đơn giản, sử dụng tập API trên để tạo ra các câu truy vấn ngữ nghĩa.
 
-Mục đích của ngôn ngữ muốn tạo ra là tạo được các câu truy vấn, tương ứng với nhanh query trong sơ đồ. Để thực hiện câu truy vấn, ta cần chỉ rõ muốn lấy thuộc tính hay khái niệm nào, tập các thuộc tính và khái niệm được gọi là keyword. Ngoài việc chỉ rõ các thuộc tính, khái niệm cần truy vấn, ta cũng cần chỉ rõ điều kiện thực hiện câu truy vấn. Điều kiện này được chứa trong thành phần "Condition". Một chức năng khác mà ta mong muốn ngôn ngữ có thể thực hiện là kiểm tra các điều kiện, nếu điều kiện thỏa mãn thì thực hiện một hành động nào đó, hành động này tương ứng với việc điều khiển các thiết bị IoT dựa trên các API mà các platform cung cấp. Chức năng này được gọi là rule. 
-Từ các mục đích trên, ta xây dựng được cấu trúc của ngôn ngữ truy vấn:
+Nhánh query của một statement tương ứng với việc thực hiện một câu truy vấn ngữ nghĩa. Để thực hiện câu truy vấn, ta cần chỉ rõ muốn lấy thuộc tính hay khái niệm nào, tập các thuộc tính và khái niệm được gọi là keyword. Ngoài việc chỉ rõ các thuộc tính, khái niệm cần truy vấn, ta cũng cần chỉ rõ điều kiện thực hiện câu truy vấn. Điều kiện này được chứa trong thành phần "Condition". Một chức năng khác mà ta mong muốn có thể thực hiện là kiểm tra các điều kiện, nếu điều kiện thỏa mãn thì thực hiện một hành động nào đó, hành động này tương ứng với việc điều khiển các thiết bị IoT dựa trên các API mà các platform cung cấp. Chức năng này được gọi là rule. Các thành phần của một câu truy vấn:
 
 
 \begin{figure}[h!]
@@ -467,15 +466,23 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 \end{figure}
 \clearpage
 
+
+\subsection{Biểu đồ use case tổng quát}
+
+\begin{figure}[h!]
+	\center
+	\includegraphics[scale=0.6]{image/language_diagram-use_case}
+	\caption{Biểu đồ use case tổng quát}
+\end{figure}
+
+
 \subsection{Biểu đồ lớp của các thành phần của cơ chế truy vấn}
 
 \begin{figure}[h!]
 	\center
-	\includegraphics[scale=0.4]{image/language_diagram-class_diagram}	
+	\includegraphics[scale=0.35]{image/language_diagram-class_diagram}	
 	\caption{Biểu đồ lớp của các thành phần}
 \end{figure}
-
-
 
 
 \subsection{Biểu đồ hoạt động các thành phần của cơ chế truy vấn}
@@ -530,7 +537,7 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 
 
 \subsection{Tập các API}
-Để cài đặt cơ chế ngữ nghĩa, tôi đã xây dựng tập các API, các API này dựa vào mối quan hệ giữa các khái niệm trong ontology để thực hiện các câu truy vấn ngữ nghĩa. 
+Để cài đặt cơ chế ngữ nghĩa, tôi đã xây dựng tập các API, các API này dựa vào mối quan hệ giữa các khái niệm trong ontology để thực hiện các câu truy vấn ngữ nghĩa. \\
 
 Các API cơ bản:
 
@@ -580,4 +587,12 @@ Các API thể hiện tính ngữ nghĩa dựa trên mối quan hệ giữa các
 
 
 Ví dụ về cơ chế ngữ nghĩa trong API: Lấy DataPoint từ một SmartContext.
-Để lấy được DataPoint thuộc vào một SmartContext, trước hết ta phải lấy ra các Platform mà Smart Context đó chứa dựa vào mối quan hệ hasPlatform của SmartContext. Khi đã xác định được các Platform, với mỗi Platform, xác định xem nó chứa các Source nào dựa vào mối quan hệ hasSource của Platform.Với mỗi Source, xác định xem nó chứa các Metric nào dựa vào mối quan hệ hasMetric của Source. Với mỗi Metric, xác định DataPoint mà nó chứa dựa vào thuộc tính hasDataPoint của Metric. Vậy sau khi duyệt qua các quan hệ trên ontology, ta sẽ lấy ra được các DataPoint nằm trong một SmartContext. Cơ chế truy vấn ngữ nghĩa này hoàn toàn tương tự đối với các API khác được xây dựng.
+Các bước để lấy DataPoint từ SmartContext:
+\begin{enumerate}
+	\item lấy ra các Platform mà Smart Context đó chứa dựa vào mối quan hệ hasPlatform của SmartContext.
+	\item với mỗi Platform, xác định xem nó chứa các Source nào dựa vào mối quan hệ hasSource của Platform.
+	\item với mỗi Source, xác định xem nó chứa các Metric nào dựa vào mối quan hệ hasMetric của Source.
+	\item với mỗi Metric, xác định DataPoint mà nó chứa dựa vào thuộc tính hasDataPoint của Metric.
+\end{enumerate}
+
+Vậy sau khi duyệt qua các quan hệ trên ontology, ta sẽ lấy ra được các DataPoint nằm trong một SmartContext. Cơ chế truy vấn ngữ nghĩa này hoàn toàn tương tự đối với các API khác được xây dựng.

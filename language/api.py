@@ -86,7 +86,7 @@ def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute, 
 
 def api_get_all_datapoint():
     filter_.api_get_state()
-    time.sleep(2)
+    # time.sleep(2)
 
     datapoints = []
 
@@ -127,8 +127,8 @@ def api_get_datapoint_from_metric(metric_attr, metric_value):
 
 def api_get_datapoint_from_source(source_attr, source_value):
     list_datapoints = []
-
     metrics = api_get_metric_from_source(source_attr, source_value)
+    # print (metrics)
 
     for metric in metrics:
         metric = metric
@@ -196,17 +196,16 @@ def api_get_all_metric():
 def api_get_metric_from_datapoint(datapoint_attr, datapoint_value):
     datapoint_ids = api_get_datapoint_id_from_datapoint_attribute(datapoint_attr, datapoint_value)
     # print (datapoint_ids)
-    metrics = []
+    metrics = api_get_all_metric()
+    return_metrics = []
 
     for datapoint_id in datapoint_ids:
-        print (datapoint_id)
-        metric_attr = "HasDatapoint"
-        metric = api_get_metric_from_metric_attr(metric_attr, datapoint_id)
-        print (metric)
-        if (metric != []):
-            metrics.extend(metric)
+        # print (datapoint_id)
+        for metric in metrics:
+            if (datapoint_id in metric["HasDatapoint"]):
+                return_metrics.append(metric)
 
-    return metrics
+    return return_metrics
 
 
 def api_get_metric_from_metric_attr(metric_attr, metric_value):
@@ -453,6 +452,7 @@ def api_get_platform_from_smartcontext(smartcontext_attr, smartcontext_value):
         # add platform in sub_smartcontext
         smartcontext_id = smartcontext["SmartContextId"]
         sub_smartcontexts = api_get_sub_smartcontext_from_parent_smartcontext(smartcontext_id)
+        # print (sub_smartcontexts)
         for sub_smartcontext in sub_smartcontexts:
             platform_ids = sub_smartcontext["HasPlatform"]
             for platform_id in platform_ids:
@@ -597,21 +597,21 @@ if __name__ == "__main__":
     # x = api_get_all_smartcontext()
 
     # x = api_get_datapoint_from_datapoint_attr('value', '55')
-    # x = api_get_metric_from_metric_attr("MetricId", 'humidity_homeassistant')
+    # x = api_get_metric_from_metric_attr("MetricId", 'sensor.humidity')
     # x = api_get_source_from_source_attr("SourceId", 'motion_openhab')
-    # x = api_get_platform_from_platform_attr("PlatformId", 'openhab_id')
+    # x = api_get_platform_from_platform_attr("PlatformId", '2667a8d0-0ff1-4d22-9153-26795502efc9')
     # x = api_get_smartcontext_from_smartcontext_attr('SmartContextName', 'phong_sinh_vien')
 
-    # x = api_get_datapoint_id_from_datapoint_attribute('DatapointId', 'humidity_homeassistant_datapoint')
-    # x = api_get_metric_id_from_metric_attribute('MetricName', 'temperature_phong_may_chu')
+    # x = api_get_datapoint_id_from_datapoint_attribute('DatapointId', 'sensor.humidity_datapoint')
+    # x = api_get_metric_id_from_metric_attribute('MetricName', 'Temperature')
     # x = api_get_source_id_from_source_attribute('SourceStatus', 'active')
     # x = api_get_platform_id_from_platform_attribute('PlatformPort', '8080')
     # x = api_get_smartcontext_id_from_smartcontext_attribute('SmartContextName', 'HPCC')
 
     # x = api_get_datapoint_from_metric("MetricId", 'Humidity')
-    # x = api_get_metric_from_datapoint('DataType', 'float')
+    # x = api_get_metric_from_datapoint('DataType', 'int')
     # x = api_get_metric_from_source('SourceType', 'thing')
-    # x = api_get_source_from_metric("MetricId", 'humidity_homeassistant')
+    # x = api_get_source_from_metric("MetricId", 'sensor.humidity')
     # x = api_get_source_from_platform('PlatformPort', "8080")
     # x = api_get_platform_from_source('SourceType', 'thing')
     # x = api_get_platform_from_smartcontext('SmartContextName', 'HPCC')
@@ -628,14 +628,14 @@ if __name__ == "__main__":
     
 
     # x = api_get_source_from_smartcontext('SmartContextName', 'phong_sinh_vien')
-    # x = api_get_source_from_datapoint('value', '64.0')
+    # x = api_get_source_from_datapoint('value', 1)
     
 
-    # x = api_get_platform_from_metric("MetricId", 'light_openhab')
+    # x = api_get_platform_from_metric("MetricId", 'sensor.humidity')
 
     # x = api_get_smartcontext_from_source('SourceStatus', 'active')
-    # x = api_get_smartcontext_from_metric("MetricId", 'humidity_thingsboard')
-    x = api_get_smartcontext_from_datapoint('DataType', 'int')
+    # x = api_get_smartcontext_from_metric("MetricId", 'sensor.humidity')
+    # x = api_get_smartcontext_from_datapoint('DataType', 'int')
 
 
     print (x)

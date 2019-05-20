@@ -3,5 +3,5 @@
     "SmartContextName"    : "phong_sinh_vien",
     "ParentSmartContextId" : ["HPCC_id"],
     "SubSmartContextId" : [],
-    "HasPlatform" : ["openhab_id"]
+    "HasPlatform" : ["2667a8d0-0ff1-4d22-9153-26795502efc9"]
 }

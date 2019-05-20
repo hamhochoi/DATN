@@ -10,10 +10,7 @@
             "logic" : {},
             "in_bracket" : {}
         }
-    }
-}
-
-,
+    },
     "rule" : {   
             "if" : {
                 "compare" : {},
