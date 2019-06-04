@@ -20,7 +20,7 @@
                         "compare" : {
                             "keyword" : "MetricId",
                             "comparator" : "=",
-                            "expression" : "Humidity"
+                            "expression" : "humidity_homeassistant"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -50,7 +50,7 @@
             "else" : [ 
                 {
                     "MetricId" : "LedDo",
-                    "value" : "off"
+                    "value" : "on"
                 }
             ]
     }

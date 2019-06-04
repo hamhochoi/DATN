@@ -1,1 +1,1 @@
-{"MetricType": "gauge", "MetricLocalId": "Light", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["Light_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "Light", "MetricId": "Light"}
+{"Unit": "", "MetricId": "Light", "MetricName": "Light", "MetricDomain": "sensor", "MetricType": "gauge", "HasDatapoint": ["Light_datapoint"], "MetricStatus": "active", "CanSetState": "false", "MetricLocalId": "Light"}

@@ -1,37 +1,38 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Ki\IeC {\'\ecircumflex }n tr\IeC {\'u}c h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng IoT\relax }}{16}{figure.caption.3}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Giao th\IeC {\'\uhorn }c truy\IeC {\`\ecircumflex }n tin MQTT\relax }}{18}{figure.caption.4}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces N\IeC {\`\ecircumflex }n t\IeC {\h a}ng IoT\relax }}{19}{figure.caption.5}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\d \ocircumflex }t v\IeC {\'\i } d\IeC {\d u} v\IeC {\`\ecircumflex } ontology\relax }}{22}{figure.caption.6}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces SSN ontology\relax }}{25}{figure.caption.7}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces IoT-A ontology\relax }}{27}{figure.caption.8}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces IoT-Lite ontology\relax }}{28}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ki\IeC {\'\ecircumflex }n tr\IeC {\'u}c h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng IoT\relax }}{14}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Giao th\IeC {\'\uhorn }c truy\IeC {\`\ecircumflex }n tin MQTT\relax }}{16}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces N\IeC {\`\ecircumflex }n t\IeC {\h a}ng IoT\relax }}{17}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces M\IeC {\d \ocircumflex }t v\IeC {\'\i } d\IeC {\d u} v\IeC {\`\ecircumflex } ontology\relax }}{20}{figure.caption.6}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces SSN ontology\relax }}{23}{figure.caption.7}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces IoT-A ontology\relax }}{24}{figure.caption.8}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces IoT-Lite ontology\relax }}{25}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Hai h\IeC {\d \ocircumflex }p \IeC {\dj }\IeC {\d a}i di\IeC {\d \ecircumflex }n cho hai thi\IeC {\'\ecircumflex }t b\IeC {\d i} th\IeC {\^o}ng minh\relax }}{34}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh tri\IeC {\h \ecircumflex }n khai h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng\relax }}{35}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Tri\IeC {\h \ecircumflex }n khai ph\IeC {\`\acircumflex }n c\IeC {\'\uhorn }ng tr\IeC {\^e}n ph\IeC {\`o}ng 609 Th\IeC {\uhorn } vi\IeC {\d \ecircumflex }n TQB\relax }}{36}{figure.caption.14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform OpenHAB\relax }}{37}{figure.caption.15}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform Home Assistant\relax }}{38}{figure.caption.16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform Thingsboard\relax }}{38}{figure.caption.17}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces ontology cho l\IeC {\~\i }nh v\IeC {\d \uhorn }c nh\IeC {\`a} th\IeC {\^o}ng minh\relax }}{40}{figure.caption.18}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh \IeC {\'a}nh x\IeC {\d a} d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`\ecircumflex } m\IeC {\d \ocircumflex }t chu\IeC {\h \acircumflex }n c\IeC {\h u}a ontology\relax }}{50}{figure.caption.19}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces \IeC {\DJ }\IeC {\d i}nh d\IeC {\d a}ng d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u c\IeC {\h u}a OpenHAB\relax }}{51}{figure.caption.20}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces \IeC {\DJ }\IeC {\d i}nh d\IeC {\d a}ng d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u c\IeC {\h u}a HomeAssistant\relax }}{52}{figure.caption.21}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - statement\relax }}{53}{figure.caption.22}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - condition\relax }}{53}{figure.caption.23}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - action\relax }}{53}{figure.caption.24}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - expression\relax }}{54}{figure.caption.25}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - term\relax }}{54}{figure.caption.26}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } -const\relax }}{54}{figure.caption.27}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } use case t\IeC {\h \ocircumflex }ng qu\IeC {\'a}t\relax }}{55}{figure.caption.28}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } l\IeC {\'\ohorn }p c\IeC {\h u}a c\IeC {\'a}c th\IeC {\`a}nh ph\IeC {\`\acircumflex }n\relax }}{55}{figure.caption.29}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n Statement\relax }}{56}{figure.caption.30}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n StatementQuery\relax }}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n StatementRule\relax }}{56}{figure.caption.32}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n Condition\relax }}{56}{figure.caption.33}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n Expression\relax }}{57}{figure.caption.34}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n Action\relax }}{57}{figure.caption.35}
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } ho\IeC {\d a}t \IeC {\dj }\IeC {\d \ocircumflex }ng c\IeC {\h u}a th\IeC {\`a}nh ph\IeC {\`\acircumflex }n Term\relax }}{57}{figure.caption.36}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Hai h\IeC {\d \ocircumflex }p \IeC {\dj }\IeC {\d a}i di\IeC {\d \ecircumflex }n cho hai thi\IeC {\'\ecircumflex }t b\IeC {\d i} th\IeC {\^o}ng minh\relax }}{31}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh tri\IeC {\h \ecircumflex }n khai h\IeC {\d \ecircumflex } th\IeC {\'\ocircumflex }ng\relax }}{32}{figure.caption.12}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Tri\IeC {\h \ecircumflex }n khai ph\IeC {\`\acircumflex }n c\IeC {\'\uhorn }ng tr\IeC {\^e}n ph\IeC {\`o}ng 609 Th\IeC {\uhorn } vi\IeC {\d \ecircumflex }n TQB\relax }}{33}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform OpenHAB\relax }}{34}{figure.caption.15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform Home Assistant\relax }}{35}{figure.caption.16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Giao di\IeC {\d \ecircumflex }n qu\IeC {\h a}n l\IeC {\'y} thi\IeC {\'\ecircumflex }t b\IeC {\d i} c\IeC {\h u}a platform Thingsboard\relax }}{35}{figure.caption.17}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces ontology cho l\IeC {\~\i }nh v\IeC {\d \uhorn }c nh\IeC {\`a} th\IeC {\^o}ng minh\relax }}{36}{figure.caption.18}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh \IeC {\'a}nh x\IeC {\d a} d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u v\IeC {\`\ecircumflex } m\IeC {\d \ocircumflex }t chu\IeC {\h \acircumflex }n c\IeC {\h u}a ontology\relax }}{45}{figure.caption.19}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces \IeC {\DJ }\IeC {\d i}nh d\IeC {\d a}ng d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u c\IeC {\h u}a OpenHAB\relax }}{45}{figure.caption.20}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces \IeC {\DJ }\IeC {\d i}nh d\IeC {\d a}ng d\IeC {\~\uhorn } li\IeC {\d \ecircumflex }u c\IeC {\h u}a HomeAssistant\relax }}{46}{figure.caption.21}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - statement\relax }}{47}{figure.caption.22}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - condition\relax }}{47}{figure.caption.23}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - action\relax }}{48}{figure.caption.24}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - expression\relax }}{49}{figure.caption.25}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } - term\relax }}{49}{figure.caption.26}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces M\IeC {\^o} h\IeC {\`\i }nh ng\IeC {\^o}n ng\IeC {\~\uhorn } -const\relax }}{49}{figure.caption.27}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } use case t\IeC {\h \ocircumflex }ng qu\IeC {\'a}t\relax }}{50}{figure.caption.28}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } l\IeC {\'\ohorn }p c\IeC {\h u}a c\IeC {\'a}c th\IeC {\`a}nh ph\IeC {\`\acircumflex }n\relax }}{51}{figure.caption.29}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } ng\IeC {\uhorn }\IeC {\`\ohorn }i d\IeC {\`u}ng th\IeC {\d \uhorn }c hi\IeC {\d \ecircumflex }n truy v\IeC {\'\acircumflex }n\relax }}{53}{figure.caption.30}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } th\IeC {\d \uhorn }c hi\IeC {\d \ecircumflex }n m\IeC {\d \ocircumflex }t c\IeC {\^a}u truy v\IeC {\'\acircumflex }n\relax }}{53}{figure.caption.31}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } th\IeC {\d \uhorn }c hi\IeC {\d \ecircumflex }n m\IeC {\d \ocircumflex }t Rule\relax }}{54}{figure.caption.32}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } ki\IeC {\h \ecircumflex }m tra m\IeC {\d \ocircumflex }t Condition\relax }}{54}{figure.caption.33}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } ki\IeC {\h \ecircumflex }m tra m\IeC {\d \ocircumflex }t Expression\relax }}{55}{figure.caption.34}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } th\IeC {\d \uhorn }c hi\IeC {\d \ecircumflex }n m\IeC {\d \ocircumflex }t Action\relax }}{55}{figure.caption.35}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Bi\IeC {\h \ecircumflex }u \IeC {\dj }\IeC {\`\ocircumflex } tr\IeC {\`\i }nh t\IeC {\d \uhorn } ki\IeC {\h \ecircumflex }m tra m\IeC {\d \ocircumflex }t Term\relax }}{55}{figure.caption.36}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces C\IeC {\ohorn } ch\IeC {\'\ecircumflex } truy v\IeC {\'\acircumflex }n ng\IeC {\~\uhorn } ngh\IeC {\~\i }a\relax }}{60}{figure.caption.37}
 \addvspace {10\p@ }

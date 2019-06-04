@@ -1,9 +1,7 @@
 \newcommand{\blank}[1]{\hspace*{#1}\linebreak[0]}
 \chapter{Xây dựng hệ thống IoT và thiết kế cơ chế truy vấn ngữ nghĩa}
-
 \section{Xây dựng hệ thống IoT}
 \subsection{Phần cứng}
-
 Các thiết bị IoT được cài đặt trên 3 khu vực trong phòng 609 thư viện Tạ Quang Bửu. Trong mỗi phòng, có một máy tính nhỏ Raspberry Pi 3, cài đặt nền tảng IoT để quản lý các thiết bị trong phòng. Trong mỗi phòng, gồm :
 \begin{itemize}
 	\item Một cảm biến chuyển động
@@ -29,10 +27,8 @@ Các cảm biến và đèn LED trong mỗi phòng được cài đặt vào hai
 \end{figure}
 
 Để lấy được dữ liệu từ các thiết bị trên, ta sử dụng board vi mạch xử lý Arduino Uno. Tuy nhiên, vi mạch này không có chức năng gửi dữ liệu thông qua mạng wifi, do đó, cần phải lắp thêm module ESP8266 để gửi dữ liệu từ Arduino, qua ESP8266 rồi gửi lên platform.
-
 \subsection{Các giao thức sử dụng}
 Giao thức được dùng để truyền tải dữ liệu từ ESP8266 lên nền tảng IoT là MQTT thông qua mạng wifi. Sau khi đã xác định được các thành phần phần cứng và giao thức sử dụng để truyền tin giữa các thiết bị tới nền tảng IoT, tôi xây dựng mô hình triển khai như sau: \\
-
 \clearpage
 \begin{figure}[h!]
 	\center
@@ -106,7 +102,7 @@ Thingsboard là một nền tảng IoT mã nguồn mở giúp thu thập dữ li
 \section{Xây dựng ontology}
 Sau một thời gian làm việc, tôi đã xây dựng được một ontology như hình vẽ:
 
-\clearpage
+%\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.2, center]{image/ontology-2}
@@ -151,7 +147,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item SmartContextId: định danh duy nhất của một smart context
 	\item SmartContextName: tên của một smartcontext
 \end{itemize} 
-
 \hspace{0mm}Platform có các thuộc tính:
 \begin{itemize}
 	\item PlatformId: định danh duy nhất của một platform
@@ -161,7 +156,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item PlatformPort: Cổng cài đặt platform	
 	\item PlatformStatus: trạng thái hoạt động của platform
 \end{itemize}
-
 \hspace{0mm}Source có các thuộc tính:
 \begin{itemize}
 	\item SourceId: Định danh toàn cục duy nhất của một Source
@@ -172,9 +166,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item Label: nhãn của Source
 	\item LocalId: Địa chỉ cục bộ của Source
 \end{itemize}
-
-
-
 \hspace{0mm}Metric có các thuộc tính:
 \begin{itemize}
 	\item MetricId: định danh toàn cục duy nhất của một Metric
@@ -184,8 +175,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item Unit: đơn vị của Metric
 	\item ValueDomain: trường giá trị để ánh xạ các khác nhau trong việc biểu diễn các giá trị dữ liệu của cùng một thiết bị nhưng trong các platform khác nhau. Ví dụ, cùng một cảm biến nhiệt độ, nhưng OpenHAB biểu diễn giá trị của nó là 0/1, HomeAssistant biểu diễn giá trị là on/off.
 \end{itemize}
-
-
 \hspace{0mm}Data Point có các thuộc tính:
 \begin{itemize}
 	\item DataPointId: định danh duy nhất của một Data Point
@@ -193,14 +182,11 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item time: thời điểm Data Point được thu nhận
 	\item value: giá trị của Data Point
 \end{itemize}
-
-
 \hspace{0mm}Log có các thuộc tính:
 \begin{itemize}
 	\item time: thời điểm ghi log
 	\item message: nội dung của log
 \end{itemize}
-
 \hspace{0mm}Mối quan hệ của các khái niệm:
 \hspace{0mm}Smart Context
 \begin{itemize}
@@ -208,22 +194,18 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item hasSmartContextId: smart context chứa smart context khác.
 	\item hasPlatform: smart context chứa platform nào.
 \end{itemize}
-
 \hspace{0mm}Platform:
 \begin{itemize}
 	\item hasSource: Platform chứa những Source nào
 \end{itemize}
-
 \hspace{0mm}Source:
 \begin{itemize}
 	\item hasMetric: Source chứa những Metric nào
 \end{itemize}
-
 \hspace{0mm}Metric:
 \begin{itemize}
 	\item hasDataPoint: Metric chứa những Data Point nào
 \end{itemize}
-
 \underline{Bước 6:} Định nghĩa các ràng buộc của các thuộc tính
 \hspace{0mm}Các ràng buộc của các thuộc tính:
 \hspace{0mm}Smart context: 
@@ -231,7 +213,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item SmartContextId: phải là một kiểu String
 	\item SmartContextName: phải là một kiểu String
 \end{itemize}
-
 \hspace{0mm}Platform:
 \begin{itemize}
 	\item PlatformId: phải là một kiểu String
@@ -241,8 +222,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item PlatformPort: phải là một kiểu String
 	\item PlatformStatus: phải là một kiểu String
 \end{itemize}
-
-
 \hspace{0mm}Source:
 \begin{itemize}
 	\item SourceId: phải là một kiểu String
@@ -253,8 +232,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item Label: phải là một kiểu String
 	\item LocalId: phải là một kiểu String
 \end{itemize}
-
-
 \hspace{0mm}Metric:
 \begin{itemize}
 	\item MetricId: phải là một kiểu String
@@ -264,8 +241,6 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item Unit: có thể là kiểu của Percent, Time hoặc Degree
 	\item ValueDomain: phải là một kiểu String
 \end{itemize}
-
-
 \hspace{0mm}Data Point:
 \begin{itemize}
 	\item DataPointId: phải là một kiểu String
@@ -273,43 +248,28 @@ Các thuộc tính của các khái niệm trong ontology:
 	\item time: phải là một kiểu datetime
 	\item value: phải là một kiểu Number
 \end{itemize}
-
-
 \hspace{0mm}Log có các thuộc tính:
 \begin{itemize}
 	\item time: phải là một kiểu datetime
 	\item message: phải là một kiểu String
 \end{itemize}
 
-
 \underline{Bước 7:} Tạo ra các thực thể
 Để tạo ra thực thể cho các khái niệm, tôi dùng cú pháp json thay thế cho cú pháp bộ ba: đối tượng - thuộc tính - giá trị với ý nghĩa tương đương.
 
 \hspace{0mm}Một thực thể Smart context: \\
-\clearpage
-%\begin{figure}[h!]
-%	\center
-%	\includegraphics[scale=0.5]{image/smartcontext_instance}
-%	\caption{Thực thể smartcontext}
-%\end{figure}
-
 \{\\
 \blank{1cm}"SmartContextId" : "HPCC\_id", \\
 \blank{1cm}"SmartContextName" : "HPCC",	\\
-\blank{1cm}"ParentSmartContextId" : [],	\\
-\blank{1cm}"SubSmartContextId" : ["phong\_sinh\_vien\_id", "phong\_can\_bo\_id", "phong\_may\_chu\_id"], \\
-\blank{1cm}"HasPlatform" : []\\
+\blank{1cm}"ParentSmartContextId" : [ ],	\\
+\blank{1cm}"SubSmartContextId" : [\\
+\blank{2cm}"phong\_sinh\_vien\_id", "phong\_can\_bo\_id","phong\_may\_chu\_id"\\
+\blank{1cm}], \\
+\blank{1cm}"HasPlatform" : [ ]\\
 \}
-
-
+\clearpage
 
 \hspace{0mm}Một thực thể Platform: \\
-%\begin{figure}[h!]
-%	\center
-%	\includegraphics[scale=0.5]{image/platform_instance}
-%	\caption{Thực thể platform}
-%\end{figure}
-
 \{\\
 \blank{1cm}"PlatformId" : "611dc2c1-086d-487f-b44a-2d819764603a", \\
 \blank{1cm}"PlatformName" : "homeassistant",	\\
@@ -317,16 +277,12 @@ Các thuộc tính của các khái niệm trong ontology:
 \blank{1cm}"PlatformHost" : "http://192.168.0.199",\\
 \blank{1cm}"PlatformPort" : "8123",\\
 \blank{1cm}"PlatformStatus" : "active",\\
-\blank{1cm}"HasSource" : ["temperature-humidity-light\_homeassistant", "motion\_homeassistant"]\\
+\blank{1cm}"HasSource" : [\\
+\blank{2cm}"temperature-humidity-light\_homeassistant", "motion\_homeassistant"\\
+\blank{1cm}]\\
 \}
 
 \hspace{0mm}Một thực thể Source:
-%\begin{figure}[h!]
-%	\center
-%	\includegraphics[scale=0.4]{image/source_instance}
-%	\caption{Thực thể Source}
-%\end{figure}
-
 \{\\
 \blank{1cm}"SourceId" : "motion\_homeassistant",\\
 \blank{1cm}"EndPoint" : "http://192.168.0.199:8123/source",\\
@@ -335,39 +291,27 @@ Các thuộc tính của các khái niệm trong ontology:
 \blank{1cm}"SourceType" : "thing",\\
 \blank{1cm}"Label" : "sensor",\\
 \blank{1cm}"LocalId" : "motion\_id",\\
-\blank{1cm}"HasMetric" : ["binary\_sensor.motion\_detection", "light.green\_light", "light.red\_light", "light.yellow\_light"] \\
+\blank{1cm}"HasMetric" : [\\
+\blank{2cm}"binary\_sensor.motion\_detection", "light.green\_light", "light.red\_light", "light.yellow\_light"\\
+\blank{1cm}] \\
 \}
 
-\hspace{0mm}Một thực thể Metric:
-\clearpage
-%\begin{figure}[h!]
-%	\center
-%	\includegraphics[scale=0.6]{image/metric_instance}
-%	\caption{Thực thể Metric}
-%\end{figure}
-
+\hspace{0mm}Một thực thể Metric:\\
 \{\\
 \blank{1cm}"MetricType":"gauge",\\
 \blank{1cm}"MetricLocalId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",\\
 \blank{1cm}"MetricId":"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity",\\
 \blank{1cm}"CanSetState":"false",\\
-\blank{1cm}"HasDatapoint":[
-        "b37a79a0-755c-11e9-abce-5bf295b292b2-humidity\_datapoint"
-    ],\\
+\blank{1cm}"HasDatapoint":[\\
+\blank{2cm}"b37a79a0-755c-11e9-abce-5bf295b292b2-humidity\_datapoint"\\
+\blank{1cm}],\\
 \blank{1cm}"MetricStatus":"active",\\
 \blank{1cm}"Unit":"",\\
 \blank{1cm}"MetricName":"humidity",\\
 \blank{1cm}"MetricDomain":"sensor"\\
 \}
 
-\hspace{0mm}Một thực thể Data Point:
-
-%\begin{figure}[h!]
-%	\center
-%	\includegraphics[scale=0.6]{image/datapoint_instance}
-%	\caption{Thực thể Data Point}
-%\end{figure}
-
+\hspace{0mm}Một thực thể Data Point:\\
 \{\\
 \blank{1cm}"DataType":"int",\\
 \blank{1cm}"time":"2019-05-13 18:21:26.213131",\\
@@ -379,6 +323,7 @@ Các thuộc tính của các khái niệm trong ontology:
 \section{Xây dựng driver ánh xạ các dữ liệu trong IoT theo ontology}
 Các dữ liệu từ các cảm biến, thiết bị IoT rất khác nhau về cấu trúc. Do trong đề tài này, tất cả các cảm biến, thiết bị đều được gắn với một platform; mỗi platform biểu diễn dữ liệu thu được từ các cảm biến, thiết bị theo một định dạng chuẩn riêng ta phải ánh xạ các định dạng dữ liệu chuẩn của các platform về một dạng chung. Để làm được điều này, ta phải viết các driver cho mỗi platform, nhiệm vụ của driver là ánh xạ định dạng dữ liệu của mỗi platform về định dạng dữ liệu chung của ontology. Để chứng minh khả năng mở rộng của hệ thống, tôi xây dựng driver cho hai nền tảng IoT là HomeAssistant và OpenHAB để ánh xạ định dạng dữ liệu của hai nền tảng này về định dạng của ontology. Sau đó, đến phần thực nghiệm khả năng mở rộng của hệ thống tôi sẽ thêm một nền tảng IoT khác là Thingsboard rồi tích hợp vào hệ thống bằng cách viết thêm một driver cho nền tảng này.\\
 %Sau khi đã có một định dạng dữ liệu thống nhất, ta phải dùng ngôn ngữ hình thức để biểu diễn các khái niệm trong ontology. Ở đề tài này, tôi dùng định dạng json để biểu diễn các khái niệm, các thuộc tính của các khái niệm cũng như mối quan hệ giữa các khái niệm. 
+
 %\clearpage
 \begin{figure}[h!]
 	\center
@@ -386,17 +331,16 @@ Các dữ liệu từ các cảm biến, thiết bị IoT rất khác nhau về 
 	\caption{Mô hình ánh xạ dữ liệu về một chuẩn của ontology}
 \end{figure}
 
-
 Định dạng dữ liệu của OpenHAB:
-
+%\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.6]{image/openhab_dataformat}
 	\caption{Định dạng dữ liệu của OpenHAB}
 \end{figure}
+\clearpage
 
 Định dạng dữ liệu của HomeAssistant
-\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.6]{image/homeassistant_dataformat}
@@ -410,13 +354,11 @@ Sau khi qua thành phần ánh xạ, dữ liệu của hai nền tảng IoT sẽ
 %	\includegraphics[scale=0.6]{image/ontology_dataformat}
 %	\caption{Định dạng dữ liệu của Ontology}
 %\end{figure}
-
 \section{Xây dựng cơ chế truy vấn ngữ nghĩa}
-
 \subsection{Cơ chế truy vấn ngữ nghĩa}
-Từ các thực thể được biểu diễn theo ontology, ta phải xây dựng cơ chế để lấy được thông tin của các thực thể, mối quan hệ giữa các thực thể. Để làm được điều này, tôi xây dựng tập các API dựa vào mối quan hệ giữa các khái niệm để đạt được tính ngữ nghĩa. Đồng thời, tôi định nghĩa một ngôn ngữ truy vấn đơn giản, sử dụng tập API trên để tạo ra các câu truy vấn ngữ nghĩa.
+Từ các thực thể được biểu diễn theo ontology, ta phải xây dựng cơ chế để lấy được thông tin của các thực thể, mối quan hệ giữa các thực thể. Để làm được điều này, tôi xây dựng tập các API dựa vào mối quan hệ giữa các khái niệm để đạt được tính ngữ nghĩa. Đồng thời, tôi định nghĩa ra cấu trúc của một truy vấn đơn giản, sử dụng tập API trên để tạo ra các câu truy vấn ngữ nghĩa. Tôi cũng sử dụng định dạng json để biểu diễn các câu truy vấn để đơn giản hóa trong việc phân tích cấu trúc của câu truy vấn. Cấu trúc của một câu truy vấn bao gồm các thành phần: 
 
-Nhánh query của một statement tương ứng với việc thực hiện một câu truy vấn ngữ nghĩa. Để thực hiện câu truy vấn, ta cần chỉ rõ muốn lấy thuộc tính hay khái niệm nào, tập các thuộc tính và khái niệm được gọi là keyword. Ngoài việc chỉ rõ các thuộc tính, khái niệm cần truy vấn, ta cũng cần chỉ rõ điều kiện thực hiện câu truy vấn. Điều kiện này được chứa trong thành phần "Condition". Một chức năng khác mà ta mong muốn có thể thực hiện là kiểm tra các điều kiện, nếu điều kiện thỏa mãn thì thực hiện một hành động nào đó, hành động này tương ứng với việc điều khiển các thiết bị IoT dựa trên các API mà các platform cung cấp. Chức năng này được gọi là rule. Các thành phần của một câu truy vấn:
+Nhánh query của một statement tương ứng với việc thực hiện một câu truy vấn ngữ nghĩa. Để thực hiện câu truy vấn, ta cần chỉ rõ muốn lấy thuộc tính hay khái niệm nào, tập các thuộc tính và khái niệm được gọi là "keyword". Ngoài việc chỉ rõ các thuộc tính, khái niệm cần truy vấn, ta cũng cần chỉ rõ điều kiện thực hiện câu truy vấn. Điều kiện này được chứa trong thành phần "Condition". Một chức năng khác mà ta mong muốn có thể thực hiện là kiểm tra các điều kiện, nếu điều kiện thỏa mãn thì thực hiện một hành động nào đó, hành động này tương ứng với việc điều khiển các thiết bị IoT dựa trên các API mà các platform cung cấp. Chức năng này được gọi là rule.
 
 
 \begin{figure}[h!]
@@ -424,6 +366,27 @@ Nhánh query của một statement tương ứng với việc thực hiện mộ
 	\includegraphics[scale=0.3]{image/language_model-statement}
 	\caption{Mô hình ngôn ngữ - statement}
 \end{figure}
+
+%Ví dụ một Statement: \\ 
+
+
+\myexample{Ví dụ một Statement}{
+\{\\
+\blank{1cm}"select" : "Source",\\
+\blank{1cm}"where" : \{\\
+\blank{2cm}"condition" : \{\\
+%\blank{3cm}"compare" : \{\\
+%\blank{4cm}    "keyword" : "SmartContextName",\\
+%\blank{4cm}    "comparator" : "=",\\
+%\blank{4cm}    "expression" : "HPCC"\\
+%\blank{3cm}\},\\
+%\blank{3cm}"logic" : \{\},\\
+%\blank{3cm}"in\_bracket" : \{\}\\
+\blank{2cm}\}\\
+\blank{1cm}\}\\
+\}\\
+}
+
 
 
 Một condition là một phép so sánh giữa giá trị tương ứng một keyword với một biểu thức. Ví dụ so sánh PlatformId = "OpenHAB\_id". Các phép so sánh có thể có là <, >, >=, <=, =, !=. Tùy thuộc vào keyword mà có phép so sánh tương ứng. Condition cũng có thể là kết quả của một phép toán logic của một tập hợp các condition khác. Hai phép toán logic hỗ trợ là AND và OR. Ngoài ra, để thể hiện thứ tự ưu tiên của các phép toán logic, ta đưa thêm cặp dấu ngoặc đơn vào ngôn ngữ.
@@ -435,7 +398,24 @@ Một condition là một phép so sánh giữa giá trị tương ứng một k
 \end{figure}
 
 
-Một Action (hành động) là một lời gọi tới các API để điều khiển các thiết bị từ nền tảng IoT. Do các thiết bị trong hệ thống chỉ cung cấp hai thao tác điều khiển là bật và tắt nên ngôn ngữ chỉ đưa vào hai hành động là bật và tắt.
+\myexample{Ví dụ một Condition}{
+\{\\
+%\blank{1cm}"select" : "Source",\\
+%\blank{1cm}"where" : \{\\
+\blank{1cm}"condition" : \{\\
+\blank{2cm}"compare" : \{\\
+\blank{3cm}    "keyword" : "SmartContextName",\\
+\blank{3cm}    "comparator" : "=",\\
+\blank{3cm}    "expression" : "HPCC"\\
+\blank{2cm}\},\\
+\blank{2cm}"logic" : \{\},\\
+\blank{2cm}"in\_bracket" : \{\}\\
+\blank{1cm}\}\\
+%\blank{1cm}\}\\
+\}\\
+}
+
+Một Action (hành động) là một lời gọi tới các API để điều khiển các thiết bị từ nền tảng IoT. Do các thiết bị trong hệ thống chỉ cung cấp hai thao tác điều khiển là bật và tắt nên ngôn ngữ chỉ đưa vào hai hành động là bật và tắt. Một Action cũng có thể là một danh sách các Action, khi đó, hệ thống sẽ thực hiện lần lượt các Action được liệt kê trong danh sách.
 
 \begin{figure}[h!]
 	\center
@@ -444,30 +424,52 @@ Một Action (hành động) là một lời gọi tới các API để điều 
 \end{figure}
 
 
-Một biểu thức là một toán tử hoặc các phép toán cộng, trừ các toán tử.
+\myexample{Ví dụ một Action}{
+\blank{0cm}\{\\
+\blank{1cm}    "metric\_id" : "led\_id\_1",\\
+\blank{1cm}    "value" : turn on\\
+\blank{0cm}\},\\
+%\blank{0cm}\},\\
+}
+
+Một Expression (biểu thức) là một toán tử hoặc các phép toán cộng, trừ các toán tử.
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_model-expression}
 	\caption{Mô hình ngôn ngữ - expression}
 \end{figure}
 
-Một toán tử là một hằng số hoặc các phép toán của các hằng số.
+Ví dụ một Expression: \\
+\myexample{Ví dụ một Expression}{
+\blank{0cm}\{\\
+\blank{1cm}    "expression" : "HPCC"\\
+\blank{0cm}\}
+}
+
+
+Một Term (toán tử) là một hằng số hoặc các phép toán của các hằng số.
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_model-term}
 	\caption{Mô hình ngôn ngữ - term}
 \end{figure}
-
-Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
+%Ví dụ: 3*4/5 là một Term
+\myexample{Ví dụ một Term}{
+    3*4/5 là một Term
+}
+Một Const (hằng số) là một chuỗi hoặc một số (nguyên hoặc thực).
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_model-const}	
 	\caption{Mô hình ngôn ngữ -const}
 \end{figure}
+
+\myexample{Ví dụ một Const}{
+    "HPCC" là một chuỗi hay là một Const 
+}
 \clearpage
 
-
-\subsection{Biểu đồ use case tổng quát}
+\subsection{Ca sử dụng tổng quát}
 
 \begin{figure}[h!]
 	\center
@@ -475,6 +477,33 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 	\caption{Biểu đồ use case tổng quát}
 \end{figure}
 
+
+\begin{longtable}{|p{140mm}|}
+\hline
+%\multicolumn{1}{c|}{}\\
+Tên ca sử dụng: Statement\\
+\hline
+Tác nhân chính: Người dùng\\
+\hline
+Các nhân tố và mối quan tâm: Người dùng muốn sử dụng hệ thống\\
+\hline
+Mô tả ngắn gọn: Gọi tới các ca sử dụng StatementQuery và StatementRule để phân tích câu truy vấn và trả về kết quả cho người sử dụng.\\
+\hline
+Kích hoạt: Người dùng gửi một câu truy vấn/luật tới cho Statement\\
+\hline
+Luồng sự kiện chính: \\
+\begin{enumerate}
+	\item Người dùng gửi một câu truy vấn/luật 
+	\item Statement phân tích, trả về kết quả tương ứng với câu truy vấn/luật mà người dùng yêu cầu.
+\end{enumerate}\\
+\hline
+Luồng sự kiện con: \\
+\hline 
+Luồng sự kiện ngoại lệ: \\
+\hline
+\end{longtable}
+
+\clearpage
 
 \subsection{Biểu đồ lớp của các thành phần của cơ chế truy vấn}
 
@@ -484,55 +513,111 @@ Một hằng số là một chuỗi hoặc một số (nguyên hoặc thực).
 	\caption{Biểu đồ lớp của các thành phần}
 \end{figure}
 
+\begin{longtable}{|p{30mm}|p{40mm}|p{30mm}|p{40mm}|}
+\hline
+\multicolumn{4}{c|}{}\\
+%\cline{3-7}
+Tên class & Mô tả Class & Tên thuộc tính/phương thức& Mô tả thuộc tính/phương thức\\
+\hline
+Language & Chưa các keyword trong ontology và chia các keyword này theo các khái niệm trong ontology & list\_key\_word & Danh sách keyword của ontology\\
+\cline{3-4}
+&& smartcontext\_level & Chứa các keyword là các thuộc tính của SmartContext \\
+\cline{3-4}
+&& platform\_level & Chứa các keyword là các thuộc tính của Platform \\
+\cline{3-4}
+&& source\_level & Chứa các keyword là các thuộc tính của Source \\
+\cline{3-4}
+&& metric\_level & Chứa các keyword là các thuộc tính của metric\\
+\cline{3-4}
+&& datapoint\_level & Chứa các keyword là các thuộc tính của DataPoint\\
+\cline{3-4}
+&& list\_comparator & Danh sách các phép toán \\
+\cline{3-4}
+&& list\_logic & Danh sách các biểu thức logic \\
+\hline
+Statement & Chứa các phương thức để kiểm tra, thực hiện câu truy vấn/luật & checkQuery & Kiểm tra cú pháp, thực hiện câu truy vấn \\
+\cline{3-4}
+&& checkRule & Kiểm tra cú pháp, thực hiện luật.\\
+\hline
+StatementQuery & Kế thừa Statement, thực hiện kiểm tra, thực hiện câu truy vấn & checkQuery & Kiểm tra, thực hiện câu truy vấn\\
+\hline
+StatementRule & Kế thừa Statement, thực hiện kiểm tra, thực hiện luật & checkRule & Kiểm tra, thực hiện luật\\
+\hline
+Condition & Kiểm tra điều kiện câu truy vấn/luật & checkCompare & Kiểm tra nhánh compare của điều kiện\\
+\cline{3-4}
+&& checkLogic & Kiểm tra nhánh Logic của điều kiện\\
+\cline{3-4}
+&& checkInBracket & Kiểm tra nhanh in-bracket của điều kiện\\
+\hline
+Action & Thực hiện gọi API của các nền tảng IoT & callAPI & Gọi API của các nền tảng IoT\\
+\hline
+Expression & kiểm tra biểu thức & checkExpression & Kiểm tra cú pháp, ngữ nghĩa của biểu thức\\
+\hline
+Term & Kiểm tra toán tử & checkTerm & Kiểm tra cú pháp, ngữ nghĩa của toán tử\\
+\hline
+Const & Kiểm tra hằng số & checkConst & Kiểm tra một hằng số\\
+\hline
 
-\subsection{Biểu đồ hoạt động các thành phần của cơ chế truy vấn}
+\end{longtable}
+
+\subsection{Biểu đồ trình tự của cơ chế truy vấn}
+
+Khi người dùng tạo một câu truy vấn hay một luật (Rule) tới hệ thống, thành phần Statement sẽ phân tích câu đó và chuyển tới các thành phần khác của hệ thống để thực hiện câu đó.
 
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-statement}	
-	\caption{Biểu đồ hoạt động của thành phần Statement}
+	\caption{Biểu đồ trình tự người dùng thực hiện truy vấn}
 \end{figure}
 
+Nếu người dùng tạo một câu truy vấn, thành phần Statement sẽ chuyển câu truy vấn tới thành phần StatementQuery để phân tích câu truy vấn. StatementQuery khi đó sẽ kiểm tra cú pháp câu truy vấn và gọi thành phần Condition để kiểm tra cú pháp và lấy ra kết quả câu truy vấn. Sau khi lấy được kết quả truy vấn từ thành phần Condition, StatementQuery gửi lại kết quả cho Statement.
 
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-statement_query}	
-	\caption{Biểu đồ hoạt động của thành phần StatementQuery}
+	\caption{Biểu đồ trình tự thực hiện một câu truy vấn}
 \end{figure}
 
+Nếu người dùng tạo một luật, thành phần Statement của hệ thống sẽ chuyển luật đó tới StatementRule để kiểm tra điều kiện (Condition) và thực hiện hành động (Action). Để kiểm tra điều kiện, StatementRule gọi tới thành phần Condition của hệ thống. Ứng với kết quả kiểm tra điều kiện, StatementRule sẽ gọi tới thành phần Action để thực hiện các hành động tương ứng.
 
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-statement_rule}	
-	\caption{Biểu đồ hoạt động của thành phần StatementRule}
+	\caption{Biểu đồ thực hiện một Rule}
 \end{figure}
 
+Thành phần Condition của hệ thống có nhiệm vụ kiểm tra cú pháp của điều kiện. Nếu cú pháp đúng, sẽ thực hiện gọi các API để lấy ra kết quả của các câu truy vấn. 
 
+%\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-condition}	
-	\caption{Biểu đồ hoạt động của thành phần Condition}
+	\caption{Biểu đồ trình tự kiểm tra một Condition}
 \end{figure}
 
+Thành phần Expression sẽ kiểm tra tính đúng đắn về cú pháp của một biểu thức. Một biểu thức phải là một toán tử (Term) hoặc một biểu thức gồm các phép cộng, trừ các toán tử. Nếu là một biểu thức, toán tử phải là các số nguyên hoặc số thực, không được là một chuỗi ký tự.
 
+\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-expression}	
-	\caption{Biểu đồ hoạt động của thành phần Expression}
+	\caption{Biểu đồ trình tự kiểm tra một Expression}
 \end{figure}
 
+Thành phần Action sẽ thực hiện các lời gọi API tới các nền tảng IoT để điều khiển các thiết bị.
 
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-action}	
-	\caption{Biểu đồ hoạt động của thành phần Action}
+	\caption{Biểu đồ trình tự thực hiện một Action}
 \end{figure}
 
+Thành phần Term sẽ kiểm tra một toán tử. Một toán tử phải là một hằng số hoặc một biểu thức gồm các phép nhân, chia các hằng số. Nếu toán tử là một biểu thức, hằng số phải là một số, không được là một chuỗi ký tự.
 
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.4]{image/language_diagram-term}	
-	\caption{Biểu đồ hoạt động của thành phần Term}
+	\caption{Biểu đồ trình tự kiểm tra một Term}
 \end{figure}
 
 

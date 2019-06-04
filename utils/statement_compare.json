@@ -1,5 +1,5 @@
 {
-    "select" : "Platform",
+    "select" : "DataPoint",
     "where" : {
         "condition" : {
             "compare" : {
@@ -15,12 +15,12 @@
             "if" : {
                 "compare" : {},
                 "logic" : {
-                    "operation" : "AND",
+                    "operation" : "OR",
                     "condition_1" : {
                         "compare" : {
                             "keyword" : "MetricId",
                             "comparator" : "=",
-                            "expression" : "humidity_homeassistant"
+                            "expression" : "Humidity"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -29,7 +29,7 @@
                         "compare" : {
                             "keyword" : "value",
                             "comparator" : "=",
-                            "expression" : "64.0"
+                            "expression" : "55.0"
                         },
                         "logic" : {},
                         "in_bracket" : {}
@@ -39,18 +39,18 @@
             },
             "then" : [
                 {
-                    "metric_id" : "led_id_1",
-                    "value" : "turn on"
+                    "MetricId" : "LedXanh",
+                    "value" : "off"
                 },
                 {
-                    "metric_id" : "led_id_2",
-                    "value" : "turn off"
+                    "MetricId" : "LedVang",
+                    "value" : "off"
                 }
             ], 
             "else" : [ 
                 {
-                    "metric_id" : "led_id_3",
-                    "value" : "turn off"
+                    "MetricId" : "LedDo",
+                    "value" : "off"
                 }
             ]
     }

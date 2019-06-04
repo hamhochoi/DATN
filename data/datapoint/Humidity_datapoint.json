@@ -1,1 +1,1 @@
-{"DataType": "int", "time": "2019-05-13 18:21:25.467575", "DatapointId": "Humidity_datapoint", "value": 55}
+{"value": 55, "DataType": "int", "time": "2019-06-04 13:51:35.626909", "DatapointId": "Humidity_datapoint"}

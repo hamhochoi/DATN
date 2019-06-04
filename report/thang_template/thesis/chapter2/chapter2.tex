@@ -1,10 +1,9 @@
 \chapter{Các cơ sở lý thuyết và các công nghệ liên quan}
 
 Để thu thập được dữ liệu phục vụ mục đích tìm kiếm, tôi xây dựng một hệ thống IoT đơn giản. Sau đây là các cơ sở lý thuyết và các công nghệ liên quan mà tôi đã tìm hiểu trong quá trình xây dựng hệ thống IoT đó.
-
-\section{Giới thiệu về IoT}
+\section{Giới thiệu về IoT và các công nghệ liên quan}
+\subsection{Giới thiệu về IoT}
 Internet vạn vật (Internet of Things - IoT) hay mạng lưới vật kết nối, trong đó, các thiết bị, phương tiện, nhà cửa, ... được nhúng các thiết bị điện tử, phần mềm, cảm biến cùng khả năng kết nối tới mạng máy tính giúp cho các thiết bị này có thể thu thập và gửi dữ liệu. Hệ thống IoT cho phép vật được cảm nhận hoặc được điều khiển từ xa thông qua hạ tầng mạng hiện hữu, tạo cơ hội cho thế giới thực được tích hợp trực tiếp hơn vào hệ thống điện toán, hệ quả là hiệu năng, độ tin cậy và lợi ích kinh tế được tăng cường bên cạnh việc giảm thiểu sự can dự của con người. Mục đích của Internet vạn vật là tạo ra các liên kết Máy-Máy (Machine-to-Machine), được xem như là thông minh. Các thiết bị thu thập dữ liệu hữu ích rồi sau đó tự động truyền dữ liệu sang các thiết bị khác. Các ví dụ về IoT có thể kể đến như tự động bật tắt đèn, hệ thống thông gió, hệ thống điều hòa nhiệt độ, ... 
-
 %\subsection{Lịch sử của internet of things}
 %Năm 1999, Kevin Ashton, đồng sáng lập của trung tâm Auto-ID tại MIT, lần đầu tiên đề cập tới IoT trong bài trình bày của mình tại Procter \& Gamble (P\&G). Với mong muốn thu hút sự chú ý của các nhà quản lý của P\&G với công nghệ RFID (radio frequency ID), Ashton gọi bài trình bày của ông là "Internet of Things" để phù hợp với xu hướng đang nổi lúc bấy giờ là Internet. 
 
@@ -22,15 +21,13 @@ Internet vạn vật (Internet of Things - IoT) hay mạng lưới vật kết n
 %\subsection{Lợi ích của internet of things}
 %Khi IoT được diễn ra phổ biến, sẽ dẫn tới quá trình tự động hóa đại trà trên nhiều lĩnh vực. Theo Garner, Inc.  (một công ty nghiên cứu và tư vấn về công nghệ), sẽ có khoảng 26 tỷ thiết bị IoT vào năm 2020. Theo một cuộc khảo sát và nghiên cứu gần đây được thực hiện bởi dự án Internet Pew Research, một phần lớn các chuyên gia công nghệ đã hưởng ứng tham gia sử dụng Internet of Things với 83\% đồng ý quan điểm cho rằng Internet of Things sẽ có tác động rộng rãi và mang lại lợi ích đến năm 2025. 
 %Một số lợi ích của IoT với các doanh nghiệp có thể kể đến như sử dụng tài nguyên hiệu quả hơn, giảm công sức của con người đồng thời giảm chi phí và mang lại hoạt động hiệu quả hơn, nâng cao trải nghiệm người dùng, tiết kiệm thời gian và tiền bạc, ... Ngoài ra, đối với khách hàng, người sử dụng, những ngôi nhà thông minh có thể điều khiển từ xa, có các hệ thống điều khiển tự động giúp thuận tiện hơn cho người dùng; các thiết bị IoT có thể đeo được trên cơ thể con người giúp thu thập dữ liệu về con người, phân tích các dữ liệu đó và đưa ra các hỗ trợ cho con người ví dụ như trong các trường hợp y tế khẩn cấp,…
-
 \subsection{Các công nghệ liên quan tới Internet of things}
 \subsubsection{Phần cứng}
 Thành phần phần cứng cơ bản nhất của một hệ thống IoT là các cảm biến. Một cách khái quát, một cảm biến là một thiết bị có khả năng phát hiện những thay đổi trong môi trường. Nếu hoạt động độc lập, một cảm biến sẽ là vô dụng, tuy nhiên, khi chúng ta dùng chúng trong một hệ thống điện tử, cảm biến đóng vai trò chính yếu. Một cảm biến  có thể đo đạc một hiện tượng vật lý (ví dụ như nhiệt độ, độ ẩm, áp suất, ...) và chuyển chúng thành các tín hiệu điện. Một cảm biến tốt cần phải có ba tính chất: Nhạy bén với các hiện tượng vật lý mà chúng đo đạc, không nhạy với các hiện tượng vật lý khác, và không làm thay đổi các giá trị đo trong quá trình đo đạc. Một số cảm biến phổ biến ngày nên có thể kể đến như cảm biến nhiệt độ, độ ẩm, ánh sáng, gia tốc,...\\ %Trong đồ án này, tôi sử dụng các cảm biến chuyển động, cảm biến nhiệt độ-độ ẩm và các đèn LED để xây dựng hệ thống IoT. Đây là những cảm biến đơn giản, giá thành rẻ và được sử dụng rộng rãi trên thực tế.\\
 
 Để đọc các giá trị được tạo ra bởi các cảm biến, các cảm biến thường được kết nối tới một bảng mạch vi xử lý. Một số mạch vi xử lý như Arduino, Raspberry Pi, Intel Galileo, … trong đó Arduino được sử dụng phổ biến nhất bởi cả các chuyên gia lẫn những người mới bắt đầu. Arduino là một board mạch vi xử lý được sinh ra tại thị trấn Ivrea ở Ý, nhằm xây dựng các ứng dụng tương tác với nhau hoặc với môi trường được thuận lợi hơn. Phần cứng bao gồm một board mạch nguồn mở được thiết kế trên nền tảng vi xử lý AVR Atmel 8bit, hoặc ARM Atmel 32-bit. Những Model hiện tại được trang bị gồm 1 cổng giao tiếp USB, 6 chân đầu vào analog, 14 chân I/O kỹ thuật số tương thích với nhiều board mở rộng khác nhau. Được giới thiệu vào năm 2005, Những nhà thiết kế của Arduino cố gắng mang đến một phương thức dễ dàng, không tốn kém cho những người yêu thích, sinh viên và giới chuyên nghiệp để tạo ra những thiết bị có khả năng tương tác với môi trường thông qua các cảm biến và cơ chế hành động. Những ví dụ phổ biến cho những người yêu thích mới bắt đầu bao gồm các robot đơn giản, điều khiển nhiệt độ và phát hiện chuyển động. Đi cùng với nó là một môi trường phát triển tích hợp (IDE) chạy trên các máy tính cá nhân thông thường và cho phép người dùng viết các chương trình cho Arduino bằng ngôn ngữ C hoặc C++. Thông tin thiết kế phần cứng được cung cấp công khai để những ai muốn tự làm một mạch Arduino bằng tay có thể tự mình thực hiện được (mã nguồn mở). Người ta ước tính khoảng giữa năm 2011 có trên 300 nghìn mạch Arduino chính thức đã được sản xuất thương mại, và vào năm 2013 có khoảng 700 nghìn mạch chính thức đã được đưa tới tay người dùng. 
 Sau khi đã đọc được dữ liệu từ các cảm biến, các mạch vi xử lý gửi dữ liệu tới các máy tính để lưu trữ, xử lý dữ liệu. Tuy nhiên, Arduino không hỗ trợ các giao thức mạng wifi nên cần mạch bổ trợ esp8266 để gửi, nhận dữ liệu từ các thành phần khác trong hệ thống.
-
-\clearpage
+%\clearpage
 \begin{figure}[h!]
 	\center
 	\includegraphics[scale=0.6]{image/internet-of-things1}
@@ -38,22 +35,18 @@ Sau khi đã đọc được dữ liệu từ các cảm biến, các mạch vi 
 	nguồn:http://www.open-silicon.com/wp-content/uploads/2015/05/internet-of-things1.jpg
 	\label{fig:iot}
 \end{figure}
-
-
 \subsubsection{Các giao thức trong IoT}
 Điều quan trọng trong Internet of Things là các thiết bị phải được đưa lên internet, tức là phải có một định danh duy nhất. Tuy nhiên, với giao thức IPv4, số lượng định danh có thể có là hơn 4 tỷ định danh. Mặc dù có thể dùng các kỹ thuật để tăng số lượng IPv4 (ví dụ NAT, ...) tuy nhiên không thể giải quyết triệt để vấn đề này trong khi số lượng thiết bị IoT ngày càng tăng với tốc độ nhanh chóng và sẽ lên tới hàng chục tỷ thiết bị. Do đó giao thức IPv6 (có thể có hơn 2 triệu tỷ định danh) đang được tích cực triển khai để giải quyết vấn đề này. 
 
 Một số giao thức truyền thông được sử dụng trong IoT là các giao thức truyền thông phổ biến như wifi, bluetooth, NFC, ... Tuy nhiên, cũng có các giao thức được sử dụng rộng rãi trong IoT nhưng ít được biết đến hơn như Zigbee, MQTT, AMQP, RFID,... Do tính đơn giản, dễ triển khai mà vẫn đảm bảo được các chức năng cơ bản trong môi trường IoT như gửi, nhận dữ liệu, đảm bảo chất lượng dịch vụ (QoS) nên MQTT là giao thức được sử dụng rộng rãi trong các ứng dụng IoT. Và trong đồ án này, tôi cũng sử dụng giao thức này để thực hiện gửi, nhận dữ liệu giữa các thành phần của hệ thống.\\ 
-MQTT (Message Queuing Telemetry Transport) là một giao thức gửi dạng publish/subscribe sử dụng cho các thiết bị IoT với băng thông thấp, độ tin cậy cao và khả năng được sử dụng trong mạng lưới không ổn định. Trong đó, broker được coi như trung tâm, nó là điểm giao của tất cả các kết nối đến từ client. Nhiệm vụ chính của broker là nhận message (gói tin) từ publisher, xếp các message theo hàng đợi rồi chuyển chúng tới một địa chỉ cụ thể. Nhiệm vụ phụ của broker là nó có thể đảm nhận thêm một vài tính năng liên quan tới quá trình truyền thông như: bảo mật message, lưu trữ message, logs,...
-Client thì được chia thành 2 nhóm là publisher và subscriber. Client là các chương trình được thiết kế để có thể hoạt động một cách linh hoạt (lightweight). Client chỉ làm ít nhất một trong 2 việc là publish các message lên một topic cụ thể hoặc subscribe một topic nào đó để nhận message từ topic này. \\
-
-Các khái niệm đáng chú ý trong giao thức MQTT:\\
+MQTT (Message Queuing Telemetry Transport) là một giao thức gửi dạng publish/subscribe sử dụng cho các thiết bị IoT với băng thông thấp, độ tin cậy cao và khả năng được sử dụng trong mạng lưới không ổn định. Trong đó, broker được coi như trung tâm, nó là điểm giao của tất cả các kết nối đến từ client. Nhiệm vụ chính của broker là nhận message (gói tin) từ publisher, xếp các message theo hàng đợi rồi chuyển chúng tới một địa chỉ cụ thể. Nhiệm vụ phụ của broker là nó có thể đảm nhận thêm một vài tính năng liên quan tới quá trình truyền thông như: bảo mật message, lưu trữ message, logs,... Client thì được chia thành 2 nhóm là publisher và subscriber. Client là các chương trình được thiết kế để có thể hoạt động một cách linh hoạt (lightweight). Client chỉ làm ít nhất một trong 2 việc là publish các message lên một topic cụ thể hoặc subscribe một topic nào đó để nhận message từ topic này. \\
+Các khái niệm đáng chú ý trong giao thức MQTT:
 \begin{itemize}
 	\item Message: Trong giao thức MQTT, message còn được gọi là "message payload", có định dạng mặc định là plain-text (chữ viết người đọc được), tuy nhiên người sử dụng có thể cấu hình thành các định dạng khác.
 	\item Topic: Topic có thể coi như một "đường truyền" logic giữa 2 điểm là publisher và subscriber. Về cơ bản, khi message được publish vào một topic thì tất cả những subscriber của topic đó sẽ nhận được message này. 
 \end{itemize}
 
-\clearpage
+%\clearpage
 
 \begin{figure}[h!]
 	\center
@@ -127,12 +120,9 @@ Các tiên đề là các khẳng định mang tính logic. Ví dụ "memo" là 
 
 Ontology không chỉ là bản mô tả có thể chia sẻ và tái sử dụng của một lĩnh vực mà còn có thể thêm các tri thức mới về lĩnh vực đó. 
 Có một số cách khác có thể được sử dụng để mô tả một cách hình thức tri thức về một miền lĩnh vực như cơ sở dữ liệu quan hệ, sử dụng tập từ vựng của lĩnh vực, ... tuy nhiên, ontology nhấn mạnh mối quan hệ giữa các khái niệm và cho phép người sử dụng liên kết các khái niệm này với các khái niệm khác theo nhiều cách khác nhau. 
-
 \subsubsection{Cách xây dựng một ontology}
-
 Có nhiều phương pháp để xây dựng một ontology, tuy nhiên, nhìn chung, các phương pháp đều thực hiện hai bước cơ bản: xây dựng cấu trúc lớp phân cấp và định nghĩa các thuộc tính cho các lớp. Trong thực tế, để xây dựng một ontology mô tả một lĩnh vực là một công việc khó khăn, phụ thuộc rất nhiều vào công cụ sử dụng, tính chất, quy mô, sự thường xuyên biến đổi của lĩnh vực đó, cũng như các mối quan hệ phức tạp trong đó. Những khó khăn này đòi hỏi quá trình xây dựng ontology phải là một quá trình lặp đi lặp lại, mỗi lần lặp cải thiện, tinh chế và phát triển dần sản phẩm chứ không phải là một quy trình với các công đoạn tách rời nhau. Công việc xây dựng ontology cũng cần phải tính đến khả năng mở rộng lĩnh vực quan tâm trong tương lai, khả năng kế thừa các ontology đã có, cũng như có tính linh động để ontology có khả năng mô tả tốt nhất các mối quan hệ phức tạp trong thế giới thực. 
 Một số nguyên tắc cơ bản trong xây dựng ontology:
-
 \begin{itemize}
 	\item Không có một cách duy nhất nào để mô hình hóa một lĩnh vực. Luôn có rất nhiều cách có thể thay thế cho nhau. Việc xác định cách tốt nhất thường phụ thuộc vào ứng dụng của mô hình và các mở rộng trong tương lai mà ta đoán trước sẽ có thể xảy ra.
 	\item Quá trình phát triển ontology là một quá trình lặp đi lặp lại
@@ -157,7 +147,6 @@ Nhìn chung, câu trả lời cho các câu hỏi dạng này có thể sẽ th�
 	\item Câu trả lời của cơ sở tri thức đã đáp ứng được mức độ, yêu cầu nào của người sử dụng?
 	\item Các ràng buộc và quan hệ phức tạp trong miền quan tâm đã được biểu diễn hợp lý chưa? 
 \end{itemize}
-
 \underline{Bước 2:} Xem xét việc kế thừa các ontology có sẵn: \\
 Đây là một công đoạn thường hay sử dụng để giảm thiểu công sức xây dựng một Ontology. Bằng cách kế thừa các ontology tương tự có sẵn, người xây dựng có thể thêm hoặc bớt các lớp, quan hệ giữa các lớp, thực thể để tinh chỉnh tùy theo mục đích của mình. Việc sử dụng lại các Ontology có sẵn cũng rất quan trọng khi cần sự tương tác giữa các ứng dụng khác nhau, các ứng dụng sẽ cần phải hiểu các lớp, thực thể, quan hệ của nhau để thuận tiện trong việc trao đổi hoặc thống nhất thông tin.\\
 
@@ -167,17 +156,17 @@ SSN ontology được phát triển bởi W3C Semantic Sensor Network Incubator 
 
 \begin{figure}[h!]
 	\center
-	\includegraphics[scale=0.4]{image/ssn_ontology} \\
+	\includegraphics[scale=0.5]{image/ssn_ontology} \\
 	\caption{SSN ontology}
 	\small nguồn: https://corescholar.libraries.wright.edu/knoesis/610/?utm\_source=corescholar.libraries.wright.edu \%2Fknoesis\%2F610\&utm\_medium=PDF\&utm\_campaign=PDFCoverPages
 \end{figure}
 
 Một ontology khác là ontology IoT-A \cite{iotaontology}, cung cấp các khái niệm chính như Service, và các khái niệm chủ yếu theo liên quan tới các Service. Nó chỉ tái sử dụng khái niệm ssn:condition. Hơn nữa, nó rất phức tạp, không sử dụng các ontology chuẩn, và gặp nhiều vấn đề về tính dư thừa. 
-\clearpage
+%\clearpage
 
 \begin{figure}[h!]
 	\center
-	\includegraphics[scale=0.5]{image/iot-a}
+	\includegraphics[scale=0.6]{image/iot-a}
 	\caption{IoT-A ontology}
 	nguồn: https://www.researchgate.net/profile/Suparna\_De/publication/330729011/figure/fig1/ AS:720756187090946@1548853074205/Internet-of-Things-Architecture-IoT-A-Resource-Model.png
 \end{figure}
@@ -243,13 +232,12 @@ Tổ chức dữ liệu đơn giản, đồng nhất nên thông tin dễ dàng 
 Cấu trúc bộ ba giúp cho thông tin dễ truy xuất bởi các hệ thống suy luận, tìm kiếm ngữ nghĩa. Cũng nhờ vậy mà những bộ xử lý RDF có thể suy luận ra những thông tin mới không có trong hệ dữ liệu. \\
 Chia sẻ dữ liệu trên mạng dễ dàng nhờ sự đồng nhất. Ngoài RDF, còn có một số ngôn ngữ ontology được dùng khá phổ biến khác như RDFS, OWL,... để mô tả các tài nguyên trên môi trường web.
 
-
 \subsection{Định hướng giải pháp}
 Sau khi đã tìm hiểu cơ sở lý thuyết và các công nghệ liên quan, tôi quyết định sử dụng các công nghệ sau để xây dựng hệ thống IoT và cơ chế truy vấn ngữ nghĩa: 
 
 \begin{itemize}
-	\item Sử dụng các cảm biến nhiệt độ-độ ẩm, cảm biến chuẩn động và các đèn LED để xây dựng hệ thống phần cứng
-	\item Sử dụng giao thức MQTT để gửi, nhận các thông điệp giữa thành phần trong hệ thống
-	\item Sử dụng các nền tảng IoT mã nguồn mở OpenHAB, HomeAssistant và ThingsBoard. Trong đó, hệ thống ban đầu sẽ gồm hai nền tảng IoT là OpenHAB và HomeAssistant; nền tảng IoT ThingsBoard sẽ được tích hợp vào hệ thống sau này để chứng minh khả năng mở rộng của hệ thống
+	\item Sử dụng các cảm biến phổ biến, dễ mua trên thị trường là cảm biến nhiệt độ-độ ẩm, cảm biến chuẩn động và các đèn LED để xây dựng hệ thống phần cứng
+	\item Sử dụng giao thức MQTT là giao thức phổ biến trong môi trường IoT để gửi, nhận các thông điệp giữa thành phần trong hệ thống
+	\item Các nền tảng IoT mã nguồn mở được sử dụng do dễ tiếp cận, cài đặt. Trong đồ án này, tôi sử dụng các nền tảng IoT mã nguồn mở OpenHAB, HomeAssistant và ThingsBoard. Trong đó, hệ thống ban đầu sẽ gồm hai nền tảng IoT là OpenHAB và HomeAssistant; nền tảng IoT ThingsBoard sẽ được tích hợp vào hệ thống sau này để chứng minh khả năng mở rộng của hệ thống
 	\item Xây dựng ontology dựa trên bảy bước như đã nêu trong phần giới thiệu về ontology. Sử dụng định dạng json để biểu diễn các khái niệm, thuộc tính, cũng như mối quan hệ giữa các khái niệm.
 \end{itemize}

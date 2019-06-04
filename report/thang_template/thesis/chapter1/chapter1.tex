@@ -1,9 +1,7 @@
 \chapter{Giới thiệu đề tài}
 \section{Lý do thực hiện đề tài}
 Môi trường IoT là môi trường rất đa dạng về thiết bị IoT cũng như các nền tảng IoT. Thông thường, trong các hệ thống IoT, các thiết bị đều được quản lý bởi một nền tảng IoT. Mà mỗi nền tảng IoT này lại có một định dạng dữ liệu riêng. Trên thị trường hiện nay, có rất nhiều các nền tảng IoT tồn tại và chưa có một nền tảng nào được coi là chuẩn chung cho toàn bộ ngành IoT. Do đó, dữ liệu trên môi trường IoT rất khác nhau về định dạng. Tuy nhiên, để tìm kiếm, xử lý dữ liệu một cách dễ dàng, hiệu quả, ta cần đưa các định dạng này về một định dạng chung. Để giải quyết bài toán này, tôi cùng một nhóm sinh viên dưới sự chỉ dẫn của TS. Nguyễn Bình Minh đã xây dựng hệ thống IoT đa nền tảng, trong đó, xây dựng các driver cho các nền tảng IoT để chuẩn hóa dữ liệu về một chuẩn chung. Đồng thời, hệ thống cũng có khả năng mở rộng, cho phép thêm các nền tảng IoT mới vào một cách dễ dàng thông qua việc xây dựng một driver mới. \\
-
-Sau khi đã có được dữ liệu theo một cấu trúc thống nhất,  để sử được dữ liệu thu thập được,  đặt ra một bài toán là tìm kiếm dữ liệu. Phương pháp truyền thống là tìm kiếm theo từ khóa xuất hiện, ví dụ câu tìm kiếm "Tìm các đèn trong phòng 609 thư viện Tạ Quang Bửu". Tuy nhiên, phương pháp tìm kiếm theo từ khóa có một nhược điểm là không hiểu được câu tìm kiếm, mà chỉ liệt kê các tài liệu chứa các từ khóa trong câu tìm kiếm. Với ví dụ trên, kết quả mong muốn là tìm kiếm các đèn trong phòng 609 thư viện Tạ Quang Bửu, nhưng kết quả trả về sẽ bao gồm cả các tài liệu khác về phòng 609 thư viện Tạ Quang Bửu như điều hòa, tivi, các thiết bị trong phòng 609, không phải là kết quả mong muốn. Do đó, tôi thực hiện đề tài "Xây dựng cơ chế truy vấn ngữ nghĩa cho hệ thống IoT đa nền tảng".\\
-
+Tuy nhiên, dữ liệu sau khi được chuẩn hóa về một dạng chuẩn chung được lưu trữ trên cơ sở dữ liệu. Điều này có một nhược điểm là không thể hiện được mối quan hệ giữa các dữ liệu. Ví dụ: Thông tin về một căn phòng chứa các thiết bị thông minh không có mối quan hệ rõ ràng nào với thông tin về các thiết bị trong căn phòng đó. Do đó, đề tài này được thực để xây dựng được cơ chế có khả năng mô tả mối quan hệ giữa các dữ liệu trong môi trường IoT đa nền tảng.\\
 \section{Nhiệm vụ của đề tài}
 Nhiệm vụ của đề tài là xây dựng cơ chế truy vấn ngữ nghĩa cho hệ thống đa nền tảng IoT. Để xây dựng cơ chế truy vấn ngữ nghĩa này, ta phải thực hiện một số công việc sau:
 
@@ -16,7 +14,6 @@ Nhiệm vụ của đề tài là xây dựng cơ chế truy vấn ngữ nghĩa 
 
 \section{Phạm vi}
 Do thời gian thực hiện đồ án có hạn nên đồ án này sẽ chỉ xét tới các hệ thống IoT đơn giản là nhà thông minh. Trong đó, bao gồm các cảm biến, thiết bị, các nền tảng IoT nguồn mở là các thành phần cơ bản chung cho một hệ thống IoT. Cơ chế truy vấn ngữ nghĩa vì thế cũng rất đơn giản, mục tiêu là chứng minh việc thực hiện được tính ngữ nghĩa của một câu truy vấn.\\
-
 Để kiểm chứng được tính ngữ nghĩa của câu truy vấn, tôi xây dựng một trường hợp kiểm thử:
 Thực hiện câu truy vấn: "Liệt kê các thiết bị trong phòng 609". Hệ thống cần trả về kết quả là các thiết bị có trong phòng 609. \\
 Đồng thời, để thể hiện tính khả mở của hệ thống, ban đầu hệ thống được xây dựng trên hai nền tảng IoT. Sau đó, hệ thống cần có khả năng thêm vào một nền tảng IoT mới.
@@ -24,5 +21,5 @@ Thực hiện câu truy vấn: "Liệt kê các thiết bị trong phòng 609". 
 
 \section{Cấu trúc đồ án tốt nghiệp}
 Phần còn lại của báo cáo đồ án tốt nghiệp này được tổ chức như sau:\\
-\textbf{Chương 2} sẽ giới thiệu cơ sở lý thuyết của IoT và truy vấn ngữ nghĩa, đồng thời nêu lên hướng giải quyết của đề tài. \textbf{Chương 3} sẽ trình bày việc xây dựng hệ thống IoT và thiết kế ngôn ngữ truy vấn ngữ nghĩa. Tiếp theo, \textbf{chương 4} sẽ thực nghiệm hệ thống, đồng thời nêu lên những kết luận và hướng phát triển đề tài. Cuối cùng, \textbf{chương 5} là các tài liệu tham khảo sử dụng trong đồ án tốt nghiệp.
+\textbf{Chương 2} sẽ giới thiệu cơ sở lý thuyết của IoT và truy vấn ngữ nghĩa, đồng thời nêu lên hướng giải quyết của đề tài. \textbf{Chương 3} sẽ trình bày việc xây dựng hệ thống IoT và thiết kế ngôn ngữ truy vấn ngữ nghĩa. Tiếp theo, \textbf{Chương 4} sẽ thực nghiệm hệ thống. Cuối cùng, \textbf{Chương 5} đồng thời nêu lên những kết luận và hướng phát triển đề tài.
  

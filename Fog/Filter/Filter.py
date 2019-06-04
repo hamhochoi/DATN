@@ -27,6 +27,7 @@ class Filter:
 
         self.client = mqtt.Client()
         self.client.connect(broker_fog)
+        self.client.on_connect = self.on_connect
         self.now_state = {}         # {global_id : value_state}
         self.datapoint_folder = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - student.hust.edu.vn/OD/20182/DATN/data/datapoint"
         self.metric_folder = "/media/hamhochoi/Beo/OneDrive for Business 1/OneDrive - student.hust.edu.vn/OD/20182/DATN/data/metric"
@@ -41,7 +42,7 @@ class Filter:
 
 
     def filter_message(self, client, userdata, msg):
-        self.logger.info("Filter message before send to Collector")
+        # self.logger.info("Filter message before send to Collector")
         # filter_topic_pub = 'filter/response/forwarder/api_get_states'
         message = json.loads(msg.payload.decode('utf-8'))
         self.logger.debug("Meassage before: {}".format(message))
@@ -84,6 +85,7 @@ class Filter:
 
 
     def api_set_state(self, topic, message):
+        print ("Called API set state")
         self.client.publish(topic, message)
 
 
@@ -104,4 +106,5 @@ if __name__ == '__main__':
 
     filter_fog = Filter(BROKER_FOG)
     filter_fog.run()
+    # filter_fog.api_set_state('2667a8d0-0ff1-4d22-9153-26795502efc9/request/api_set_state', 'b')
 

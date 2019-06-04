@@ -1,1 +1,1 @@
-{"MetricType": "gauge", "MetricLocalId": "LedXanh", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["LedXanh_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "LedXanh", "MetricId": "LedXanh"}
+{"Unit": "", "MetricId": "LedXanh", "MetricName": "LedXanh", "MetricDomain": "sensor", "MetricType": "gauge", "HasDatapoint": ["LedXanh_datapoint"], "MetricStatus": "active", "CanSetState": "false", "MetricLocalId": "LedXanh"}

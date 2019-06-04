@@ -5,6 +5,12 @@
 \usepackage{setspace}
 \usepackage{footnote}
 
+\usepackage{tcolorbox}
+\newcommand{\myexample}[2]{
+    \begin{tcolorbox}[colback=black!5!white,colframe=black,title={#1}]
+        #2
+    \end{tcolorbox}
+}
 
 \input{blocked.sty}
 \input{uhead.sty}
@@ -81,9 +87,9 @@
 \newcommand{\symbolfootnote}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}}
 % now add \symbolfootnote to the beginning of the document...
 
-\newcommand{\normallinespacing}{\renewcommand{\baselinestretch}{1.5} \normalsize}
+\newcommand{\normallinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}
 \newcommand{\mediumlinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}
-\newcommand{\narrowlinespacing}{\renewcommand{\baselinestretch}{1.0} \normalsize}
+\newcommand{\narrowlinespacing}{\renewcommand{\baselinestretch}{1.2} \normalsize}
 \newcommand{\bump}{\noalign{\vspace*{\doublerulesep}}}
 \newcommand{\cell}{\multicolumn{1}{}{}}
 \newcommand{\spann}{\mbox{span}}

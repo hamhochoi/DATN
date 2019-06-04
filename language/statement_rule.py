@@ -7,7 +7,8 @@ from language import Languague
 import traceback
 import requests
 import random
-from Fog.Filter.Filter import Filter
+# from Fog.Filter.Filter import Filter
+from action import Action 
 
 
 
@@ -17,7 +18,8 @@ class Rule(Statement):
         Statement.__init__(self)
         BROKER_CLOUD = "159.65.7.246"
         self.host_api_set_state = "http://{}:5000/api/metric".format(BROKER_CLOUD)
-        self.filter_ = Filter(broker_fog="broker.hivemq.com")
+        # self.filter = Filter(broker_fog="broker.hivemq.com")
+
 
 
     def rule(self, rule):
@@ -40,7 +42,7 @@ class Rule(Statement):
             if_field   = rule['if']
             datapoint_level = 5 
             check_condition_result, result = Condition().check_condition(json.dumps(if_field), datapoint_level)
-            print (check_condition_result, result)
+            # print (check_condition_result, result)
 
 
             if (check_condition_result == True and len(result) != 0):
@@ -63,8 +65,8 @@ class Rule(Statement):
                         }
                     }
 
-                    self.filter_.api_set_state(topic, json.dumps(message))
-                    print ("called Quan's API")
+                    Action().api_set_state(topic, json.dumps(message))
+                    # print ("called set state API")
                     time.sleep(1)
             else:
                 else_field = rule['else']
@@ -86,8 +88,8 @@ class Rule(Statement):
                     }
 
                     topic = str(platform_id) + '/request/api_set_state'
-                    self.filter_.api_set_state(topic, json.dumps(message))
-                    print ("called set state API")
+                    Action().api_set_state(topic, json.dumps(message))
+                    # print ("called set state API")
             return True
         except:
             traceback.print_exc()

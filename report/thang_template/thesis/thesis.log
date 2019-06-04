@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  20 MAY 2019 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  23 MAY 2019 02:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,7 +436,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip66
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 19.
+Package hyperref Info: Option `colorlinks' set `true' on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
@@ -1211,34 +1211,52 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \tabu@vleads=\box71
 \tabu@cellskip=\skip71
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip72
+\LTright=\skip73
+\LTpre=\skip74
+\LTpost=\skip75
+\LTchunksize=\count138
+\LTcapwidth=\dimen169
+\LT@head=\box72
+\LT@firsthead=\box73
+\LT@foot=\box74
+\LT@lastfoot=\box75
+\LT@cols=\count139
+\LT@rows=\count140
+\c@LT@tables=\count141
+\c@LT@chunks=\count142
+\LT@p@ftn=\toks32
+)
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip72
-\f@ncyO@elh=\skip73
-\f@ncyO@erh=\skip74
-\f@ncyO@olh=\skip75
-\f@ncyO@orh=\skip76
-\f@ncyO@elf=\skip77
-\f@ncyO@erf=\skip78
-\f@ncyO@olf=\skip79
-\f@ncyO@orf=\skip80
+\fancy@headwidth=\skip76
+\f@ncyO@elh=\skip77
+\f@ncyO@erh=\skip78
+\f@ncyO@olh=\skip79
+\f@ncyO@orh=\skip80
+\f@ncyO@elf=\skip81
+\f@ncyO@erf=\skip82
+\f@ncyO@olf=\skip83
+\f@ncyO@orf=\skip84
 )
    defining Unicode char U+0190 (decimal 400)
    defining Unicode char U+025B (decimal 603)
 
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count138
-\Gm@cntv=\count139
-\c@Gm@tempcnt=\count140
-\Gm@bindingoffset=\dimen169
-\Gm@wd@mp=\dimen170
-\Gm@odd@mp=\dimen171
-\Gm@even@mp=\dimen172
-\Gm@layoutwidth=\dimen173
-\Gm@layoutheight=\dimen174
-\Gm@layouthoffset=\dimen175
-\Gm@layoutvoffset=\dimen176
-\Gm@dimlist=\toks32
+\Gm@cnth=\count143
+\Gm@cntv=\count144
+\c@Gm@tempcnt=\count145
+\Gm@bindingoffset=\dimen170
+\Gm@wd@mp=\dimen171
+\Gm@odd@mp=\dimen172
+\Gm@even@mp=\dimen173
+\Gm@layoutwidth=\dimen174
+\Gm@layoutheight=\dimen175
+\Gm@layouthoffset=\dimen176
+\Gm@layoutvoffset=\dimen177
+\Gm@dimlist=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -1253,20 +1271,20 @@ Package color Info: Driver file: pdftex.def on input line 143.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks33
-\minrowclearance=\skip81
+\everycr=\toks34
+\minrowclearance=\skip85
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks34
-\pgfutil@tempdima=\dimen177
-\pgfutil@tempdimb=\dimen178
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen178
+\pgfutil@tempdimb=\dimen179
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box72
+\pgfutil@abb=\box76
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1281,30 +1299,30 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen179
-\pgf@y=\dimen180
-\pgf@xa=\dimen181
-\pgf@ya=\dimen182
-\pgf@xb=\dimen183
-\pgf@yb=\dimen184
-\pgf@xc=\dimen185
-\pgf@yc=\dimen186
+\pgf@x=\dimen180
+\pgf@y=\dimen181
+\pgf@xa=\dimen182
+\pgf@ya=\dimen183
+\pgf@xb=\dimen184
+\pgf@yb=\dimen185
+\pgf@xc=\dimen186
+\pgf@yc=\dimen187
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count141
-\c@pgf@countb=\count142
-\c@pgf@countc=\count143
-\c@pgf@countd=\count144
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
+\c@pgf@counta=\count146
+\c@pgf@countb=\count147
+\c@pgf@countc=\count148
+\c@pgf@countd=\count149
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1320,8 +1338,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count145
-\pgfsyssoftpath@bigbuffer@items=\count146
+\pgfsyssoftpath@smallbuffer@items=\count150
+\pgfsyssoftpath@bigbuffer@items=\count151
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1351,12 +1369,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen187
-\pgfmath@count=\count147
-\pgfmath@box=\box73
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@dimen=\dimen188
+\pgfmath@count=\count152
+\pgfmath@box=\box77
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -1376,57 +1394,57 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count148
+\c@pgfmathroundto@lastzeros=\count153
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen188
-\pgf@picmaxx=\dimen189
-\pgf@picminy=\dimen190
-\pgf@picmaxy=\dimen191
-\pgf@pathminx=\dimen192
-\pgf@pathmaxx=\dimen193
-\pgf@pathminy=\dimen194
-\pgf@pathmaxy=\dimen195
-\pgf@xx=\dimen196
-\pgf@xy=\dimen197
-\pgf@yx=\dimen198
-\pgf@yy=\dimen199
-\pgf@zx=\dimen256
-\pgf@zy=\dimen257
+\pgf@picminx=\dimen189
+\pgf@picmaxx=\dimen190
+\pgf@picminy=\dimen191
+\pgf@picmaxy=\dimen192
+\pgf@pathminx=\dimen193
+\pgf@pathmaxx=\dimen194
+\pgf@pathminy=\dimen195
+\pgf@pathmaxy=\dimen196
+\pgf@xx=\dimen197
+\pgf@xy=\dimen198
+\pgf@yx=\dimen199
+\pgf@yy=\dimen256
+\pgf@zx=\dimen257
+\pgf@zy=\dimen258
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen258
-\pgf@path@lasty=\dimen259
+\pgf@path@lastx=\dimen259
+\pgf@path@lasty=\dimen260
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen260
-\pgf@shorten@start@additional=\dimen261
+\pgf@shorten@end@additional=\dimen261
+\pgf@shorten@start@additional=\dimen262
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box74
-\pgf@hbox=\box75
-\pgf@layerbox@main=\box76
-\pgf@picture@serial@count=\count149
+\pgfpic=\box78
+\pgf@hbox=\box79
+\pgf@layerbox@main=\box80
+\pgf@picture@serial@count=\count154
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen262
+\pgflinewidth=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen263
-\pgf@pt@y=\dimen264
-\pgf@pt@temp=\dimen265
+\pgf@pt@x=\dimen264
+\pgf@pt@y=\dimen265
+\pgf@pt@temp=\dimen266
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1442,12 +1460,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen266
+\pgfarrowsep=\dimen267
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen267
-\pgf@sys@shading@range@num=\count150
+\pgf@max=\dimen268
+\pgf@sys@shading@range@num=\count155
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1455,7 +1473,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box77
+\pgfexternal@startupbox=\box81
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -1471,15 +1489,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box78
+\pgfnodeparttextbox=\box82
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen268
-\pgf@nodesepend=\dimen269
+\pgf@nodesepstart=\dimen269
+\pgf@nodesepend=\dimen270
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1493,10 +1511,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen270
-\pgffor@skip=\dimen271
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@iter=\dimen271
+\pgffor@skip=\dimen272
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -1504,31 +1522,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count151
-\pgfplotmarksize=\dimen272
+\pgf@plot@mark@count=\count156
+\pgfplotmarksize=\dimen273
 )
-\tikz@lastx=\dimen273
-\tikz@lasty=\dimen274
-\tikz@lastxsaved=\dimen275
-\tikz@lastysaved=\dimen276
-\tikzleveldistance=\dimen277
-\tikzsiblingdistance=\dimen278
-\tikz@figbox=\box79
-\tikz@figbox@bg=\box80
-\tikz@tempbox=\box81
-\tikz@tempbox@bg=\box82
-\tikztreelevel=\count152
-\tikznumberofchildren=\count153
-\tikznumberofcurrentchild=\count154
-\tikz@fig@count=\count155
+\tikz@lastx=\dimen274
+\tikz@lasty=\dimen275
+\tikz@lastxsaved=\dimen276
+\tikz@lastysaved=\dimen277
+\tikzleveldistance=\dimen278
+\tikzsiblingdistance=\dimen279
+\tikz@figbox=\box83
+\tikz@figbox@bg=\box84
+\tikz@tempbox=\box85
+\tikz@tempbox@bg=\box86
+\tikztreelevel=\count157
+\tikznumberofchildren=\count158
+\tikznumberofcurrentchild=\count159
+\tikz@fig@count=\count160
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count156
-\pgfmatrixcurrentcolumn=\count157
-\pgf@matrix@numberofcolumns=\count158
+\pgfmatrixcurrentrow=\count161
+\pgfmatrixcurrentcolumn=\count162
+\pgf@matrix@numberofcolumns=\count163
 )
-\tikz@expandcount=\count159
+\tikz@expandcount=\count164
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1544,8 +1562,8 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 (./thesis.preamble.tex
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks46
-\verbatim@line=\toks47
+\every@verbatim=\toks47
+\verbatim@line=\toks48
 \verbatim@in@stream=\read2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
@@ -1559,11 +1577,38 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box83
-\fn@width=\dimen279
+\fn@notes=\box87
+\fn@width=\dimen280
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2016/02/29 version 3.90 text color boxes
+
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count165
+)
+\tcb@titlebox=\box88
+\tcb@upperbox=\box89
+\tcb@lowerbox=\box90
+\tcb@phantombox=\box91
+\c@tcbbreakpart=\count166
+\c@tcblayer=\count167
+\tcolorbox@number=\count168
+\tcb@temp=\box92
+\tcb@temp=\box93
+\tcb@temp=\box94
+\tcb@temp=\box95
+\tcb@out=\write4
+\tcb@record@out=\write5
 ) (./blocked.sty) (./uhead.sty) (./boxit.sty) (./icthesis.sty)
-\c@definition=\count160
-\c@theorem=\count161
+\c@definition=\count169
+\c@theorem=\count170
 )
 
 LaTeX Warning: Unused global option(s):
@@ -1576,42 +1621,42 @@ LaTeX Warning: Label `fig:2hop' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for X2/cmr/m/n on input line 67.
-LaTeX Font Info:    Try loading font information for X2+cmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for X2/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for X2+cmr on input line 68.
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/x2cmr.fd
 File: x2cmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count162
-\scratchdimen=\dimen280
-\scratchbox=\box84
-\nofMPsegments=\count163
-\nofMParguments=\count164
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count165
-\MPscratchDim=\dimen281
-\MPnumerator=\count166
-\makeMPintoPDFobject=\count167
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count171
+\scratchdimen=\dimen281
+\scratchbox=\box96
+\nofMPsegments=\count172
+\nofMParguments=\count173
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count174
+\MPscratchDim=\dimen282
+\MPnumerator=\count175
+\makeMPintoPDFobject=\count176
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1630,10 +1675,15 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box85
-Package hyperref Info: Link coloring ON on input line 67.
+\AtBeginShipoutBox=\box97
+Package hyperref Info: Link coloring ON on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1641,11 +1691,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count168
+\c@section@level=\count177
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1682,12 +1732,14 @@ LaTeX Info: Redefining \nameref on input line 67.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-Overfull \vbox (53.58911pt too high) detected at line 81
+Overfull \vbox (38.12442pt too high) detected at line 82
  []
 
 [1
 
 
+
+\providecommand\tcolorbox@label[2]{}
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (./phieu_giao_do_an/phieu_giao_do_an.tex
@@ -1722,11 +1774,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--50
 
  []
 
-[2
+) (./acknowledgements/acknowledgements.tex [2
 
 
 
-]) (./acknowledgements/acknowledgements.tex [3] [4
+] [3
 
 
 ]) (./abstract/abstract.tex
@@ -1734,598 +1786,645 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [5
+) [4
 
-] (./thesis.toc [6
-
-
-])
-\tf@toc=\write4
-\openout4 = `thesis.toc'.
-
- [7] (./thesis.lof [8
+] (./thesis.toc [5
 
 
 ])
-\tf@lof=\write5
-\openout5 = `thesis.lof'.
+\tf@toc=\write6
+\openout6 = `thesis.toc'.
 
- [9] (./chapter1/chapter1.tex
+ [6] (./thesis.lof [7
+
+
+])
+\tf@lof=\write7
+\openout7 = `thesis.lof'.
+
+ [8] (./chapter1/chapter1.tex
 Ch\uhorn \ohorn ng 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
+[9
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
- []
-
-[10
-
+] [10]) (./chapter2/chapter2.tex [11]
+Ch\uhorn \ohorn ng 2.
+[12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[11]) (./chapter2/chapter2.tex [12]
-Ch\uhorn \ohorn ng 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
-
- []
-
-[13
-
-] [14] [15]
-<image/internet-of-things1.jpg, id=212, 783.92876pt x 419.5675pt>
+<image/internet-of-things1.jpg, id=202, 783.92876pt x 419.5675pt>
 File: image/internet-of-things1.jpg Graphic file (type jpg)
 
 <use image/internet-of-things1.jpg>
-Package pdftex.def Info: image/internet-of-things1.jpg used on input line 36.
+Package pdftex.def Info: image/internet-of-things1.jpg used on input line 33.
 (pdftex.def)             Requested size: 470.36089pt x 251.74243pt.
 
-Overfull \hbox (29.34315pt too wide) in paragraph at lines 36--37
+Overfull \hbox (29.34315pt too wide) in paragraph at lines 33--34
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
-
- []
-
-[16
-
- <./image/internet-of-things1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-[17] <image/mqtt.png, id=222, 582.175pt x 304.13625pt>
+[13] [14 <./image/internet-of-things1.jpg>]
+<image/mqtt.png, id=214, 582.175pt x 304.13625pt>
 File: image/mqtt.png Graphic file (type png)
  <use image/mqtt.png>
-Package pdftex.def Info: image/mqtt.png used on input line 60.
+Package pdftex.def Info: image/mqtt.png used on input line 53.
 (pdftex.def)             Requested size: 349.3077pt x 182.48315pt.
 
-[18
 
- <./image/mqtt.png (PNG copy)>]
-<image/IoTPlatform.png, id=230, 770.88pt x 475.7775pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./image/mqtt.png (PNG copy)>]
+<image/IoTPlatform.png, id=226, 770.88pt x 475.7775pt>
 File: image/IoTPlatform.png Graphic file (type png)
 
 <use image/IoTPlatform.png>
-Package pdftex.def Info: image/IoTPlatform.png used on input line 76.
+Package pdftex.def Info: image/IoTPlatform.png used on input line 69.
 (pdftex.def)             Requested size: 462.53157pt x 285.46869pt.
 
-Overfull \hbox (21.51384pt too wide) in paragraph at lines 76--77
+Overfull \hbox (21.51384pt too wide) in paragraph at lines 69--70
  [] 
  []
 
-[19
+[17
 
- <./image/IoTPlatform.png>] [20] [21]
-<image/otology_example.png, id=247, 773.89125pt x 502.87875pt>
+ <./image/IoTPlatform.png>] [18] [19]
+<image/otology_example.png, id=243, 773.89125pt x 502.87875pt>
 File: image/otology_example.png Graphic file (type png)
 
 <use image/otology_example.png>
-Package pdftex.def Info: image/otology_example.png used on input line 122.
+Package pdftex.def Info: image/otology_example.png used on input line 115.
 (pdftex.def)             Requested size: 464.33833pt x 301.72957pt.
 
-Overfull \hbox (23.3206pt too wide) in paragraph at lines 122--124
+Overfull \hbox (23.3206pt too wide) in paragraph at lines 115--117
  [] 
  []
 
-[22
+[20
 
- <./image/otology_example.png>] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 161--163
+ <./image/otology_example.png>] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
-[24] <image/ssn_ontology.png, id=267, 985.6825pt x 578.16pt>
+[22] <image/ssn_ontology.png, id=263, 985.6825pt x 578.16pt>
 File: image/ssn_ontology.png Graphic file (type png)
 
 <use image/ssn_ontology.png>
-Package pdftex.def Info: image/ssn_ontology.png used on input line 170.
-(pdftex.def)             Requested size: 394.266pt x 231.2599pt.
+Package pdftex.def Info: image/ssn_ontology.png used on input line 159.
+(pdftex.def)             Requested size: 492.84004pt x 289.07928pt.
 
-Overfull \hbox (32.36147pt too wide) in paragraph at lines 172--173
+Overfull \hbox (51.82231pt too wide) in paragraph at lines 159--159
+ [] 
+ []
+
+
+Overfull \hbox (32.36147pt too wide) in paragraph at lines 161--162
  \T5/cmr/m/n/10.95 https://corescholar.libraries.wright.edu/knoesis/610/?utm_so
 urce=corescholar.libraries.wright.edu 
  []
 
-[25 <./image/ssn_ontology.png>] [26]
-<image/iot-a.png, id=281, 575.14874pt x 644.4075pt>
+[23 <./image/ssn_ontology.png>]
+<image/iot-a.png, id=272, 575.14874pt x 644.4075pt>
 File: image/iot-a.png Graphic file (type png)
  <use image/iot-a.png>
-Package pdftex.def Info: image/iot-a.png used on input line 180.
-(pdftex.def)             Requested size: 287.57367pt x 322.20296pt.
+Package pdftex.def Info: image/iot-a.png used on input line 169.
+(pdftex.def)             Requested size: 345.0919pt x 386.64748pt.
 
-Overfull \hbox (8.92783pt too wide) in paragraph at lines 182--183
+Overfull \hbox (8.92783pt too wide) in paragraph at lines 171--172
  \T5/cmr/m/n/12 https://www.researchgate.net/profile/Suparna_De/publication/330
 729011/figure/fig1/ 
  []
 
-[27
-
- <./image/iot-a.png>] <image/iot-lite.jpg, id=289, 722.7pt x 406.51875pt>
+[24 <./image/iot-a.png>] <image/iot-lite.jpg, id=280, 722.7pt x 406.51875pt>
 File: image/iot-lite.jpg Graphic file (type jpg)
 
 <use image/iot-lite.jpg>
-Package pdftex.def Info: image/iot-lite.jpg used on input line 190.
+Package pdftex.def Info: image/iot-lite.jpg used on input line 179.
 (pdftex.def)             Requested size: 433.62334pt x 243.91312pt.
- [28
+ [25
 
- <./image/iot-lite.jpg>] [29] [30] [31])
-(./chapter3/chapter3.tex [32]
+ <./image/iot-lite.jpg>] [26] [27] [28])
+(./chapter3/chapter3.tex [29]
 Ch\uhorn \ohorn ng 3.
-[33
+[30
 
-] <image/hop_1.png, id=317, 256.887pt x 144.54pt>
+] <image/hop_1.png, id=308, 256.887pt x 144.54pt>
 File: image/hop_1.png Graphic file (type png)
  <use image/hop_1.png>
-Package pdftex.def Info: image/hop_1.png used on input line 19.
+Package pdftex.def Info: image/hop_1.png used on input line 17.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_2.png, id=318, 256.887pt x 144.54pt>
+<image/hop_2.png, id=309, 256.887pt x 144.54pt>
 File: image/hop_2.png Graphic file (type png)
  <use image/hop_2.png>
-Package pdftex.def Info: image/hop_2.png used on input line 26.
+Package pdftex.def Info: image/hop_2.png used on input line 24.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-[34
+[31
 
  <./image/hop_1.png> <./image/hop_2.png>]
-<image/mo_hinh_trien_khai_phan_cung.png, id=324, 212.795pt x 463.7325pt>
+<image/mo_hinh_trien_khai_phan_cung.png, id=316, 212.795pt x 463.7325pt>
 File: image/mo_hinh_trien_khai_phan_cung.png Graphic file (type png)
 
 <use image/mo_hinh_trien_khai_phan_cung.png>
 Package pdftex.def Info: image/mo_hinh_trien_khai_phan_cung.png used on input l
-ine 39.
+ine 35.
 (pdftex.def)             Requested size: 127.67796pt x 278.24164pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 File: image/hop_1.png Graphic file (type png)
 <use image/hop_1.png>
-Package pdftex.def Info: image/hop_1.png used on input line 49.
+Package pdftex.def Info: image/hop_1.png used on input line 45.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 File: image/hop_2.png Graphic file (type png)
  <use image/hop_2.png>
-Package pdftex.def Info: image/hop_2.png used on input line 50.
+Package pdftex.def Info: image/hop_2.png used on input line 46.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
-<image/hop_3.png, id=325, 616.266pt x 281.853pt>
+<image/hop_3.png, id=317, 616.266pt x 281.853pt>
 File: image/hop_3.png Graphic file (type png)
  <use image/hop_3.png>
-Package pdftex.def Info: image/hop_3.png used on input line 57.
+Package pdftex.def Info: image/hop_3.png used on input line 53.
 (pdftex.def)             Requested size: 246.50203pt x 112.7392pt.
 
-<image/hop_4.png, id=326, 456.9435pt x 256.887pt>
+<image/hop_4.png, id=318, 456.9435pt x 256.887pt>
 File: image/hop_4.png Graphic file (type png)
  <use image/hop_4.png>
-Package pdftex.def Info: image/hop_4.png used on input line 58.
+Package pdftex.def Info: image/hop_4.png used on input line 54.
 (pdftex.def)             Requested size: 228.47118pt x 128.44318pt.
 
-<image/hop_5.jpg, id=327, 256.887pt x 144.54pt>
+<image/hop_5.jpg, id=319, 256.887pt x 144.54pt>
 File: image/hop_5.jpg Graphic file (type jpg)
  <use image/hop_5.jpg>
-Package pdftex.def Info: image/hop_5.jpg used on input line 59.
+Package pdftex.def Info: image/hop_5.jpg used on input line 55.
 (pdftex.def)             Requested size: 256.88635pt x 144.53963pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[35
+[32
 
- <./image/mo_hinh_trien_khai_phan_cung.png>] [36 <./image/hop_3.png> <./image/h
+ <./image/mo_hinh_trien_khai_phan_cung.png>] [33 <./image/hop_3.png> <./image/h
 op_4.png> <./image/hop_5.jpg>]
-<image/openhab.png, id=338, 1370.11874pt x 711.65875pt>
+<image/openhab.png, id=330, 1370.11874pt x 711.65875pt>
 File: image/openhab.png Graphic file (type png)
 
 <use image/openhab.png>
-Package pdftex.def Info: image/openhab.png used on input line 80.
+Package pdftex.def Info: image/openhab.png used on input line 76.
 (pdftex.def)             Requested size: 411.03879pt x 213.49927pt.
- [37 <./image/openhab.png>]
-<image/homeassistant.png, id=344, 1370.11874pt x 710.655pt>
+ [34 <./image/openhab.png>]
+<image/homeassistant.png, id=335, 1370.11874pt x 710.655pt>
 File: image/homeassistant.png Graphic file (type png)
 
 <use image/homeassistant.png>
-Package pdftex.def Info: image/homeassistant.png used on input line 90.
+Package pdftex.def Info: image/homeassistant.png used on input line 86.
 (pdftex.def)             Requested size: 411.03879pt x 213.19814pt.
 
-<image/thingsboard.png, id=345, 1370.11874pt x 709.65125pt>
+<image/thingsboard.png, id=336, 1370.11874pt x 709.65125pt>
 File: image/thingsboard.png Graphic file (type png)
 
 <use image/thingsboard.png>
-Package pdftex.def Info: image/thingsboard.png used on input line 100.
+Package pdftex.def Info: image/thingsboard.png used on input line 96.
 (pdftex.def)             Requested size: 411.03879pt x 212.897pt.
- [38
 
- <./image/homeassistant.png> <./image/thingsboard.png>] [39] <image/ontology-2.
-pdf, id=354, 4080.24374pt x 2281.52374pt>
+<image/ontology-2.pdf, id=337, 4080.24374pt x 2281.52374pt>
 File: image/ontology-2.pdf Graphic file (type pdf)
 
 <use image/ontology-2.pdf>
-Package pdftex.def Info: image/ontology-2.pdf used on input line 112.
+Package pdftex.def Info: image/ontology-2.pdf used on input line 108.
 (pdftex.def)             Requested size: 816.0343pt x 456.29668pt.
- [40
+ [35
 
- <./image/ontology-2.pdf>] [41] [42] [43]
-[44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+ <./image/homeassistant.png> <./image/thingsboard.png>] [36 <./image/ontology-2
+.pdf>] [37] [38] [39] [40] [41] [42] [43
 
- []
-
-[46]
-Overfull \hbox (84.47122pt too wide) in paragraph at lines 296--303
-| \T5/cmr/m/n/12 "SubSmartContextId" : ["phong_sinh_vien_id", "phong_can_bo_id"
-, "phong_may_chu_id"], 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--312
+]
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
-
-Overfull \hbox (34.28368pt too wide) in paragraph at lines 313--322
-| \T5/cmr/m/n/12 "HasSource" : ["temperature-humidity-light_homeassistant", "mo
--tion_homeassistant"] 
- []
-
-
-Overfull \hbox (44.13528pt too wide) in paragraph at lines 330--340
-| \T5/cmr/m/n/12 "HasMetric" : ["bi-nary_sensor.motion_detection", "light.green
-_light", "light.red_light",
- []
-
-[47
-
-] [48]
-Overfull \hbox (2.39601pt too wide) in paragraph at lines 349--362
-| \T5/cmr/m/n/12 "HasDatapoint":[ "b37a79a0-755c-11e9-abce-5bf295b292b2-humidit
-y_datapoint"
- []
-
-<image/mapping_service.png, id=412, 524.96124pt x 503.8825pt>
+[44] <image/mapping_service.png, id=400, 524.96124pt x 503.8825pt>
 File: image/mapping_service.png Graphic file (type png)
 
 <use image/mapping_service.png>
-Package pdftex.def Info: image/mapping_service.png used on input line 385.
+Package pdftex.def Info: image/mapping_service.png used on input line 330.
 (pdftex.def)             Requested size: 314.97917pt x 302.33183pt.
- [49
 
-]
-<image/openhab_dataformat.png, id=418, 549.05125pt x 322.20375pt>
+<image/openhab_dataformat.png, id=401, 549.05125pt x 322.20375pt>
 File: image/openhab_dataformat.png Graphic file (type png)
 
 <use image/openhab_dataformat.png>
-Package pdftex.def Info: image/openhab_dataformat.png used on input line 394.
+Package pdftex.def Info: image/openhab_dataformat.png used on input line 338.
 (pdftex.def)             Requested size: 329.43329pt x 193.32373pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[50 <./image/mapping_service.png>] [51 <./image/openhab_dataformat.png>]
-<image/homeassistant_dataformat.png, id=428, 523.9575pt x 211.79124pt>
+ [45 <./image/mapping_service.png> <./image/openhab_dataformat.png>]
+<image/homeassistant_dataformat.png, id=407, 523.9575pt x 211.79124pt>
 File: image/homeassistant_dataformat.png Graphic file (type png)
 
 <use image/homeassistant_dataformat.png>
 Package pdftex.def Info: image/homeassistant_dataformat.png used on input line 
-402.
+346.
 (pdftex.def)             Requested size: 314.37692pt x 127.07571pt.
 
-<image/language_model-statement.png, id=429, 1434.35875pt x 302.12875pt>
+<image/language_model-statement.png, id=408, 1434.35875pt x 302.12875pt>
 File: image/language_model-statement.png Graphic file (type png)
 
 <use image/language_model-statement.png>
 Package pdftex.def Info: image/language_model-statement.png used on input line 
-424.
+366.
 (pdftex.def)             Requested size: 430.31094pt x 90.63931pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[52
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
+
+ []
+
+[46
 
  <./image/homeassistant_dataformat.png>]
-<image/language_model-condition.png, id=434, 1462.46375pt x 442.65375pt>
+<image/language_model-condition.png, id=413, 1462.46375pt x 442.65375pt>
 File: image/language_model-condition.png Graphic file (type png)
 
 <use image/language_model-condition.png>
 Package pdftex.def Info: image/language_model-condition.png used on input line 
-433.
+396.
 (pdftex.def)             Requested size: 438.74251pt x 132.79713pt.
 
-<image/language_model-action.png, id=435, 1000.73875pt x 206.7725pt>
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+
+ []
+
+[47 <./image/language_model-statement.png> <./image/language_model-condition.pn
+g>] <image/language_model-action.png, id=420, 1000.73875pt x 206.7725pt>
 File: image/language_model-action.png Graphic file (type png)
 
 <use image/language_model-action.png>
-Package pdftex.def Info: image/language_model-action.png used on input line 442
+Package pdftex.def Info: image/language_model-action.png used on input line 422
 .
 (pdftex.def)             Requested size: 400.28842pt x 82.70752pt.
 
-<image/language_model-expression.png, id=436, 1069.9975pt x 213.79875pt>
+Underfull \hbox (badness 10000) in paragraph at lines 433--433
+
+ []
+
+<image/language_model-expression.png, id=421, 1069.9975pt x 213.79875pt>
 File: image/language_model-expression.png Graphic file (type png)
 
 <use image/language_model-expression.png>
 Package pdftex.def Info: image/language_model-expression.png used on input line
- 450.
+ 438.
 (pdftex.def)             Requested size: 427.99142pt x 85.51797pt.
+ [48 <./image/language_model-action.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 442--447
 
+ []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_model-term.png, id=437, 758.835pt x 180.675pt>
+<image/language_model-term.png, id=427, 758.835pt x 180.675pt>
 File: image/language_model-term.png Graphic file (type png)
 
 <use image/language_model-term.png>
-Package pdftex.def Info: image/language_model-term.png used on input line 457.
+Package pdftex.def Info: image/language_model-term.png used on input line 453.
 (pdftex.def)             Requested size: 303.52863pt x 72.2687pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_model-const.png, id=438, 688.5725pt x 159.59625pt>
+<image/language_model-const.png, id=428, 688.5725pt x 159.59625pt>
 File: image/language_model-const.png Graphic file (type png)
 
 <use image/language_model-const.png>
-Package pdftex.def Info: image/language_model-const.png used on input line 464.
+Package pdftex.def Info: image/language_model-const.png used on input line 463.
 
 (pdftex.def)             Requested size: 275.4241pt x 63.83736pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[53 <./image/language_model-statement.png> <./image/language_model-condition.pn
-g> <./image/language_model-action.png>] [54 <./image/language_model-expression.
-png> <./image/language_model-term.png> <./image/language_model-const.png>]
-<image/language_diagram-use_case.png, id=454, 633.36626pt x 352.31625pt>
+ [49 <./image/language_model-expression.png> <./image/language_model-term.png> 
+<./image/language_model-const.png>]
+<image/language_diagram-use_case.png, id=437, 633.36626pt x 352.31625pt>
 File: image/language_diagram-use_case.png Graphic file (type png)
 
 <use image/language_diagram-use_case.png>
 Package pdftex.def Info: image/language_diagram-use_case.png used on input line
- 474.
+ 476.
 (pdftex.def)             Requested size: 380.02269pt x 211.39137pt.
 
-<image/language_diagram-class_diagram.png, id=455, 1321.93875pt x 563.10374pt>
+Underfull \vbox (badness 10000) detected at line 504
+ []
+
+[50
+
+ <./image/language_diagram-use_case.png>]
+<image/language_diagram-class_diagram.png, id=447, 1321.93875pt x 563.10374pt>
 File: image/language_diagram-class_diagram.png Graphic file (type png)
 
 <use image/language_diagram-class_diagram.png>
 Package pdftex.def Info: image/language_diagram-class_diagram.png used on input
- line 483.
+ line 512.
 (pdftex.def)             Requested size: 462.6855pt x 197.08926pt.
 
-Overfull \hbox (21.66777pt too wide) in paragraph at lines 483--484
+Overfull \hbox (21.66777pt too wide) in paragraph at lines 512--513
  [] 
  []
 
-<image/language_diagram-statement.png, id=456, 342.27875pt x 302.12875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--520
+[]|\T5/cmr/m/n/12 T¶n thuëc
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--520
+\T5/cmr/m/n/12 t½nh/ph÷ìng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
+[]|\T5/cmr/m/n/12 Mæ t£ thuëc
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--522
+[]|\T5/cmr/m/n/12 Ch÷a c¡c key-word
+ []
+
+
+Underfull \hbox (badness 4303) in paragraph at lines 522--523
+[]|\T5/cmr/m/n/12 Danh s¡ch key-word
+ []
+
+
+Overfull \hbox (13.90494pt too wide) in paragraph at lines 524--524
+[]|\T5/cmr/m/n/12 smartcontext_level| 
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 524--525
+\T5/cmr/m/n/12 c¡c thuëc t½nh cõa
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 526--527
+\T5/cmr/m/n/12 c¡c thuëc t½nh cõa
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 528--529
+\T5/cmr/m/n/12 c¡c thuëc t½nh cõa
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 530--531
+\T5/cmr/m/n/12 c¡c thuëc t½nh cõa
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 532--533
+\T5/cmr/m/n/12 c¡c thuëc t½nh cõa
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 536--537
+[]|\T5/cmr/m/n/12 Danh s¡ch c¡c biºu
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 538--539
+[]|\T5/cmr/m/n/12 Kiºm tra có ph¡p,
+ []
+
+
+Underfull \hbox (badness 3482) in paragraph at lines 540--541
+[]|\T5/cmr/m/n/12 Kiºm tra có ph¡p,
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 542--542
+[]|\T5/cmr/m/n/12 K¸ thøa State-ment,
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 542--542
+\T5/cmr/m/n/12 thüc hi»n kiºm tra,
+ []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 544--544
+[]|\T5/cmr/m/n/12 K¸ thøa State-ment,
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 544--544
+\T5/cmr/m/n/12 thüc hi»n kiºm tra,
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 550--551
+[]|\T5/cmr/m/n/12 Kiºm tra nhanh in-
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 516--557
+ [] [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 557
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 557--561
+ [] [] [] [] 
+ []
+
+[51
+
+ <./image/language_diagram-class_diagram.png>] [52]
+<image/language_diagram-statement.png, id=458, 342.27875pt x 302.12875pt>
 File: image/language_diagram-statement.png Graphic file (type png)
 
 <use image/language_diagram-statement.png>
 Package pdftex.def Info: image/language_diagram-statement.png used on input lin
-e 492.
+e 569.
 (pdftex.def)             Requested size: 136.90906pt x 120.84935pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<image/language_diagram-statement_query.png, id=457, 522.95375pt x 312.16624pt>
+<image/language_diagram-statement_query.png, id=459, 522.95375pt x 312.16624pt>
 File: image/language_diagram-statement_query.png Graphic file (type png)
 <use image/language_diagram-statement_query.png>
 Package pdftex.def Info: image/language_diagram-statement_query.png used on inp
-ut line 499.
+ut line 577.
 (pdftex.def)             Requested size: 209.1778pt x 124.86427pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<image/language_diagram-statement_rule.png, id=458, 683.55376pt x 312.16624pt>
+ [53 <./image/language_diagram-statement.png> <./image/language_diagram-stateme
+nt_query.png>]
+<image/language_diagram-statement_rule.png, id=466, 683.55376pt x 312.16624pt>
 File: image/language_diagram-statement_rule.png Graphic file (type png)
 
 <use image/language_diagram-statement_rule.png>
 Package pdftex.def Info: image/language_diagram-statement_rule.png used on inpu
-t line 506.
+t line 585.
 (pdftex.def)             Requested size: 273.41666pt x 124.86427pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_diagram-condition.png, id=459, 352.31625pt x 321.2pt>
+<image/language_diagram-condition.png, id=467, 522.95375pt x 403.5075pt>
 File: image/language_diagram-condition.png Graphic file (type png)
 
 <use image/language_diagram-condition.png>
 Package pdftex.def Info: image/language_diagram-condition.png used on input lin
-e 513.
-(pdftex.def)             Requested size: 140.924pt x 128.47772pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_diagram-expression.png, id=460, 407.5225pt x 302.12875pt>
+e 594.
+(pdftex.def)             Requested size: 209.1778pt x 161.40013pt.
+ [54 <./image/language_diagram-statement_rule.png> <./image/language_diagram-co
+ndition.png>]
+<image/language_diagram-expression.png, id=474, 407.5225pt x 302.12875pt>
 File: image/language_diagram-expression.png Graphic file (type png)
 
 <use image/language_diagram-expression.png>
 Package pdftex.def Info: image/language_diagram-expression.png used on input li
-ne 520.
+ne 603.
 (pdftex.def)             Requested size: 163.0061pt x 120.84935pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_diagram-action.png, id=461, 357.335pt x 111.41624pt>
+<image/language_diagram-action.png, id=475, 357.335pt x 111.41624pt>
 File: image/language_diagram-action.png Graphic file (type png)
 
 <use image/language_diagram-action.png>
-Package pdftex.def Info: image/language_diagram-action.png used on input line 5
-27.
+Package pdftex.def Info: image/language_diagram-action.png used on input line 6
+11.
 (pdftex.def)             Requested size: 142.93146pt x 44.5657pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<image/language_diagram-term.png, id=462, 342.27875pt x 302.12875pt>
+<image/language_diagram-term.png, id=476, 342.27875pt x 302.12875pt>
 File: image/language_diagram-term.png Graphic file (type png)
 
 <use image/language_diagram-term.png>
-Package pdftex.def Info: image/language_diagram-term.png used on input line 534
+Package pdftex.def Info: image/language_diagram-term.png used on input line 619
 .
 (pdftex.def)             Requested size: 136.90906pt x 120.84935pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
 
  []
 
 [55
 
- <./image/language_diagram-use_case.png> <./image/language_diagram-class_diagra
-m.png>]
-Overfull \vbox (40.3096pt too high) has occurred while \output is active []
-
-
-[56 <./image/language_diagram-statement.png> <./image/language_diagram-statemen
-t_query.png> <./image/language_diagram-statement_rule.png> <./image/language_di
-agram-condition.png>] [57 <./image/language_diagram-expression.png> <./image/la
-nguage_diagram-action.png> <./image/language_diagram-term.png>] [58])
-(./chapter4/chapter4.tex [59]
+ <./image/language_diagram-expression.png> <./image/language_diagram-action.png
+> <./image/language_diagram-term.png>] [56]) (./chapter4/chapter4.tex
+[57] [58]
 Ch\uhorn \ohorn ng 4.
+<image/demo.png, id=501, 544.0325pt x 302.12875pt>
+File: image/demo.png Graphic file (type png)
+ <use image/demo.png>
+Package pdftex.def Info: image/demo.png used on input line 27.
+(pdftex.def)             Requested size: 326.42201pt x 181.27864pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+Underfull \hbox (badness 10000) in paragraph at lines 24--46
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--28
-
- []
-
-[60
+[59
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-[61] [62]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+[60 <./image/demo.png>] [61]
+Underfull \hbox (badness 10000) in paragraph at lines 95--110
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+[63] [64] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
 
  []
 
-[63
+[66
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-[64] [65]
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
-
- []
-
-) (./reference/reference.tex [66]
-Ch\uhorn \ohorn ng 5.
 [67
 
-
 ]
-LaTeX Font Info:    Try loading font information for T5+cmtt on input line 9.
- (/usr/share/texlive/texmf-dist/tex/latex/vntex/t5cmtt.fd
+Underfull \hbox (badness 10000) in paragraph at lines 245--274
+
+ []
+
+) (./chapter5/chapter5.tex [68
+
+] [69]
+Ch\uhorn \ohorn ng 5.
+) (./reference/reference.tex [70
+
+] [71]
+LaTeX Font Info:    Try loading font information for T5+cmtt on input line 10.
+
+(/usr/share/texlive/texmf-dist/tex/latex/vntex/t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (3.2279pt too wide) in paragraph at lines 8--10
+Overfull \hbox (9.10147pt too wide) in paragraph at lines 9--11
 \T5/cmtt/m/n/12 gartner-says-8-billion-connected-things-will-be-in-use-in-2017-
 up-31- 
  []
 
 
-Overfull \hbox (3.2279pt too wide) in paragraph at lines 14--16
+Overfull \hbox (2.92798pt too wide) in paragraph at lines 12--14
+\T5/cmtt/m/n/12 https://www.iothub.com.au/news/the-number-of-iot-platforms-jump
+s-to- 
+ []
+
+
+Overfull \hbox (9.10147pt too wide) in paragraph at lines 15--17
 \T5/cmtt/m/n/12 https://internetofthingsagenda.techtarget.com/definition/Intern
 et-of- 
  []
 
-[68
+[72
 
-])
+]
+Underfull \hbox (badness 2435) in paragraph at lines 33--35
+\T5/cmtt/m/n/12 https://www.w3.org/Submission/2015/SUBM-iot-lite-20151126/\T5/c
+mr/m/n/12 , last vis-
+ []
+
+)
 Overfull \vbox (1.62167pt too high) has occurred while \output is active []
 
 
-[69]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+[73]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
  (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 115.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 22528 strings out of 493029
- 394610 string characters out of 6136233
- 476913 words of memory out of 5000000
- 25383 multiletter control sequences out of 15000+600000
- 22570 words of font info for 51 fonts, out of 8000000 for 9000
+ 24490 strings out of 493029
+ 439045 string characters out of 6136233
+ 541644 words of memory out of 5000000
+ 27309 multiletter control sequences out of 15000+600000
+ 20614 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,77p,2226b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,77p,2226b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/vntex/vnr/vnr10.pfb></usr/share/texlive/texmf-dist/font
@@ -2333,10 +2432,10 @@ s/type1/vntex/vnr/vnr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vn
 r/vnr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnsl12.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on thesis.pdf (69 pages, 1935218 bytes).
+Output written on thesis.pdf (73 pages, 1963499 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 459 compressed objects within 5 object streams
- 159 named destinations out of 1000 (max. 500000)
- 188 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 636 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

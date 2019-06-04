@@ -1,1 +1,1 @@
-{"MetricType": "gauge", "MetricLocalId": "Humidity", "MetricDomain": "sensor", "CanSetState": "false", "HasDatapoint": ["Humidity_datapoint"], "MetricStatus": "active", "Unit": "", "MetricName": "Humidity", "MetricId": "Humidity"}
+{"Unit": "", "MetricId": "Humidity", "MetricName": "Humidity", "MetricDomain": "sensor", "MetricType": "gauge", "HasDatapoint": ["Humidity_datapoint"], "MetricStatus": "active", "CanSetState": "false", "MetricLocalId": "Humidity"}

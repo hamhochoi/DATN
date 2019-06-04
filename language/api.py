@@ -1,7 +1,7 @@
-import MySQLdb
-from influxdb import InfluxDBClient
+# import MySQLdb
+# from influxdb import InfluxDBClient
 import traceback
-import numpy as np
+# import numpy as np
 import os
 import json
 from Fog.Filter.Filter import Filter
@@ -86,7 +86,7 @@ def api_get_smartcontext_id_from_smartcontext_attribute(smartcontext_attribute, 
 
 def api_get_all_datapoint():
     filter_.api_get_state()
-    # time.sleep(2)
+    time.sleep(1)
 
     datapoints = []
 
@@ -347,13 +347,20 @@ def api_get_source_from_platform(platform_attr, platform_value):
 def api_get_source_from_smartcontext(smartcontext_attr, smartcontext_value):
     list_sources = []
     smartcontexts = api_get_smartcontext_from_smartcontext_attr(smartcontext_attr, smartcontext_value)
+    print ("Smartcontexts: ")
+    print (smartcontexts)
     
     for smartcontext in smartcontexts:
         smartcontext_id = smartcontext["SmartContextId"]
         platforms = api_get_platform_from_smartcontext(smartcontext_attr, smartcontext_value)
+        print ("SmartcontextId: ", smartcontext_id)
+        print ("Platforms: ")
+        print (platforms)
         for platform in platforms:
             platform_id = platform["PlatformId"]
+            print (platform_id)
             sources = api_get_source_from_platform(platform_attr="PlatformId", platform_value=platform_id)
+            print (sources)
             list_sources.extend(sources)
 
     return list_sources
@@ -627,7 +634,7 @@ if __name__ == "__main__":
     # x = api_get_metric_from_smartcontext("SmartContextId", 'HPCC_id')
     
 
-    # x = api_get_source_from_smartcontext('SmartContextName', 'phong_sinh_vien')
+    x = api_get_source_from_smartcontext('SmartContextName', 'HPCC')
     # x = api_get_source_from_datapoint('value', 1)
     
 
